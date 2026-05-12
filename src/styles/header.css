@@ -1,0 +1,811 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap');
+
+/* ========== RESET & VARIABLES ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-body: #ffffff;
+    --text-body: #1a1a2e;
+    --primary: #0a0a0a;
+    --primary-light: #1e1e2f;
+    --accent: #0066ff;
+    --accent-hover: #0052cc;
+    --gray-light: #f5f5fa;
+    --gray-mid: #cbd5e1;
+    --shadow-sm: 0 8px 20px rgba(0,0,0,0.05);
+    --shadow-md: 0 12px 24px rgba(0,0,0,0.08);
+    --shadow-lg: 0 20px 35px rgba(0,0,0,0.12);
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --transition: all 0.25s ease;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-body);
+    font-family: 'Inter', 'Poppins', sans-serif;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ========== HEADER (común) ========== */
+header {
+    background: var(--primary);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 32px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+}
+
+.logo {
+    height: 42px;
+    width: auto;
+    transition: transform 0.2s;
+}
+.logo:hover {
+    transform: scale(1.02);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    font-weight: 500;
+    border-radius: 40px;
+    transition: var(--transition);
+}
+nav a:hover, nav a.active {
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.desplegable {
+    position: relative;
+}
+.submenú {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--primary);
+    min-width: 220px;
+    border-radius: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: all 0.2s;
+    box-shadow: var(--shadow-lg);
+    padding: 8px 0;
+}
+.desplegable:hover .submenú {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.submenú li {
+    border-bottom: 1px solid #2a2a2a;
+}
+.submenú li:last-child {
+    border: none;
+}
+.submenú a {
+    padding: 12px 20px;
+    display: block;
+}
+
+/* Hamburguesa */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background: white;
+    margin: 6px 0;
+    transition: 0.2s;
+}
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobile-menu {
+    display: none;
+    background: var(--primary);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+.mobile-menu.active {
+    display: block;
+}
+.mobile-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+}
+.mobile-menu a {
+    display: block;
+    padding: 14px 24px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #2a2a2a;
+}
+.mobile-menu a:hover {
+    color: var(--accent);
+}
+
+/* ========== HERO PRINCIPAL (index) ========== */
+.hero {
+    padding: 60px 0 40px;
+    background: linear-gradient(135deg, #f9faff 0%, #ffffff 100%);
+}
+.hero-grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr;
+    gap: 32px;
+    align-items: center;
+}
+.hero-text h1 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #0a0a0a, #1e2a3a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.hero-text p {
+    font-size: 1.1rem;
+    color: #2d3e50;
+    margin-bottom: 32px;
+}
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+.btn-primary {
+    background: var(--accent);
+    color: white;
+}
+.btn-primary:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+}
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--text-body);
+    color: var(--text-body);
+}
+.btn-secondary:hover {
+    background: rgba(0,0,0,0.04);
+    transform: translateY(-2px);
+}
+.hero-image img {
+    width: 100%;
+    max-width: 480px;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+}
+.hero-latest .latest-panel {
+    background: var(--primary);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    color: white;
+    box-shadow: var(--shadow-lg);
+}
+.latest-panel h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--accent);
+    padding-left: 16px;
+}
+.article-card {
+    background: rgba(255,255,255,0.05);
+    border-radius: var(--radius-md);
+    padding: 18px;
+    margin-bottom: 16px;
+    transition: var(--transition);
+}
+.article-card:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-3px);
+}
+.article-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+.article-card p {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    margin-bottom: 12px;
+}
+.article-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+.article-link:hover {
+    text-decoration: underline;
+}
+
+/* ========== CARRUSEL TEMAS (index) ========== */
+.what-you-find {
+    background: var(--gray-light);
+    padding: 60px 0;
+    margin: 0;
+    max-width: 100%;
+    border-radius: 0;
+}
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 48px;
+}
+.que-carousel {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+.que-arrow {
+    background: white;
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+.que-arrow:hover {
+    background: var(--accent);
+    color: white;
+    transform: scale(1.02);
+}
+.que-track {
+    flex: 1;
+    display: flex;
+    gap: 28px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding: 8px 4px;
+}
+.que-track::-webkit-scrollbar {
+    display: none;
+}
+.que-card {
+    flex: 0 0 300px;
+    background: white;
+    border-radius: 24px;
+    padding: 28px;
+    scroll-snap-align: start;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+.que-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+.que-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+.que-card p {
+    color: #475569;
+    margin-bottom: 20px;
+}
+.card-link {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+}
+.card-link:hover {
+    text-decoration: underline;
+}
+
+/* ========== SECCIÓN MISIÓN (index) ========== */
+.mission-section {
+    padding: 70px 24px;
+    background: white;
+}
+.mission-box {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #f8fafc;
+    border-radius: 32px;
+    padding: 48px;
+}
+.mission-quote {
+    flex: 1;
+    background: white;
+    padding: 32px;
+    border-radius: 28px;
+    box-shadow: var(--shadow-md);
+}
+.quote-icon {
+    font-size: 4rem;
+    font-family: serif;
+    color: var(--accent);
+    opacity: 0.5;
+    line-height: 0.8;
+}
+.mission-quote p {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin: 16px 0;
+    color: #1e293b;
+}
+.mission-quote footer {
+    font-weight: 600;
+    color: var(--accent);
+}
+.mission-text {
+    flex: 1;
+}
+.mission-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+.mission-text p {
+    margin-bottom: 24px;
+    color: #334155;
+}
+.btn-outline {
+    display: inline-block;
+    border: 1px solid var(--accent);
+    padding: 10px 24px;
+    border-radius: 40px;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+.btn-outline:hover {
+    background: var(--accent);
+    color: white;
+}
+
+/* ========== ESTILOS PARA PÁGINAS INTERIORES (theme-page, about, etc.) ========== */
+/* Para todas las páginas que NO son el index (about, sugerencias, artículos, temas) */
+main:not(.hero) {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+/* Páginas con clase "theme-page" (tecnologia.html, ia.html, finanzas.html, todosTemas.html) */
+main.theme-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: var(--bg-body);
+    color: var(--text-body);
+}
+main.theme-page h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-body);
+}
+.theme-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.theme-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 28px;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+.theme-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+.theme-card h2, .theme-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: var(--text-body);
+}
+.theme-card p {
+    margin-bottom: 16px;
+    color: #475569;
+    line-height: 1.6;
+}
+.theme-card a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.theme-card a:hover {
+    text-decoration: underline;
+}
+.subtopics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+.subtopics .theme-card {
+    width: 300px;
+    flex: 1 1 280px;
+}
+
+/* Páginas de artículos individuales, about, sugerencias (sin clase .theme-page) */
+main:not(.theme-page) h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+main:not(.theme-page) h2 {
+    margin: 1.5rem 0 1rem;
+}
+main:not(.theme-page) p, 
+main:not(.theme-page) ul, 
+main:not(.theme-page) ol {
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+}
+main:not(.theme-page) ul, 
+main:not(.theme-page) ol {
+    padding-left: 1.5rem;
+}
+main:not(.theme-page) li {
+    margin-bottom: 0.5rem;
+}
+
+/* Formulario de sugerencias */
+#contact-form {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 24px;
+    margin-top: 2rem;
+}
+#contact-form label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+}
+#contact-form input, 
+#contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    font-family: inherit;
+    margin-bottom: 6px;
+}
+#contact-form button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+#contact-form button:hover {
+    background: var(--accent-hover);
+}
+
+/* ========== FOOTER ========== */
+footer {
+    background: #0a0a0a;
+    color: #94a3b8;
+    padding: 32px 24px;
+}
+.footer-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.footer-links {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+.footer-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.footer-links a:hover {
+    color: white;
+}
+
+/* ========== BOTÓN VOLVER ARRIBA ========== */
+.back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+    box-shadow: var(--shadow-md);
+}
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ========== ANIMACIONES ========== */
+.fade-down {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-down.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+    .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+    .hero-latest {
+        grid-column: span 2;
+    }
+}
+@media (max-width: 768px) {
+    header {
+        padding: 12px 20px;
+    }
+    nav ul {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .hero-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+    .hero-latest {
+        grid-column: span 1;
+    }
+    .hero-text {
+        text-align: center;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+    .hero-image img {
+        max-width: 80%;
+    }
+    .que-arrow {
+        display: none;
+    }
+    .que-track {
+        overflow-x: auto;
+    }
+    .mission-box {
+        flex-direction: column;
+        padding: 32px;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-links {
+        justify-content: center;
+    }
+    main:not(.hero) {
+        padding: 0 20px;
+    }
+    .theme-card {
+        padding: 20px;
+    }
+}
+
+/* ========== ESTILOS PARA PÁGINAS INTERIORES (theme-page, about, etc.) ========== */
+/* Páginas interiores sin clase específica (about, sugerencias, artículos) */
+main:not(.hero):not(.theme-page) {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 24px;
+}
+
+/* Páginas con clase "theme-page" (tecnologia.html, ia.html, finanzas.html, todosTemas.html) */
+main.theme-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: var(--bg-body);
+    color: var(--text-body);
+}
+main.theme-page h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-body);
+}
+.theme-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.theme-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 28px;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+.theme-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+.theme-card h2, .theme-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: var(--text-body);
+}
+.theme-card p {
+    margin-bottom: 16px;
+    color: #475569;
+    line-height: 1.6;
+}
+.theme-card a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.theme-card a:hover {
+    text-decoration: underline;
+}
+.subtopics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+.subtopics .theme-card {
+    width: 300px;
+    flex: 1 1 280px;
+}
+
+/* Páginas de artículos individuales, about, sugerencias (sin clase .theme-page) - estilos de texto */
+main:not(.theme-page) h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+main:not(.theme-page) h2 {
+    margin: 1.5rem 0 1rem;
+}
+main:not(.theme-page) p, 
+main:not(.theme-page) ul, 
+main:not(.theme-page) ol {
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+}
+main:not(.theme-page) ul, 
+main:not(.theme-page) ol {
+    padding-left: 1.5rem;
+}
+main:not(.theme-page) li {
+    margin-bottom: 0.5rem;
+}
+
+/* Formulario de sugerencias */
+#contact-form {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 24px;
+    margin-top: 2rem;
+}
+#contact-form label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+}
+#contact-form input, 
+#contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    font-family: inherit;
+    margin-bottom: 6px;
+}
+#contact-form button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+#contact-form button:hover {
+    background: var(--accent-hover);
+}
+
+/* Ajuste móvil para páginas interiores */
+@media (max-width: 768px) {
+    main:not(.hero):not(.theme-page) {
+        padding: 0 16px;
+    }
+}

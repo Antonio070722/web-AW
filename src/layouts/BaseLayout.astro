@@ -1,0 +1,43 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>{title ? `${title} | AW HUB` : 'AW HUB'}</title>
+    <meta name="description"
+        content="AW HUB es tu espacio para aprender tecnología, inteligencia artificial, finanzas y programación de forma clara y práctica.">
+    <meta name="keywords" content="tecnología, inteligencia artificial, finanzas, programación, educación digital">
+    <meta name="author" content="AW HUB">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://tudominio.com/index.html">
+    <link rel="stylesheet" href="/src/styles/header.css">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+    <!-- Preconexión a Google Fonts para mejorar velocidad -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <Header />
+
+    <main>
+        <slot />
+    </main>
+
+    <Footer />
+
+    <!-- Tus scripts -->
+    <script is:inline src="/js/menu.js"></script>
+</body>
+</html>

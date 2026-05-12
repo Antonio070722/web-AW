@@ -1,0 +1,43 @@
+﻿---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Temas - AW Hub">
+    <div class="contenido">
+        <h1 style="text-align: center;">Todos los Temas</h1>
+        <div class="theme-content">
+            <div class="theme-card">
+                <h2>Tecnología</h2>
+                <p>Explora las últimas innovaciones tecnológicas que están transformando nuestro mundo, desde gadgets hasta avances en software.</p>
+                <a href="tecnologia.html" style="color: #007bff; text-decoration: none;">Saber más</a>
+            </div>
+            <div class="theme-card">
+                <h2>IA</h2>
+                <p>Descubre el poder de la inteligencia artificial y cómo está revolucionando industrias enteras con aprendizaje automático y algoritmos avanzados.</p>
+                <a href="ia.html" style="color: #007bff; text-decoration: none;">Saber más</a>
+            </div>
+            <div class="theme-card">
+                <h2>Finanzas</h2>
+                <p>Aprende sobre estrategias financieras, inversiones y tendencias económicas que te ayudarán a tomar decisiones inteligentes.</p>
+                <a href="finanzas.html" style="color: #007bff; text-decoration: none;">Saber más</a>
+            </div>
+            <div class="theme-card">
+                <h2>Programación</h2>
+                <p>Aprende a escribir código, crear aplicaciones y mejorar tus habilidades de desarrollo con ejemplos prácticos.</p>
+                <a href="../Progr.html" style="color: #007bff; text-decoration: none;">Saber más</a>
+            </div>
+        </div>
+    </div>
+<script is:inline src="/js/menu.js"></script>
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+</BaseLayout>
+<style>
+    .contenido {
+        padding: 20px; 
+        font-family: 'Poppins', sans-serif; 
+        background-color: #fff; 
+        color: #000;
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+</style>

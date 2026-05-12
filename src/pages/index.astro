@@ -1,0 +1,105 @@
+﻿---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Inicio">
+        <!-- Hero principal - Nuevo diseño Grid -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h1>Aprendizaje sin complicaciones</h1>
+                    <p>Tecnología, inteligencia artificial y finanzas explicadas con claridad. Contenido práctico para
+                        mentes curiosas que quieren entender el presente y construir el futuro.</p>
+                    <div class="hero-buttons">
+                        <a href="temas/todosTemas.html" class="btn btn-primary">Explorar temas →</a>
+                        <a href="about.html" class="btn btn-secondary">Conoce más</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="/img/img-fondo-inicio.png" alt="Ilustración de tecnología y finanzas" loading="eager"
+                        width="600" height="400">
+                </div>
+                <div class="hero-latest">
+                    <div class="latest-panel">
+                        <h2>📌 Últimos artículos</h2>
+                        <div class="article-card">
+                            <h3>📱 Evolución de los Smartphones</h3>
+                            <p>Desde el DynaTAC hasta los plegables, cómo han cambiado nuestra vida.</p>
+                            <a href="articulos/articulo1.html" class="article-link">Leer más →</a>
+                        </div>
+                        <div class="article-card">
+                            <h3>🤖 Introducción a la IA Ética</h3>
+                            <p>Principios de transparencia, equidad y privacidad en sistemas de IA.</p>
+                            <a href="articulos/tipos-de-inteligencia-artificial.html" class="article-link">Leer más →</a>
+                        </div>
+                        <div class="article-card">
+                            <h3>📈 Inversiones para Principiantes</h3>
+                            <p>Guía paso a paso para empezar a invertir sin miedo.</p>
+                            <a href="articulos/articulo3.html" class="article-link">Leer más →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carrusel de temas (Qué puedes encontrar aquí) -->
+        <section class="what-you-find">
+            <div class="container">
+                <h2 class="section-title">✨ Qué puedes encontrar aquí</h2>
+                <div class="que-carousel">
+                    <button class="que-arrow que-prev" aria-label="Anterior">◄</button>
+                    <div class="que-track" id="queTrack">
+                        <div class="que-card">
+                            <h3>💻 Tecnología</h3>
+                            <p>Innovaciones, gadgets y tendencias digitales que transforman el mundo.</p>
+                            <a href="temas/tecnologia.html" class="card-link">Descubrir →</a>
+                        </div>
+                        <div class="que-card">
+                            <h3>🧠 Inteligencia Artificial</h3>
+                            <p>Desde redes neuronales hasta ética, aprende IA de forma amigable.</p>
+                            <a href="temas/ia.html" class="card-link">Descubrir →</a>
+                        </div>
+                        <div class="que-card">
+                            <h3>💰 Finanzas</h3>
+                            <p>Estrategias de inversión, ahorro inteligente y educación financiera.</p>
+                            <a href="temas/finanzas.html" class="card-link">Descubrir →</a>
+                        </div>
+                        <div class="que-card">
+                            <h3>🐍 Programación</h3>
+                            <p>Fundamentos de código, herramientas prácticas y proyectos reales.</p>
+                            <a href="Progr.html" class="card-link">Descubrir →</a>
+                        </div>
+                        <div class="que-card">
+                            <h3>📚 Mucho más</h3>
+                            <p>Desarrollo personal, productividad y mucho contenido en camino.</p>
+                            <a href="temas/todosTemas.html" class="card-link">Explorar todo →</a>
+                        </div>
+                    </div>
+                    <button class="que-arrow que-next" aria-label="Siguiente">►</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Por qué existe esta web (estilo testimonio) -->
+        <section class="mission-section">
+            <div class="container mission-box">
+                <div class="mission-quote">
+                    <span class="quote-icon">“</span>
+                    <p>Democratizar el conocimiento, sin jergas técnicas ni barreras. Que cualquier persona pueda
+                        entender cómo funciona el mundo digital y financiero.</p>
+                    <footer>— AW, creador de AW HUB</footer>
+                </div>
+                <div class="mission-text">
+                    <h2>¿Por qué nació este proyecto?</h2>
+                    <p>Porque aprender sobre tecnología, IA y finanzas no debería ser aburrido ni intimidante. Aquí
+                        encontrarás explicaciones claras, ejemplos cotidianos y una comunidad de curiosos que creen en
+                        el poder de la educación accesible. Cada artículo está pensado para que <strong>tú tomes
+                            acción</strong>.</p>
+                    <a href="about.html" class="btn-outline">Conoce más sobre mí →</a>
+                </div>
+            </div>
+        </section>
+
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+    <script is:inline src="/js/carrusel.js"></script>
+</BaseLayout>

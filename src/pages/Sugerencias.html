@@ -1,0 +1,88 @@
+﻿﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugerencias - AW HUB</title>
+    <link rel="stylesheet" href="/src/styles/header.css">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="/img/logo.png" alt="Logo" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li class="desplegable">
+                    <a href="temas/todosTemas.html">Temas</a>
+                    <ul class="submenú">
+                        <li><a href="temas/tecnologia.html">Tecnología</a></li>
+                        <li><a href="temas/ia.html">IA</a></li>
+                        <li><a href="temas/finanzas.html">Finanzas</a></li>
+                        <li><a href="temas/todosTemas.html">Más temas</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">Sobre nosotros</a></li>
+                <li><a href="Sugerencias.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <button id="hamburger" class="hamburger" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú de navegación">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="temas/todosTemas.html">Temas</a></li>
+                <li><a href="temas/todosTemas.html">Más temas</a></li>
+                <li><a href="about.html">Sobre nosotros</a></li>
+                <li><a href="Sugerencias.html">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+    <main style="padding: 20px; font-family: 'Poppins', sans-serif; background-color: #fff; color: #000; max-width: 800px; margin: 0 auto;">
+        <h1>Sugerencias / Contacto</h1>
+        <p>¿Tienes ideas, mejoras, propuestas o alguna duda sobre el sitio? ¡Envíanos tus sugerencias! Nos encantaría escuchar tus opiniones y ayudarte en lo que necesites para hacer AW HUB aún mejor.</p>
+        <div data-fs-success style="color: green; margin-bottom: 10px;"></div>
+        <div data-fs-error style="color: red; margin-bottom: 10px;"></div>
+        <form id="contact-form">
+            <label for="nombre">Nombre <span style="font-size: 0.8em; color: #666;">(Tus datos no se usarán para ningún fin fuera de contactar contigo.)</span></label><br>
+            <input type="text" id="nombre" name="nombre" data-fs-field required><br>
+            <span data-fs-error="nombre" style="color: red; font-size: 0.8em;"></span><br><br>
+            <label for="email">Correo electrónico <span style="font-size: 0.8em; color: #666;">(Tus datos no se usarán para ningún fin fuera de contactar contigo.)</span></label><br>
+            <input type="email" id="email" name="email" data-fs-field required><br>
+            <span data-fs-error="email" style="color: red; font-size: 0.8em;"></span><br><br>
+            <label for="mensaje">Mensaje</label><br>
+            <textarea id="mensaje" name="mensaje" rows="5" data-fs-field required></textarea><br>
+            <span data-fs-error="mensaje" style="color: red; font-size: 0.8em;"></span><br><br>
+            <button type="submit" data-fs-submit-btn>Enviar</button>
+        </form>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="/img/logo.png" alt="AW HUB" width="36" height="36">
+                <p>© 2025 AW HUB — Todos los derechos reservados</p>
+            </div>
+            <div class="footer-links">
+                <a href="about.html">Sobre nosotros</a>
+                <a href="Sugerencias.html">Contacto</a>
+                <a href="politica-privacidad.html">Política de privacidad</a>
+                <a href="terminos.html">Términos de uso</a>
+            </div>
+        </div>
+    </footer>
+<script src="/js/menu.js"></script>
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#contact-form', formId: 'mrejrwqn' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+</body>
+</html>
+
+
