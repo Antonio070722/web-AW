@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Inicio">
+<BaseLayout title="Inicio" page="home">
         <!-- Hero principal - Nuevo diseño Grid -->
         <section class="hero">
             <div class="hero-grid">
@@ -19,19 +19,26 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                     <img src="/img/img-fondo-inicio.png" alt="Ilustración de tecnología y finanzas" loading="eager"
                         width="600" height="400">
                 </div>
-                <div class="hero-latest">
+            
+            </div>
+            
+        </section>
+        
+        <div class="hero-latest">
                     <div class="latest-panel">
                         <h2>📌 Últimos artículos</h2>
+                        <div class="article-card">
+                            <h3>🤖 ¿Qué tipos de IA existen?</h3>
+                            <p>Una visión clara de los tipos de inteligencia artificial: desde la IA débil que usamos a diario hasta la 
+                    IA fuerte, capaz de razonar y aprender como un ser humano.</p>
+                            <a href="articulos/tipos-de-inteligencia-artificial.html" class="article-link">Leer más →</a>
+                        </div>
                         <div class="article-card">
                             <h3>📱 Evolución de los Smartphones</h3>
                             <p>Desde el DynaTAC hasta los plegables, cómo han cambiado nuestra vida.</p>
                             <a href="articulos/articulo1.html" class="article-link">Leer más →</a>
                         </div>
-                        <div class="article-card">
-                            <h3>🤖 Introducción a la IA Ética</h3>
-                            <p>Principios de transparencia, equidad y privacidad en sistemas de IA.</p>
-                            <a href="articulos/tipos-de-inteligencia-artificial.html" class="article-link">Leer más →</a>
-                        </div>
+                        
                         <div class="article-card">
                             <h3>📈 Inversiones para Principiantes</h3>
                             <p>Guía paso a paso para empezar a invertir sin miedo.</p>
@@ -39,8 +46,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
         <!-- Carrusel de temas (Qué puedes encontrar aquí) -->
         <section class="what-you-find">
@@ -101,5 +106,5 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </section>
 
     <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
-    <script is:inline src="/js/carrusel.js"></script>
+    <!--<script is:inline src="/js/carrusel.js"></script> -->
 </BaseLayout>

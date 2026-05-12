@@ -27,7 +27,9 @@ const { title } = Astro.props;
         rel="stylesheet">
 
 </head>
-
+   <!-- Tus scripts -->
+    <script is:inline src="/js/menu.js" defer></script>
+    <script src="/js/carrusel.js" defer></script>
 <body>
     <Header />
 
@@ -37,7 +39,6 @@ const { title } = Astro.props;
 
     <Footer />
 
-    <!-- Tus scripts -->
-    <script is:inline src="/js/menu.js"></script>
+   
 </body>
 </html>

@@ -1,4 +1,14 @@
+function initMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (!hamburger || !mobileMenu) {
+        console.warn('Menú hamburguesa: elementos no encontrados');
+        return;
+    }
+
+
 // Carrusel automático mejorado (preserva funcionalidad original)
+document.addEventListener('DOMContentLoaded', function() {        
         (function () {
             const track = document.getElementById('queTrack');
             const prev = document.querySelector('.que-prev');
@@ -28,3 +38,15 @@
             next.addEventListener('click', () => { scrollStep(1); stopAuto(); });
             autoTimer = setInterval(() => scrollStep(1), 4000);
         })();
+
+        });
+
+
+        }
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMenu);
+} else {
+    initMenu();
+}
+window.addEventListener('load', initMenu); // Segundo intento

@@ -129,7 +129,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         </div>
     </div>
 
-<script is:inline src="/public/js/menu.js"></script>
 <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
 </BaseLayout>
 
@@ -143,6 +142,29 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     flex-direction: column;
     gap: 20px;
     z-index: 5;
+    
+    @media (max-width: 900px) {
+
+        .articulos-sidebar {
+            position: static !important;
+            top: auto !important;
+            right: auto !important;
+            left: auto !important;
+            width: 100% !important;
+            margin: 40px 0 0 0 !important;
+            padding: 0 20px;
+        }
+
+        /* MUY IMPORTANTE: el contenedor principal debe permitir flujo normal */
+        .contenedor-principal, 
+        main, 
+        .contenido, 
+        .wrapper {
+            position: static !important;
+        }
+    }
+
+
 }
 
 .articulos-sidebar .theme-card {
