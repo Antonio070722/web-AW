@@ -1,0 +1,37 @@
+﻿﻿---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Tecnología | AW Hub">
+   <div class="contSug">
+        <h1>Sugerencias / Contacto</h1>
+        <p>¿Tienes ideas, mejoras, propuestas o alguna duda sobre el sitio? ¡Envíanos tus sugerencias! Nos encantaría escuchar tus opiniones y ayudarte en lo que necesites para hacer AW HUB aún mejor.</p>
+        <div data-fs-success style="color: green; margin-bottom: 10px;"></div>
+        <div data-fs-error style="color: red; margin-bottom: 10px;"></div>
+        <form id="contact-form">
+            <label for="nombre">Nombre <span style="font-size: 0.8em; color: #666;">(Tus datos no se usarán para ningún fin fuera de contactar contigo.)</span></label><br>
+            <input type="text" id="nombre" name="nombre" data-fs-field required><br>
+            <span data-fs-error="nombre" style="color: red; font-size: 0.8em;"></span><br><br>
+            <label for="email">Correo electrónico <span style="font-size: 0.8em; color: #666;">(Tus datos no se usarán para ningún fin fuera de contactar contigo.)</span></label><br>
+            <input type="email" id="email" name="email" data-fs-field required><br>
+            <span data-fs-error="email" style="color: red; font-size: 0.8em;"></span><br><br>
+            <label for="mensaje">Mensaje</label><br>
+            <textarea id="mensaje" name="mensaje" rows="5" data-fs-field required></textarea><br>
+            <span data-fs-error="mensaje" style="color: red; font-size: 0.8em;"></span><br><br>
+            <button type="submit" data-fs-submit-btn>Enviar</button>
+        </form>
+    </div>
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+</BaseLayout>
+<script is:inline>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#contact-form', formId: 'mrejrwqn' });
+</script>
+
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+<style>
+    .contSug{
+        padding: 20px; font-family: 'Poppins', sans-serif; background-color: #fff; color: #000; max-width: 800px; margin: 0 auto;
+    }
+</style>

@@ -1,0 +1,46 @@
+﻿---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Finanzas | AW Hub">
+    <div slot="ticker" class="ticker-wrapper">
+        <script type="module" src="https://widgets.tradingview-widget.com/w/es/tv-ticker-tape.js"></script>
+        <tv-ticker-tape 
+        symbols="FOREXCOM:SPXUSD,FOREXCOM:NSXUSD,FX:EURUSD,BITSTAMP:BTCUSD,BITSTAMP:ETHUSD,CMCMARKETS:GOLD,NASDAQ:TSLA,NASDAQ:MSFT,NASDAQ:AAPL,NASDAQ:META,CAPITALCOM:US100,BBG:EUR,SP:SPX,OANDA:NAS100USD" 
+        show-hover>
+        </tv-ticker-tape>
+    </div>
+
+    <div class="contFinan">
+        <h1 style="text-align: center;">Finanzas</h1>
+        <div class="theme-content">
+            <div class="theme-card">
+                <h2>Inversiones para Principiantes</h2>
+                <p>Consejos prácticos para comenzar a invertir con seguridad, entender el riesgo y construir una base financiera sólida.</p>
+                <a href="../articulos/articulo3.html" style="color: #007bff; text-decoration: none;">Saber más</a>
+            </div>
+        </div>
+    </div>
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+</BaseLayout>
+
+<style>
+.contFinan{
+    padding: 20px; font-family: 'Poppins', sans-serif; background-color: #fff; color: #000;
+}
+
+.ticker-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+tv-ticker-tape {
+    width: 100% !important;
+    display: block;
+}
+
+
+</style>
+
+

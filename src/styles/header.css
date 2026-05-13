@@ -560,6 +560,37 @@ footer {
     color: #94a3b8;
     padding: 32px 24px;
 }
+
+/* Barra superior de temas */
+.footer-top {
+    max-width: 1280px;
+    margin: 0 auto 24px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.footer-top a {
+    color: #cbd5e1;              /* mismo color */
+    text-decoration: none;       /* igual */
+    transition: color 0.2s;      /* igual */
+    font-size: 16px;             /* mismo tamaño visual */
+    letter-spacing: 0.3px;       /* ligero ajuste profesional */
+}
+
+.footer-top a:hover {
+    color: white;
+}
+
+/* Línea superior estilo la imagen */
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15); /* blanco suave */
+    margin-bottom: 32px;
+}
+
 .footer-content {
     max-width: 1280px;
     margin: 0 auto;

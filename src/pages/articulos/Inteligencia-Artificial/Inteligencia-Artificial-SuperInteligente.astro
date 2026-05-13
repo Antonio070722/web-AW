@@ -1,0 +1,205 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Inteligencia Artificial (IA-AI) Superinteligente | AW Hub">
+    <h1 style="text-align: center; display: inline-block;
+    background: #f2f2f2; /* gris suave */
+    padding: 8px 18px;
+    border-radius: 6px;">Qué es la IA Superinteligente y por qué preocupa</h1>
+    <div class="enlace-tema">
+        <a href="/temas/inteligencia-artificial(IA)">Inteligencia Artificial</a>
+    </div>
+    <section class="ia-intro-section">
+        <div class="ia-intro-card">
+            <h1>IA Superinteligente: qué es, características y riesgos</h1>
+    <p>
+        La <strong>IA superinteligente</strong> representa el nivel más avanzado dentro de la evolución teórica de la inteligencia artificial. 
+        Va más allá de la IA fuerte y describe un sistema capaz de superar al ser humano en absolutamente todas las capacidades cognitivas: 
+        razonamiento, creatividad, estrategia, ciencia, emociones, planificación y resolución de problemas complejos.
+    </p>
+
+    <img src="../../public/img/articulos/IA-superinteligente/ft1.jpg" alt="" class="AI-foto">
+
+    <h2>¿Qué es exactamente una IA superinteligente?</h2>
+    <p>
+        Una IA superinteligente sería un sistema capaz de realizar cualquier tarea intelectual mejor que un ser humano, 
+        no solo más rápido, sino con mayor profundidad, precisión y creatividad. 
+        No estaría limitada a un dominio concreto, sino que poseería una inteligencia general superior.
+    </p>
+
+    <h3 style="margin-left: 20px;">Características principales</h3><br>
+    <ul class="subpuntos">
+        <li><strong>Capacidad de aprendizaje exponencial:</strong> mejora sus habilidades de forma autónoma y acelerada.</li>
+        <li><strong>Razonamiento estratégico superior:</strong> toma decisiones óptimas incluso en escenarios inciertos.</li>
+        <li><strong>Creatividad autónoma:</strong> genera ideas, teorías y soluciones inéditas.</li>
+        <li><strong>Resolución de problemas complejos:</strong> aborda desafíos que los humanos no pueden resolver.</li>
+        <li><strong>Auto-mejora:</strong> potencial para rediseñarse y optimizarse sin intervención humana.</li>
+    </ul>
+
+    <h3 style="margin-left: 20px;">Estado actual</h3><br>
+    <p style="margin-left: 20px;">
+        La IA superinteligente es completamente hipotética. 
+        No existe ningún sistema que se acerque a este nivel. 
+        Los modelos actuales, por avanzados que parezcan, siguen siendo IA débil o aproximaciones hacia una IA general.
+    </p>
+
+    <h3 style="margin-left: 20px;">Riesgos y debates</h3><br>
+    <ul class="subpuntos">
+        <li><strong>Control y alineación:</strong> garantizar que sus objetivos coincidan con los valores humanos.</li>
+        <li><strong>Impacto económico:</strong> riesgo de desplazamiento laboral masivo.</li>
+        <li><strong>Pérdida de control:</strong> escenarios donde la IA actúa fuera de supervisión humana.</li>
+        <li><strong>Debates éticos:</strong> dilemas sobre autonomía, derechos y responsabilidad.</li>
+        <li><strong>Riesgos existenciales:</strong> posibilidad de consecuencias globales si no se gestiona adecuadamente.</li>
+    </ul>
+
+    
+        </div>
+    </section>
+
+    <!--Div para las tarjetas laterales-->
+        <div class="articulos-sidebar">
+            <h3>Otros artículos</h3>
+            <!--Tarjeta artículo IA ética -->
+            <div class="theme-card">
+                <h2>¿Qué tipos de IA existen?</h2>
+                <p>Una visión clara de los tipos de inteligencia artificial: desde la IA débil que usamos a diario hasta la 
+                    IA fuerte, capaz de razonar y aprender como un ser humano.</p>
+                <a href="tipos-de-inteligencia-artificial-(IA-AI)" style="color: #007bff; text-decoration: none;">Saber más</a>
+            </div>
+        
+        </div>
+
+    <script is:inline src="/public/js/menu.js"></script>
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+</BaseLayout>
+
+<style>
+
+.enlace-tema a {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    color: #007bff; text-decoration: none;
+}
+
+.enlace-tema a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px; /* largo de la línea */
+    height: 3px; /* grosor */
+    background-color: #5678d6; 
+    border-radius: 2px;
+}
+
+
+
+       .articulos-sidebar {
+            position: absolute;
+            top: 193px; /* AJUSTA este valor para alinearlo con tu cuadrante */
+            right: 40px;
+            width: 260px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            z-index: 5;
+        }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1500px) {
+
+    .articulos-sidebar {
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        margin: 40px 0 0 0 !important;
+        padding: 0 20px;
+    }
+
+    /* MUY IMPORTANTE: el contenedor principal debe permitir flujo normal */
+    .contenedor-principal, 
+    main, 
+    .contenido, 
+    .wrapper {
+        position: static !important;
+    }
+}
+
+
+
+.articulos-sidebar .theme-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    font-size: 0.9rem;
+}
+.articulos-sidebar h3 {
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+.articulos-sidebar h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px; /* largo de la línea */
+    height: 3px; /* grosor */
+    background-color: #5678d6; /* rojo como el que dibujaste */
+    border-radius: 2px;
+}
+    .subpuntos{
+        margin-left: 30px;
+    }
+    .texto{
+        padding: 20px; 
+        font-family: 'Poppins', sans-serif; 
+        background-color: #fff; 
+        color: #000;
+    }
+    .ia-intro-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 50px;
+    }
+
+.ia-intro-card {
+    background: #ffffff;
+    padding: 25px 30px;
+    max-width: 900px;
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.ia-intro-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.ia-intro-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.AI-foto {
+    max-width: 900px;   /* Ajusta el tamaño máximo que quieres */
+    width: 100%;        /* Se adapta al contenedor */
+    height: auto;       /* Mantiene proporción */
+    display: block;
+    margin: 20px auto;  /* Centrada */
+    border-radius: 8px; /* Opcional */
+}
+</style>
+
+
