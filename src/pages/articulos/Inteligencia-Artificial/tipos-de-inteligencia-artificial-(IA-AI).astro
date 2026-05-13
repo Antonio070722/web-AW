@@ -1,0 +1,212 @@
+﻿---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Tipos de Inteligencia Artificial (IA - AI) | AW Hub">
+    <h1 style="text-align: center; display: inline-block;
+    background: #f2f2f2; /* gris suave */
+    padding: 8px 18px;
+    border-radius: 6px;">Tipos de Inteligencia Artificial (IA)</h1>
+    <div class="enlace-tema">
+        <a href="../temas/inteligencia-artificial(IA)">Inteligencia Artificial</a>
+    </div>
+    <section class="ia-intro-section">
+        <div class="ia-intro-card">
+            <h1>IA débil vs IA fuerte: diferencias y ejemplos</h1>
+            <p>
+                La distinción entre IA débil e IA fuerte es uno de los pilares fundamentales 
+                para entender cómo funciona la inteligencia artificial hoy y hacia dónde podría evolucionar. 
+                Aunque ambos conceptos se mencionan con frecuencia, 
+                representan niveles de capacidad radicalmente distintos dentro del desarrollo de sistemas inteligentes.
+            </p>
+
+            <img src="../../public/img/articulos/Tipos-AI/ft1.jpg" alt="Foto1-tipos-AI" class="AI-foto">
+            
+            <h2>¿Qué es la IA Débil (Narrow AI)?</h2>
+            <p>La IA débil, también llamada IA estrecha, es el tipo de inteligencia artificial que domina el mundo actual. Está diseñada para realizar tareas específicas con gran precisión, pero sin comprensión real, sin conciencia y sin capacidad de transferir sus habilidades a otros contextos.</p>            
+            <h3 style="margin-left: 20px;">Características principales</h3><br>
+            <ul class="subpuntos">
+                <li><strong>Especialización absoluta:</strong> solo funciona dentro del dominio para el que fue entrenada.</li>
+                <li><strong>Comportamiento predecible:</strong> responde según patrones aprendidos; si la sacas de su ámbito, falla.</li>
+                <li><strong>Dependencia de datos:</strong> necesita grandes volúmenes de datos etiquetados o recompensas claras.</li>
+                <li><strong>Sin entendimiento semántico:</strong> procesa patrones, no significados.</li>
+            </ul>
+            
+            <h3 style="margin-left: 20px;">Ejemplos de IA débil</h3><br>
+            <ul class="subpuntos">
+                <li><strong>Asistentes de voz</strong> como Siri, Alexa o Google Assistant. Pueden responder preguntas y ejecutar comandos, pero no comprenden el lenguaje como un humano. </li>
+                <li><strong>Sistemas de recomendación</strong> (Netflix, Spotify, Amazon).</li>
+                <li><strong>Reconocimiento facial</strong> en redes sociales o sistemas de seguridad.</li>
+                <li><strong>Chatbots de atención al cliente</strong> que siguen guiones o plantillas.</li>
+                <li><strong>Modelos de detección de fraude</strong>, clasificación de imágenes o traducción automática. </li>
+            </ul>
+            <p>En resumen: la IA débil es eficiente, rápida y útil, pero no “piensa”. Solo ejecuta lo que fue diseñada para hacer.</p>
+
+            <h2>¿Qué es la IA Fuerte (General AI)?</h2>
+            <p>La IA fuerte es un concepto mucho más ambicioso. Se refiere a una inteligencia artificial capaz de razonar, comprender, aprender y adaptarse con la misma flexibilidad que un ser humano. Es decir, una inteligencia general, no limitada a una sola tarea.</p>
+            <h3 style="margin-left: 20px;">Características principales</h3><br>
+            <ul class="subpuntos">
+                <li><strong>Razonamiento abstracto:</strong> puede resolver problemas nuevos sin entrenamiento específico.</li>
+                <li><strong>Transferencia de conocimiento: </strong>aplica lo aprendido en un contexto a otros distintos.</li>
+                <li><strong>Comprensión semántica real:</strong> interpreta significados, no solo patrones.</li>
+                <li><strong>Autonomía cognitiva: </strong> podría generar metas propias y planificar a largo plazo. </li>
+            </ul>
+
+            <h3 style="margin-left: 20px;">Estado actual</h3><br>
+            <p style="margin-left: 20px;">Hoy en día, no existe una IA fuerte real. Los modelos actuales, por avanzados que parezcan, no poseen conciencia, comprensión profunda ni autonomía total. La IA fuerte sigue siendo teórica y un objetivo de investigación a largo plazo.</p>
+        
+            <h3 style="margin-left: 20px;">Ejemplos de IA fuerte (hipotéticos)</h3><br>
+            <ul class="subpuntos">
+                <li>Una IA capaz de aprender cualquier disciplina como lo haría un humano.</li>
+                <li>Un sistema que pueda mantener conversaciones con comprensión real del contexto.</li>
+                <li>Máquinas con sentido común, creatividad autónoma y capacidad de razonamiento general.</li>
+            </ul>
+
+        </div>
+    </section>
+
+    <!--Div para las tarjetas laterales-->
+        <div class="articulos-sidebar">
+            <h3>Otros artículos</h3>
+            <!--Tarjeta artículo IA ética -->
+            <div class="theme-card">
+                <h2>📱 Evolución de los Smartphones</h2>
+                <p>Desde el DynaTAC hasta los plegables, cómo han cambiado nuestra vida.</p>
+                <a href="../articulos/tipos-de-inteligencia-artificial-(IA-AI).html" style="color: #007bff; text-decoration: none;">Saber más</a>
+            </div>
+        
+        </div>
+
+    <script is:inline src="/public/js/menu.js"></script>
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+</BaseLayout>
+
+<style>
+
+.enlace-tema a {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    color: #007bff; text-decoration: none;
+}
+
+.enlace-tema a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px; /* largo de la línea */
+    height: 3px; /* grosor */
+    background-color: #5678d6; 
+    border-radius: 2px;
+}
+
+
+
+       .articulos-sidebar {
+            position: absolute;
+            top: 193px; /* AJUSTA este valor para alinearlo con tu cuadrante */
+            right: 40px;
+            width: 260px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            z-index: 5;
+        }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1500px) {
+
+    .articulos-sidebar {
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        margin: 40px 0 0 0 !important;
+        padding: 0 20px;
+    }
+
+    /* MUY IMPORTANTE: el contenedor principal debe permitir flujo normal */
+    .contenedor-principal, 
+    main, 
+    .contenido, 
+    .wrapper {
+        position: static !important;
+    }
+}
+
+
+
+.articulos-sidebar .theme-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    font-size: 0.9rem;
+}
+.articulos-sidebar h3 {
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+.articulos-sidebar h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px; /* largo de la línea */
+    height: 3px; /* grosor */
+    background-color: #5678d6; /* rojo como el que dibujaste */
+    border-radius: 2px;
+}
+    .subpuntos{
+        margin-left: 30px;
+    }
+    .texto{
+        padding: 20px; 
+        font-family: 'Poppins', sans-serif; 
+        background-color: #fff; 
+        color: #000;
+    }
+    .ia-intro-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 50px;
+    }
+
+.ia-intro-card {
+    background: #ffffff;
+    padding: 25px 30px;
+    max-width: 900px;
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.ia-intro-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.ia-intro-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.AI-foto {
+    max-width: 900px;   /* Ajusta el tamaño máximo que quieres */
+    width: 100%;        /* Se adapta al contenedor */
+    height: auto;       /* Mantiene proporción */
+    display: block;
+    margin: 20px auto;  /* Centrada */
+    border-radius: 8px; /* Opcional */
+}
+</style>
+
+
