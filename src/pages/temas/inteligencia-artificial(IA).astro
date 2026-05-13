@@ -7,6 +7,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     background: #f2f2f2; /* gris suave */
     padding: 8px 18px;
     border-radius: 6px;">Inteligencia Artificial</h1>
+            <div class="enlace-temas">
+                <a href="/temas/todosTemas">Todos los temas</a>
+            </div>
         
         <section class="ia-intro-section">
     <div class="ia-intro-card">
@@ -140,6 +143,25 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 </BaseLayout>
 
 <style>
+
+    .enlace-temas a {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    color: #007bff; text-decoration: none;
+}
+
+.enlace-temas a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px; /* largo de la línea */
+    height: 3px; /* grosor */
+    background-color: #5678d6; 
+    border-radius: 2px;
+}
+
     .articulos-sidebar {
     position: absolute;
     top: 193px; /* AJUSTA este valor para alinearlo con tu cuadrante */

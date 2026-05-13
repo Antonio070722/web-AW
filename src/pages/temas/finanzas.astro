@@ -12,9 +12,17 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     </div>
 
     <div class="contFinan">
-        <h1 style="text-align: center;">Finanzas</h1>
+        <h1 style="text-align: center; display: inline-block;
+    background: #f2f2f2; /* gris suave */
+    padding: 8px 18px;
+    border-radius: 6px; margin-top: -15px;">Finanzas</h1>
+            <div class="enlace-temas">
+                <a href="/temas/todosTemas">Todos los temas</a>
+            </div>
+
+
         <div class="theme-content">
-            <div class="theme-card">
+            <div class="theme-card" style="margin-top: 30px;">
                 <h2>Inversiones para Principiantes</h2>
                 <p>Consejos prácticos para comenzar a invertir con seguridad, entender el riesgo y construir una base financiera sólida.</p>
                 <a href="../articulos/articulo3.html" style="color: #007bff; text-decoration: none;">Saber más</a>
@@ -25,6 +33,24 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 </BaseLayout>
 
 <style>
+    .enlace-temas a {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    color: #007bff; text-decoration: none;
+}
+
+.enlace-temas a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px; /* largo de la línea */
+    height: 3px; /* grosor */
+    background-color: #5678d6; 
+    border-radius: 2px;
+}
+
 .contFinan{
     padding: 20px; font-family: 'Poppins', sans-serif; background-color: #fff; color: #000;
 }

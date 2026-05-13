@@ -3,18 +3,39 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Programación | AW Hub">
-    <div class="theme-page">
-        <h1 style="text-align: center;">Programación</h1>
-        <div class="theme-content">
+        <h1 style="text-align: center; display: inline-block;
+    background: #f2f2f2; /* gris suave */
+    padding: 8px 18px;
+    border-radius: 6px;">Programación</h1>
+        <div class="enlace-temas">
+            <a href="/temas/todosTemas">Todos los temas</a>
+        </div>
+
+        <div class="theme-content" style="margin-top: 30px;">
             <div class="theme-card">
                 <h2>No hay artículos disponibles</h2>
                 <p>Próximamente publicaremos artículos sobre Programación.</p>
             </div>
         </div>
-    </div>
     <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
 </BaseLayout>
 
 <style>
+    .enlace-temas a {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    color: #007bff; text-decoration: none;
+}
 
+.enlace-temas a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px; /* largo de la línea */
+    height: 3px; /* grosor */
+    background-color: #5678d6; 
+    border-radius: 2px;
+}
 </style>
