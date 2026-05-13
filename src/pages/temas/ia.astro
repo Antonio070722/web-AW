@@ -2,7 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="IA - AW Hub">
+<BaseLayout title="Inteligencia Artificial (IA - AI) | AW Hub">
     <div class="texto"></div>
         <h1 style="text-align: center; display: inline-block;
     background: #f2f2f2; /* gris suave */
@@ -113,8 +113,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
          </ul>
 
 
-    </div>
+        </div>
         </section>
+        </div>
         <!--Div para las tarjetas laterales-->
         <div class="articulos-sidebar">
             <h3>Artículos sobre la IA</h3>
@@ -125,9 +126,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                     IA fuerte, capaz de razonar y aprender como un ser humano.</p>
                 <a href="../articulos/tipos-de-inteligencia-artificial.html" style="color: #007bff; text-decoration: none;">Saber más</a>
             </div>
-            
+        
         </div>
-    </div>
+    
 
 <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
 </BaseLayout>
@@ -142,30 +143,31 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     flex-direction: column;
     gap: 20px;
     z-index: 5;
-    
-    @media (max-width: 900px) {
+}
 
-        .articulos-sidebar {
-            position: static !important;
-            top: auto !important;
-            right: auto !important;
-            left: auto !important;
-            width: 100% !important;
-            margin: 40px 0 0 0 !important;
-            padding: 0 20px;
-        }
+/* --- RESPONSIVE --- */
+@media (max-width: 1500px) {
 
-        /* MUY IMPORTANTE: el contenedor principal debe permitir flujo normal */
-        .contenedor-principal, 
-        main, 
-        .contenido, 
-        .wrapper {
-            position: static !important;
-        }
+    .articulos-sidebar {
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        margin: 40px 0 0 0 !important;
+        padding: 0 20px;
     }
 
-
+    /* MUY IMPORTANTE: el contenedor principal debe permitir flujo normal */
+    .contenedor-principal, 
+    main, 
+    .contenido, 
+    .wrapper {
+        position: static !important;
+    }
 }
+
+
 
 .articulos-sidebar .theme-card {
     background: #fff;

@@ -175,16 +175,19 @@ nav a:hover, nav a.active {
 .hero {
     padding: 60px 0 40px;
     background: linear-gradient(135deg, #f9faff 0%, #ffffff 100%);
+
 }
+
 .hero-grid {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 32px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1.2fr;
+    grid-template-columns: 1fr 1fr;
     gap: 32px;
     align-items: center;
 }
+
 .hero-text h1 {
     font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 700;
@@ -231,13 +234,14 @@ nav a:hover, nav a.active {
     transform: translateY(-2px);
 }
 .hero-image img {
-
     max-width: 500px;
     display: block;
     margin: 0 auto;
     height: auto;
     object-fit: cover;
 }
+
+
 .hero-latest .latest-panel {
     background: var(--primary);
     border-radius: var(--radius-lg);
@@ -601,6 +605,7 @@ footer {
     visibility: hidden;
     transition: all 0.2s;
     box-shadow: var(--shadow-md);
+    z-index: 9999; /* por encima de todo */
 }
 .back-to-top.show {
     opacity: 1;
