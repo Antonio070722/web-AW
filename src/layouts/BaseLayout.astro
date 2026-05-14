@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import "../styles/header.css";
 
 const { title } = Astro.props;
 ---
@@ -22,7 +23,8 @@ const { title } = Astro.props;
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://tudominio.com/index.html">
     <!--Enlace al css -->
-    <link rel="stylesheet" href="/src/styles/header.css">
+    <!--<link rel="stylesheet" href="/src/styles/header.css"> -->
+
     <link rel="icon" type="image/png" href="/img/logo.png">
     <!-- Preconexión a Google Fonts para mejorar velocidad -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
