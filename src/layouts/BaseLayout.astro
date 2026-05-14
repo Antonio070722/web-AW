@@ -7,6 +7,10 @@ const { title } = Astro.props;
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!--COSAS COOKIES -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+        <script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <!--HASTA AQUÍ -->
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -42,6 +46,29 @@ const { title } = Astro.props;
 
     <Footer />
 
-   
+   <script>
+  window.addEventListener("load", function(){
+    setTimeout(() => {
+      window.cookieconsent.initialise({
+        palette: {
+          popup: { background: "#000000", text: "#ffffff" },
+          button: { background: "#007bff", text: "#ffffff" }
+        },
+        theme: "classic",
+        layout: "popup",          // 👈 CLAVE: convierte la barra en modal
+        type: "opt-in",
+        content: {
+          message: "Usamos cookies para mejorar tu experiencia, analizar el uso de la web y mostrar contenido relevante. Estas cookies nos ayudan a entender qué funciona mejor y a optimizar el sitio sin recopilar información sensible. No compartimos tus datos con terceros para fines comerciales externos ni los utilizamos para nada que no esté relacionado con el funcionamiento y la mejora de esta página",
+          dismiss: "Rechazar",
+          allow: "Aceptar",
+          link: "Más información",
+          href: "/politica-de-cookies.html"
+        }
+      });
+    }, 2000);
+  });
+</script>
+
+
 </body>
 </html>

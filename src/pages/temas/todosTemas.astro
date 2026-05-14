@@ -8,29 +8,69 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     background: #f2f2f2; /* gris suave */
     padding: 8px 18px;
     border-radius: 6px; margin-top: -15px;">Todos los Temas</h1>
+            <div class="enlace-temas">
+                <a href="/">Inicio</a>
+            </div>
+
         <div class="theme-content" style="margin-top: 30px;">
             <div class="theme-card">
                 <h2>Tecnología</h2>
-                <p>Explora las últimas innovaciones tecnológicas que están transformando nuestro mundo, desde gadgets hasta avances en software.</p>
+                <p>Tendencias, inventos y avances que están transformando la forma en que vivimos y trabajamos.</p>
                 <a href="tecnologia.html" style="color: #007bff; text-decoration: none;">Saber más</a>
             </div>
+
             <div class="theme-card">
                 <h2>IA</h2>
-                <p>Descubre el poder de la inteligencia artificial y cómo está revolucionando industrias enteras con aprendizaje automático y algoritmos avanzados.</p>
-                <a href="ia.html" style="color: #007bff; text-decoration: none;">Saber más</a>
+                <p>Conoce cómo la inteligencia artificial está revolucionando procesos, creando nuevas oportunidades y transformando sectores completos.</p>
+                <a href="inteligencia-artificial(IA)" style="color: #007bff; text-decoration: none;">Saber más</a>
             </div>
+
             <div class="theme-card">
                 <h2>Finanzas</h2>
-                <p>Aprende sobre estrategias financieras, inversiones y tendencias económicas que te ayudarán a tomar decisiones inteligentes.</p>
+                <p>Noticias financieras explicadas sin jergas, con contexto y ejemplos claros para que entiendas cómo te afectan en el día a día.</p>
                 <a href="finanzas.html" style="color: #007bff; text-decoration: none;">Saber más</a>
             </div>
             <div class="theme-card">
                 <h2>Programación</h2>
-                <p>Aprende a escribir código, crear aplicaciones y mejorar tus habilidades de desarrollo con ejemplos prácticos.</p>
+                <p>Tutoriales, ejemplos prácticos y novedades del ecosistema de desarrollo en múltiples lenguajes para que avances como programador y sigas las tendencias del sector.</p>
                 <a href="../temas/Progr" style="color: #007bff; text-decoration: none;">Saber más</a>
             </div>
         </div>
     </div>
+
+    <div class="hero-latest">
+                    <div class="latest-panel">
+                        <h2>📌 Últimos artículos</h2>
+                        
+                        <div class="article-card">
+                            <h3>Neuralink: el primer chip cerebral funcional</h3>
+                            <p>Neuralink, la empresa de Elon Musk, ha logrado implantar un chip capaz de interpretar señales del cerebro y convertirlas en acciones reales.</p>
+                            <a href="../articulos/Tecnologia/neuralink-implanta-primer-chip-cerebral" class="article-link">Leer más →</a>
+                        </div>
+
+                        <div class="article-card">
+                            <h3>Qué es la IA Superinteligente y por qué preocupa</h3>
+                            <p>La IA superinteligente: el nivel de inteligencia artificial que podría superar al ser humano.</p>
+                            <a href="../articulos/Inteligencia-Artificial/Inteligencia-Artificial-SuperInteligente" class="article-link">Leer más →</a>
+                        </div>
+
+                        <div class="article-card">
+                            <h3>Baterías de sodio: la alternativa barata al litio que puede revolucionar la energía</h3>
+                            <p>Una nueva generación de baterías más baratas, seguras y ecológicas que podría transformar el futuro de la energía.</p>
+                            <a href="../articulos/Tecnologia/baterias-de-sodio-alternativas-baratas-al-litio" class="article-link">Leer más →</a>
+                        </div>
+
+                        <div class="article-card">
+                            <h3>¿Qué tipos de IA existen?</h3>
+                            <p>Una visión clara de los tipos de inteligencia artificial: desde la IA débil que usamos a diario hasta la 
+                    IA fuerte, capaz de razonar y aprender como un ser humano.</p>
+                            <a href="../articulos/Inteligencia-Artificial/tipos-de-inteligencia-artificial-(IA-AI)" class="article-link">Leer más →</a>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+
     <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
 </BaseLayout>
 <style>
@@ -39,4 +79,22 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         background-color: #fff; 
     
     }
+
+        .enlace-temas a {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    color: #007bff; text-decoration: none;
+}
+
+.enlace-temas a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px; /* largo de la línea */
+    height: 3px; /* grosor */
+    background-color: #5678d6; 
+    border-radius: 2px;
+}
 </style>

@@ -335,6 +335,7 @@ nav a:hover, nav a.active {
 .que-track::-webkit-scrollbar {
     display: none;
 }
+
 .que-card {
     flex: 0 0 260px;
     background: white;
@@ -356,6 +357,13 @@ nav a:hover, nav a.active {
     color: #475569;
     margin-bottom: 20px;
 }
+
+.que-track::after {
+    content: "";
+    flex: 0 0 20px; /* espacio extra al final */
+}
+
+
 .card-link {
     color: var(--accent);
     font-weight: 600;
@@ -904,5 +912,97 @@ main {
         transform: translateY(0);
     }
 }
+html {
+  overflow-x: hidden !important;
+}
 
+/*ESTILOS PARA EL BANNER DE COOKIES*/
+/* Centrar el banner como modal */
+/* ESTILOS PARA EL BANNER DE COOKIES (MODAL CENTRADO) */
+.cc-window.cc-floating {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  bottom: auto !important;
+  transform: translate(-50%, -50%) !important;
+  max-width: 420px !important;
+  width: 90% !important;
+  padding: 24px !important;
+  border-radius: 16px !important;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4) !important;
+  z-index: 999999 !important;
+  background: #000000 !important; /* fondo consistente */
+  color: #ffffff !important;
+  font-family: sans-serif !important;
+  opacity: 0;
+  animation: fadeDown 0.5s ease forwards;
+}
 
+/* Animación de entrada */
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Botones en columna (aceptar arriba, rechazar abajo) */
+.cc-compliance {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  margin-top: 20px !important;
+}
+
+/* Botón Aceptar (grande y arriba) */
+.cc-allow {
+  order: 1 !important;
+  background: #007bff !important;
+  color: #ffffff !important;
+  font-size: 1.1rem !important;
+  font-weight: bold !important;
+  padding: 12px 16px !important;
+  border-radius: 40px !important;
+  text-align: center !important;
+  transition: 0.2s ease !important;
+}
+
+.cc-allow:hover {
+  background: #0056b3 !important;
+  transform: scale(1.02) !important;
+}
+
+/* Botón Rechazar (más pequeño y abajo) */
+.cc-dismiss {
+  order: 2 !important;
+  background: #444444 !important;
+  color: #f0f0f0 !important;
+  font-size: 0.85rem !important;
+  padding: 8px 12px !important;
+  border-radius: 40px !important;
+  text-align: center !important;
+  opacity: 0.9 !important;
+  transition: 0.2s ease !important;
+}
+
+.cc-dismiss:hover {
+  background: #555555 !important;
+  opacity: 1 !important;
+}
+
+/* Enlace "Más información" */
+.cc-link {
+  display: inline-block !important;
+  margin-top: 15px !important;
+  color: #cccccc !important;
+  font-size: 0.8rem !important;
+  text-decoration: underline !important;
+}
+
+.cc-link:hover {
+  color: #ffffff !important;
+}
