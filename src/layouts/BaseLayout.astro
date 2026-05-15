@@ -29,7 +29,7 @@ const { title } = Astro.props;
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <!-- Google Analytics + Consent Mode v2 -->
-    <script src="https://www.googletagmanager.com/gtag/js?id=G-DCEVDE89VJ"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DCEVDE89VJ"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -59,57 +59,45 @@ const { title } = Astro.props;
 
     <!-- Inicialización única del banner + conexión con Consent Mode -->
     <script is:inline>
-  // Función para actualizar consentimiento de forma segura
-  function updateConsent(status) {
-    if (typeof gtag === 'function') {
-      gtag('consent', 'update', {
-        ad_storage: status ? 'granted' : 'denied',
-        analytics_storage: status ? 'granted' : 'denied',
-        ad_user_data: status ? 'granted' : 'denied',
-        ad_personalization: status ? 'granted' : 'denied'
-      });
-      console.log('Consentimiento actualizado a:', status ? 'granted' : 'denied');
-    } else {
-      console.warn('gtag no disponible, reintentando en 500ms');
-      setTimeout(() => updateConsent(status), 500);
-    }
-  }
+      window.addEventListener("load", function() {
+        window.cookieconsent.initialise({
+          palette: {
+            popup: { background: "#000000", text: "#ffffff" },
+            button: { background: "#007bff", text: "#ffffff" }
+          },
+          theme: "classic",
+          layout: "popup",
+          type: "opt-in",
+          content: {
+            message: "Usamos cookies para mejorar tu experiencia, analizar el uso de la web y mostrar contenido relevante. Estas cookies nos ayudan a entender qué funciona mejor y a optimizar el sitio sin recopilar información sensible. No compartimos tus datos con terceros para fines comerciales externos ni los utilizamos para nada que no esté relacionado con el funcionamiento y la mejora de esta página.",
+            dismiss: "Rechazar",
+            allow: "Aceptar",
+            link: "Más información",
+            href: "/politica-de-cookies.html"
+          },
 
-  window.addEventListener("load", function() {
-    // Forzar eliminación de cookie anterior para pruebas (borra esto en producción)
-    document.cookie = "cookieconsent_status=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    
-    window.cookieconsent.initialise({
-      palette: {
-        popup: { background: "#000000", text: "#ffffff" },
-        button: { background: "#007bff", text: "#ffffff" }
-      },
-      theme: "classic",
-      layout: "popup",
-      type: "opt-in",
-      content: {
-        message: "Usamos cookies para mejorar tu experiencia, analizar el uso de la web y mostrar contenido relevante. Estas cookies nos ayudan a entender qué funciona mejor y a optimizar el sitio sin recopilar información sensible. No compartimos tus datos con terceros para fines comerciales externos ni los utilizamos para nada que no esté relacionado con el funcionamiento y la mejora de esta página.",
-        dismiss: "Rechazar",
-        allow: "Aceptar",
-        link: "Más información",
-        href: "/politica-de-cookies.html"
-      },
-      onAccept: function() {
-        updateConsent(true);
-        // Opcional: forzar reenvío de página_view
-        if (typeof gtag === 'function') {
-          gtag('event', 'page_view', {
-            page_title: document.title,
-            page_location: window.location.href
-          });
-        }
-      },
-      onDecline: function() {
-        updateConsent(false);
-      }
-    });
-  });
-</script>
+          // Cuando el usuario acepta
+          onAccept: function() {
+            gtag('consent', 'update', {
+              ad_storage: 'granted',
+              analytics_storage: 'granted',
+              ad_user_data: 'granted',
+              ad_personalization: 'granted'
+            });
+          },
+
+          // Cuando rechaza
+          onDecline: function() {
+            gtag('consent', 'update', {
+              ad_storage: 'denied',
+              analytics_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied'
+            });
+          }
+        });
+      });
+    </script>
 
     <!-- Scripts propios -->
     <script is:inline src="/js/menu.js" defer></script>
