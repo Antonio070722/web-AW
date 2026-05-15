@@ -8,38 +8,47 @@ const { title } = Astro.props;
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!--COSAS COOKIES -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-        <script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-    <!--HASTA AQUÍ -->
-    
+    <!-- CookieConsent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>{title ? `${title} | AW HUB` : 'AW HUB'}</title>
-    <meta name="description"
-        content="AW HUB es tu espacio para aprender tecnología, inteligencia artificial, finanzas y programación de forma clara y práctica.">
+    <meta name="description" content="AW HUB es tu espacio para aprender tecnología, inteligencia artificial, finanzas y programación de forma clara y práctica.">
     <meta name="keywords" content="tecnología, inteligencia artificial, finanzas, programación, educación digital">
     <meta name="author" content="AW HUB">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://tudominio.com/index.html">
-    <!--Enlace al css -->
-    <!--<link rel="stylesheet" href="/src/styles/header.css"> -->
 
     <link rel="icon" type="image/png" href="/img/logo.png">
-    <!-- Preconexión a Google Fonts para mejorar velocidad -->
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+    <!-- Google Analytics + Consent Mode v2 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DCEVDE89VJ"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      // Modo por defecto: NO medir hasta que el usuario acepte
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+
+      gtag('js', new Date());
+      gtag('config', 'G-DCEVDE89VJ');
+    </script>
 </head>
-   <!-- Tus scripts -->
-    <script is:inline src="/js/menu.js" defer></script>
-    <script src="/js/carrusel.js" defer></script>
+
 <body>
     <Header />
-
     <slot name="ticker"></slot>
 
     <main class="page-transition">
@@ -48,41 +57,51 @@ const { title } = Astro.props;
 
     <Footer />
 
-   <script>
-  window.addEventListener("load", function(){
-    setTimeout(() => {
-      window.cookieconsent.initialise({
-        palette: {
-          popup: { background: "#000000", text: "#ffffff" },
-          button: { background: "#007bff", text: "#ffffff" }
-        },
-        theme: "classic",
-        layout: "popup",
-        type: "opt-in",
-        content: {
-          message: "Usamos cookies para mejorar tu experiencia, analizar el uso de la web y mostrar contenido relevante. Estas cookies nos ayudan a entender qué funciona mejor y a optimizar el sitio sin recopilar información sensible. No compartimos tus datos con terceros para fines comerciales externos ni los utilizamos para nada que no esté relacionado con el funcionamiento y la mejora de esta página",
-          dismiss: "Rechazar",
-          allow: "Aceptar",
-          link: "Más información",
-          href: "/politica-de-cookies.html"
-        },
-        onAccept: function() {
-          // Cierra el banner manualmente
-          var banner = document.querySelector('.cc-window');
-          if (banner) banner.style.display = 'none';
-          // Aquí puedes activar scripts de analytics si quieres
-        },
-        onDecline: function() {
-          // Cierra el banner y guarda el rechazo
-          var banner = document.querySelector('.cc-window');
-          if (banner) banner.style.display = 'none';
-          document.cookie = "cookieconsent_status=deny; path=/; max-age=31536000";
-        }
-      });
-    }, 2000);
-  });
-</script>
+    <!-- Inicialización única del banner + conexión con Consent Mode -->
+    <script is:inline>
+      window.addEventListener("load", function() {
+        window.cookieconsent.initialise({
+          palette: {
+            popup: { background: "#000000", text: "#ffffff" },
+            button: { background: "#007bff", text: "#ffffff" }
+          },
+          theme: "classic",
+          layout: "popup",
+          type: "opt-in",
+          content: {
+            message: "Usamos cookies para mejorar tu experiencia, analizar el uso de la web y mostrar contenido relevante.",
+            dismiss: "Rechazar",
+            allow: "Aceptar",
+            link: "Más información",
+            href: "/politica-de-cookies.html"
+          },
 
+          // Cuando el usuario acepta
+          onAccept: function() {
+            gtag('consent', 'update', {
+              ad_storage: 'granted',
+              analytics_storage: 'granted',
+              ad_user_data: 'granted',
+              ad_personalization: 'granted'
+            });
+          },
+
+          // Cuando rechaza
+          onDecline: function() {
+            gtag('consent', 'update', {
+              ad_storage: 'denied',
+              analytics_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied'
+            });
+          }
+        });
+      });
+    </script>
+
+    <!-- Scripts propios -->
+    <script is:inline src="/js/menu.js" defer></script>
+    <script src="/js/carrusel.js" defer></script>
 
 </body>
 </html>
