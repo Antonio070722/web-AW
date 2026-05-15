@@ -919,7 +919,7 @@ html {
 /*ESTILOS PARA EL BANNER DE COOKIES*/
 /* Centrar el banner como modal */
 /* ESTILOS PARA EL BANNER DE COOKIES (MODAL CENTRADO) */
-.cc-window.cc-floating {
+.cc-window.cc-classic.cc-popup {
   position: fixed !important;
   top: 50% !important;
   left: 50% !important;
@@ -931,14 +931,12 @@ html {
   border-radius: 16px !important;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4) !important;
   z-index: 999999 !important;
-  background: #000000 !important; /* fondo consistente */
+  background: #000000 !important;
   color: #ffffff !important;
   font-family: sans-serif !important;
-  opacity: 0;
   animation: fadeDown 0.5s ease forwards;
 }
 
-/* Animación de entrada */
 @keyframes fadeDown {
   0% {
     opacity: 0;
@@ -950,7 +948,6 @@ html {
   }
 }
 
-/* Botones en columna (aceptar arriba, rechazar abajo) */
 .cc-compliance {
   display: flex !important;
   flex-direction: column !important;
@@ -958,7 +955,6 @@ html {
   margin-top: 20px !important;
 }
 
-/* Botón Aceptar (grande y arriba) */
 .cc-allow {
   order: 1 !important;
   background: #007bff !important;
@@ -976,7 +972,6 @@ html {
   transform: scale(1.02) !important;
 }
 
-/* Botón Rechazar (más pequeño y abajo) */
 .cc-dismiss {
   order: 2 !important;
   background: #444444 !important;
@@ -987,6 +982,7 @@ html {
   text-align: center !important;
   opacity: 0.9 !important;
   transition: 0.2s ease !important;
+  cursor: pointer !important;
 }
 
 .cc-dismiss:hover {
@@ -994,7 +990,6 @@ html {
   opacity: 1 !important;
 }
 
-/* Enlace "Más información" */
 .cc-link {
   display: inline-block !important;
   margin-top: 15px !important;
@@ -1007,3 +1002,14 @@ html {
   color: #ffffff !important;
 }
 
+/* Ajustes táctiles para móvil */
+@media (max-width: 768px) {
+  .cc-window.cc-classic.cc-popup {
+    width: 85% !important;
+    padding: 20px !important;
+  }
+  .cc-compliance button {
+    min-height: 48px !important;
+    font-size: 1rem !important;
+  }
+}

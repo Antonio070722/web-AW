@@ -8,7 +8,7 @@ const pages = {
         {
             title: "Qué es la IA Superinteligente y por qué preocupa",
             desc: "La IA superinteligente: el nivel de inteligencia artificial que podría superar al ser humano.",
-            url: "../articulos/Inteligencia-Artificial/Inteligencia-Artificial-SuperInteligente"
+            url: "../articulos/inteligencia-artificial/inteligencia-artificial-superInteligente"
         }
     ],
     2: [
@@ -20,7 +20,7 @@ const pages = {
         {
             title: "¿Qué tipos de IA existen?",
             desc: "Una visión clara de los tipos de inteligencia artificial.",
-            url: "../articulos/Inteligencia-Artificial/tipos-de-inteligencia-artificial-(IA-AI)"
+            url: "../articulos/inteligencia-artificial/tipos-de-inteligencia-artificial-(ia-ai)"
         }
     ]
 };
