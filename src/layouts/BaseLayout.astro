@@ -8,10 +8,6 @@ const { title } = Astro.props;
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- CookieConsent -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-    <script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>{title ? `${title} | AW HUB` : 'AW HUB'}</title>
@@ -28,23 +24,28 @@ const { title } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Google Analytics + Consent Mode v2 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DCEVDE89VJ"></script>
+    <!-- Google Analytics + Consent Mode v2 (carga síncrona) -->
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-DCEVDE89VJ"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-
-      // Modo por defecto: NO medir hasta que el usuario acepte
+      function gtag(){ dataLayer.push(arguments); }
+      
+      // Configuración inicial: todo denegado
       gtag('consent', 'default', {
-        ad_storage: 'denied',
-        analytics_storage: 'denied',
-        ad_user_data: 'denied',
-        ad_personalization: 'denied'
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
       });
-
+      
       gtag('js', new Date());
-      gtag('config', 'G-DCEVDE89VJ');
+      gtag('config', 'G-DCEVDE89VJ', {
+        'send_page_view': true
+      });
     </script>
+
+    <!-- CookieConsent CSS (se carga sin defer para evitar bloqueos) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
@@ -57,51 +58,78 @@ const { title } = Astro.props;
 
     <Footer />
 
-    <!-- Inicialización única del banner + conexión con Consent Mode -->
+    <!-- Script de inicialización del banner + gestión de consentimiento con localStorage y cierre forzado -->
     <script is:inline>
-      window.addEventListener("load", function() {
-        window.cookieconsent.initialise({
-          palette: {
-            popup: { background: "#000000", text: "#ffffff" },
-            button: { background: "#007bff", text: "#ffffff" }
-          },
-          theme: "classic",
-          layout: "popup",
-          type: "opt-in",
-          content: {
-            message: "Usamos cookies para mejorar tu experiencia, analizar el uso de la web y mostrar contenido relevante. Estas cookies nos ayudan a entender qué funciona mejor y a optimizar el sitio sin recopilar información sensible. No compartimos tus datos con terceros para fines comerciales externos ni los utilizamos para nada que no esté relacionado con el funcionamiento y la mejora de esta página.",
-            dismiss: "Rechazar",
-            allow: "Aceptar",
-            link: "Más información",
-            href: "/politica-de-cookies.html"
-          },
-
-          // Cuando el usuario acepta
-          onAccept: function() {
-            gtag('consent', 'update', {
-              ad_storage: 'granted',
-              analytics_storage: 'granted',
-              ad_user_data: 'granted',
-              ad_personalization: 'granted'
-            });
-          },
-
-          // Cuando rechaza
-          onDecline: function() {
-            gtag('consent', 'update', {
-              ad_storage: 'denied',
-              analytics_storage: 'denied',
-              ad_user_data: 'denied',
-              ad_personalization: 'denied'
-            });
+      // Función para actualizar el consentimiento en GA y eliminar el banner manualmente
+      function setConsentAndClose(accepted) {
+        if (typeof gtag === 'function') {
+          gtag('consent', 'update', {
+            'ad_storage': accepted ? 'granted' : 'denied',
+            'analytics_storage': accepted ? 'granted' : 'denied',
+            'ad_user_data': accepted ? 'granted' : 'denied',
+            'ad_personalization': accepted ? 'granted' : 'denied'
+          });
+          if (accepted) {
+            // Evento opcional para registrar la aceptación
+            gtag('event', 'consent_accepted', { 'event_category': 'cookie_consent' });
           }
-        });
+        } else {
+          console.warn('gtag no disponible, reintentando en 500ms');
+          setTimeout(() => setConsentAndClose(accepted), 500);
+          return;
+        }
+        // Eliminar el banner manualmente por si la librería falla
+        const banner = document.querySelector('.cc-window');
+        if (banner) banner.remove();
+      }
+
+      window.addEventListener('load', function() {
+        // Comprobar si ya hay una preferencia guardada en localStorage (más fiable que cookies)
+        const consentGiven = localStorage.getItem('cookie_consent');
+        if (consentGiven === 'accepted') {
+          setConsentAndClose(true);
+          return;
+        } else if (consentGiven === 'declined') {
+          setConsentAndClose(false);
+          return;
+        }
+
+        // Si no hay preferencia, cargamos la librería y mostramos el banner
+        // Cargar el script de cookieconsent dinámicamente (para evitar bloqueos de almacenamiento)
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js';
+        script.onload = function() {
+          window.cookieconsent.initialise({
+            palette: {
+              popup: { background: "#000000", text: "#ffffff" },
+              button: { background: "#007bff", text: "#ffffff" }
+            },
+            theme: "classic",
+            layout: "popup",
+            type: "opt-in",
+            content: {
+              message: "Usamos cookies para mejorar tu experiencia, analizar el uso de la web y mostrar contenido relevante. Estas cookies nos ayudan a entender qué funciona mejor y a optimizar el sitio sin recopilar información sensible. No compartimos tus datos con terceros para fines comerciales externos ni los utilizamos para nada que no esté relacionado con el funcionamiento y la mejora de esta página.",
+              dismiss: "Rechazar",
+              allow: "Aceptar",
+              link: "Más información",
+              href: "/politica-de-cookies.html"
+            },
+            onAccept: function() {
+              localStorage.setItem('cookie_consent', 'accepted');
+              setConsentAndClose(true);
+            },
+            onDecline: function() {
+              localStorage.setItem('cookie_consent', 'declined');
+              setConsentAndClose(false);
+            }
+          });
+        };
+        document.head.appendChild(script);
       });
     </script>
 
     <!-- Scripts propios -->
-    <script is:inline src="/js/menu.js" defer></script>
+    <script src="/js/menu.js" defer></script>
     <script src="/js/carrusel.js" defer></script>
-
 </body>
 </html>
