@@ -3,24 +3,24 @@ const pages = {
         {
             title: "Neuralink: el primer chip cerebral funcional",
             desc: "Neuralink, la empresa de Elon Musk, ha logrado implantar un chip capaz de interpretar señales del cerebro.",
-            url: "../articulos/tecnologia/neuralink-implanta-primer-chip-cerebral"
+            url: "/articulos/tecnologia/neuralink-implanta-primer-chip-cerebral/"
         },
         {
             title: "Qué es la IA Superinteligente y por qué preocupa",
             desc: "La IA superinteligente: el nivel de inteligencia artificial que podría superar al ser humano.",
-            url: "../articulos/inteligencia-artificial/inteligencia-artificial-superInteligente"
+            url: "/articulos/inteligencia-artificial/inteligencia-artificial-superInteligente/"
         }
     ],
     2: [
         {
             title: "Baterías de sodio: la alternativa barata al litio",
             desc: "Una nueva generación de baterías más baratas, seguras y ecológicas.",
-            url: "../articulos/tecnologia/baterias-de-sodio-alternativas-baratas-al-litio"
+            url: "/articulos/tecnologia/baterias-de-sodio-alternativas-baratas-al-litio/"
         },
         {
             title: "¿Qué tipos de IA existen?",
             desc: "Una visión clara de los tipos de inteligencia artificial.",
-            url: "../articulos/inteligencia-artificial/tipos-de-inteligencia-artificial-(ia-ai)"
+            url: "/articulos/inteligencia-artificial/tipos-de-inteligencia-artificial-(ia-ai)/"
         }
     ]
 };
