@@ -15,65 +15,44 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         <div class="theme-content" style="margin-top: 30px;">
             <div class="theme-card">
                 <h2>Tecnología</h2>
-                <p>Tendencias, inventos y avances que están transformando la forma en que vivimos y trabajamos.</p>
+                <p>Descubre análisis claros y prácticos sobre tecnología moderna, con acceso a todos los artículos relacionados en esta categoría.</p>
                 <a href="tecnologia.html" style="color: #007bff; text-decoration: none;">Saber más</a>
             </div>
 
             <div class="theme-card">
                 <h2>IA</h2>
-                <p>Conoce cómo la inteligencia artificial está revolucionando procesos, creando nuevas oportunidades y transformando sectores completos.</p>
+                <p>Entiende la IA que mueve el presente y sigue explorando ideas y contenidos relacionados dentro de la categoría.</p>
                 <a href="inteligencia-artificial(IA)" style="color: #007bff; text-decoration: none;">Saber más</a>
             </div>
 
             <div class="theme-card">
-                <h2>Finanzas</h2>
-                <p>Noticias financieras explicadas sin jergas, con contexto y ejemplos claros para que entiendas cómo te afectan en el día a día.</p>
-                <a href="finanzas.html" style="color: #007bff; text-decoration: none;">Saber más</a>
-            </div>
-            <div class="theme-card">
                 <h2>Programación</h2>
-                <p>Tutoriales, ejemplos prácticos y novedades del ecosistema de desarrollo en múltiples lenguajes para que avances como programador y sigas las tendencias del sector.</p>
+                <p>Entiende la programación desde cero con ejemplos prácticos y contenidos que te ayudan a avanzar sin complicaciones.</p>
                 <a href="../temas/Progr" style="color: #007bff; text-decoration: none;">Saber más</a>
             </div>
         </div>
     </div>
 
     <div class="hero-latest">
-                    <div class="latest-panel">
-                        <h2>📌 Últimos artículos</h2>
+            <div class="latest-panel">
+                <h2>📌 Últimos artículos</h2>
                         
-                        <div class="article-card">
-                            <h3>Neuralink: el primer chip cerebral funcional</h3>
-                            <p>Neuralink, la empresa de Elon Musk, ha logrado implantar un chip capaz de interpretar señales del cerebro y convertirlas en acciones reales.</p>
-                            <a href="../articulos/tecnologia/neuralink-implanta-primer-chip-cerebral" class="article-link">Leer más →</a>
-                        </div>
+            <div id="latest-articles"></div>
 
-                        <div class="article-card">
-                            <h3>Qué es la IA Superinteligente y por qué preocupa</h3>
-                            <p>La IA superinteligente: el nivel de inteligencia artificial que podría superar al ser humano.</p>
-                            <a href="../articulos/Inteligencia-Artificial/Inteligencia-Artificial-SuperInteligente" class="article-link">Leer más →</a>
-                        </div>
-
-                        <div class="article-card">
-                            <h3>Baterías de sodio: la alternativa barata al litio que puede revolucionar la energía</h3>
-                            <p>Una nueva generación de baterías más baratas, seguras y ecológicas que podría transformar el futuro de la energía.</p>
-                            <a href="../articulos/tecnologia/baterias-de-sodio-alternativas-baratas-al-litio" class="article-link">Leer más →</a>
-                        </div>
-
-                        <div class="article-card">
-                            <h3>¿Qué tipos de IA existen?</h3>
-                            <p>Una visión clara de los tipos de inteligencia artificial: desde la IA débil que usamos a diario hasta la 
-                    IA fuerte, capaz de razonar y aprender como un ser humano.</p>
-                            <a href="../articulos/Inteligencia-Artificial/tipos-de-inteligencia-artificial-(IA-AI)" class="article-link">Leer más →</a>
-                        </div>
+            <div class="pagination">
+                <button onclick="changePage(1)">1</button>
+                <button onclick="changePage(2)">2</button>
+                <!--<button onclick="changePage(3)">3</button> COMENTADO DE MOMENTO HASTA QUE HAGA FALTA-->
+            </div>
                         
-                        
-                    </div>
-                </div>
+        </div>
+    </div>
 
     <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+    <script is:inline src="/js/paginacion-articulos.js"></script>
 </BaseLayout>
 <style>
+
     .contenido {
         padding: 20px; 
         background-color: #fff; 
@@ -97,4 +76,34 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     background-color: #5678d6; 
     border-radius: 2px;
 }
+/*Paginacon en la tarjeta Ultimos articulos*/
+.pagination {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.pagination button {
+    background: #007bff;
+    border: none;
+    padding: 6px 12px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.pagination button:hover {
+    background: #005fcc;
+    transform: scale(0.92);
+    transition: 0.15s ease;
+}
+
+.pagination button.active-page {
+    background: #005fcc;
+    color: #fff;
+    font-weight: bold;
+    transform: scale(0.92);
+}
+
 </style>
