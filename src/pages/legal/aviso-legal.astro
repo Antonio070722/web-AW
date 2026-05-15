@@ -1,0 +1,148 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Aviso legal | AW Hub">
+
+<h1 style="text-align: center; display: inline-block;
+    background: #f2f2f2; /* gris suave */
+    padding: 8px 18px;
+    border-radius: 6px;">Aviso legal</h1>
+    <div class="enlace-tema">
+        <a href="/temas/inteligencia-artificial(ia)">Inicio</a>
+    </div>
+
+    <section class="ia-intro-section">
+        <div class="ia-intro-card">
+                <h3><strong>Titular del sitio web</strong><br></h3>
+                    <p>
+                    AW HUB es un proyecto digital dedicado a la divulgación de tecnología, inteligencia artificial y programación.  
+                    Correo de contacto: <a href="mailto:awhubassistance@gmail.com">awhubassistance@gmail.com</a>  
+                    Ubicación: España
+                    </p>
+
+                    <h3><br><strong>Objeto del sitio web</strong><br></h3>
+                    <p>
+                    El presente sitio web tiene como finalidad ofrecer contenido informativo y divulgativo relacionado con tecnología, inteligencia artificial, programación y otras áreas afines.  
+                    AW HUB no ofrece servicios profesionales ni actividad económica directa; su propósito es exclusivamente educativo y divulgativo.
+                    </p>
+
+                    <h3><br><strong>Condiciones de uso</strong><br></h3>
+                    <p>
+                    El acceso y uso de este sitio web atribuye la condición de usuario e implica la aceptación de las presentes condiciones.  
+                    El usuario se compromete a hacer un uso adecuado de los contenidos y a no emplearlos para actividades ilícitas, ilegales o contrarias a la buena fe y al orden público.
+                    </p>
+
+                    <h3><br><strong>Responsabilidad del contenido</strong><br></h3>
+                    <p>
+                    AW HUB no se hace responsable del mal uso que los usuarios puedan hacer de los contenidos publicados.  
+                    No se garantiza la exactitud, integridad o actualidad de la información, aunque se procura mantenerla actualizada.  
+                    El usuario asume la responsabilidad del uso que haga del sitio web.
+                    </p>
+
+                    <h3><br><strong>Propiedad intelectual</strong><br></h3>
+                    <p>
+                    Todos los textos, imágenes, gráficos, vídeos y contenidos publicados en AW HUB son propiedad del autor o cuentan con licencia de uso.  
+                    Queda prohibida su reproducción, distribución o modificación sin autorización expresa del titular.
+                    </p>
+
+                    <h3><br><strong>Enlaces externos</strong><br></h3>
+                    <p>
+                    Este sitio web puede incluir enlaces a páginas de terceros.  
+                    AW HUB no se responsabiliza del contenido, políticas o prácticas de dichos sitios externos.  
+                    El usuario accede bajo su propia responsabilidad.
+                    </p>
+
+                    <h3><br><strong>Limitación de responsabilidad</strong><br></h3>
+                    <p>
+                    AW HUB no garantiza la disponibilidad continua del sitio web ni la ausencia de errores técnicos.  
+                    Tampoco se responsabiliza de daños derivados de:
+                    </p>
+                    <ul class="subpuntos">
+                        <li>Fallas en el servidor o interrupciones del servicio</li>
+                        <li>Virus o elementos maliciosos introducidos por terceros</li>
+                        <li>Uso indebido del sitio por parte del usuario</li>
+                    </ul>
+
+                    <h3><br><strong>Protección de datos personales</strong><br></h3>
+                    <p>
+                    El tratamiento de los datos personales se rige por la Política de Privacidad, donde se detalla la información relativa a la recopilación, uso, conservación y derechos del usuario.
+                    </p>
+
+                    <h3><br><strong>Uso de cookies</strong><br></h3>
+                    <p>
+                    Este sitio utiliza cookies técnicas necesarias para su funcionamiento.  
+                    Las cookies analíticas o de terceros solo se activarán si el usuario lo acepta expresamente.  
+                    Puede consultar la información detallada en la Política de Cookies.
+                    </p>
+
+                    <h3><br><strong>Normativa aplicable</strong><br></h3>
+                    <ul class="subpuntos">
+                        <li>Ley 34/2002 (LSSI)</li>
+                        <li>Reglamento (UE) 2016/679 (RGPD)</li>
+                        <li>Ley Orgánica 3/2018 (LOPDGDD)</li>
+                    </ul>
+
+                    <h3><br><strong>Modificaciones del aviso legal</strong><br></h3>
+                    <p>
+                    AW HUB podrá modificar el presente Aviso Legal para adaptarlo a cambios legales o técnicos.  
+                    La fecha de la última actualización aparecerá al final del documento.
+                    </p>
+
+                    <p><em>Última actualización: 2026</em></p>
+
+        </div>
+    </section>
+
+</BaseLayout>
+
+<style>
+    .subpuntos{
+        margin-left: 30px;
+    }
+    .enlace-tema a {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    color: #007bff; text-decoration: none;
+}
+
+.enlace-tema a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px; /* largo de la línea */
+    height: 3px; /* grosor */
+    background-color: #5678d6; 
+    border-radius: 2px;
+}
+
+    .ia-intro-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 50px;
+    }
+
+.ia-intro-card {
+    background: #ffffff;
+    padding: 25px 30px;
+    max-width: 900px;
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.ia-intro-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.ia-intro-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 12px;
+}
+</style>
