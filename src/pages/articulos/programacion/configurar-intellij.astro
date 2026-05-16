@@ -1,0 +1,158 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Tu primera aplicación en Java | AW Hub">
+
+<h1 style="text-align: center; display: inline-block;
+    background: #f2f2f2; /* gris suave */
+    padding: 8px 18px;
+    border-radius: 6px;">Instalar y configurar IntelliJ IDEA: tu primer IDE </h1>
+    <div class="enlace-tema">
+        <a href="/temas/progr/">Programación</a>
+    </div>
+
+    <section class="ia-intro-section">
+        <div class="ia-intro-card">
+            <h2>Introducción a IntelliJ IDEA: instalación, uso y primeros pasos</h2>
+            <p>IntelliJ IDEA es un Integrated Development Environment (IDE), es decir, 
+                un entorno de desarrollo que reúne en un solo lugar todas las herramientas 
+                necesarias para programar: editor de código, autocompletado, depuración, 
+                ejecución y gestión de proyectos. En esta guía aprenderás a instalarlo y 
+                configurarlo correctamente para que puedas empezar a trabajar con Java sin 
+                complicaciones. Esta primera parte se centra en preparar tu entorno, entender 
+                cómo funciona la interfaz y dejar todo listo antes de crear tu primera aplicación.
+            </p>
+
+            <img src="/img/articulos/conf-intellij/ft1.png" alt="imagen-logo-intellij" class="AI-foto">
+
+            <h3 >Ventajas de usar IntelliJ IDEA</h3>
+            <br>
+
+            <p>IntelliJ IDEA destaca como uno de los IDE más completos y potentes para desarrollar en Java. Su diseño está pensado para facilitar el trabajo del programador, automatizar tareas repetitivas y mejorar la productividad desde el primer día. Estas son algunas de las ventajas más importantes que ofrece:</p>
+
+            <ul class="subpuntos">
+                <li>Autocompletado inteligente que entiende el contexto del código y sugiere soluciones precisas.</li>
+                <li>Herramientas de depuración avanzadas para detectar y corregir errores de forma rápida.</li>
+                <li>Integración nativa con Maven, Gradle y otros sistemas de construcción.</li>
+                <li>Refactorización automática que permite mejorar el código sin riesgo de romper el proyecto.</li>
+                <li>Interfaz intuitiva que organiza el proyecto de forma clara y fácil de navegar.</li>
+                <li>Soporte integrado para Git, permitiendo gestionar versiones sin salir del IDE.</li>
+                <li>Plantillas, atajos y automatizaciones que aceleran el desarrollo desde el primer día.</li>
+            </ul>
+
+            <h2 >Instalación de IntelliJ IDEA</h2><br>
+
+            <p>
+            Para comenzar a trabajar con IntelliJ IDEA, primero debemos descargarlo desde la página oficial de JetBrains e instalarlo en nuestro equipo. A continuación tienes una guía detallada con cada paso del proceso. Con esta instalación tendrás el IDE listo para empezar a desarrollar en múltiples lenguajes de programación sin complicaciones.
+            </p>
+
+            <ul class="subpuntos">
+            <li>
+                Accede a la página oficial de descarga de IntelliJ IDEA desde este enlace:
+                <a href="https://www.jetbrains.com/idea/download/" target="_blank">Descargar IntelliJ IDEA</a>.
+                Aquí podrás elegir la versión que mejor se adapte a tus necesidades.
+            </li>
+
+            <li>
+                IntelliJ IDEA está disponible en dos ediciones principales: <strong>Ultimate</strong> y <strong>Community Edition</strong>.
+                La edición <strong>Ultimate</strong> es de pago e incluye herramientas avanzadas para desarrollo profesional,
+                mientras que la <strong>Community Edition</strong> es completamente gratuita y suficiente para aprender Java,
+                por lo que es la que utilizaremos en esta guía.
+                Además, JetBrains ofrece una <strong>licencia educativa gratuita</strong> para estudiantes y profesores,
+                que permite usar la edición <strong>Ultimate</strong> sin coste mientras dure la verificación académica.
+                <!-- Aquí puedes insertar una imagen mostrando las ediciones o la sección educativa -->
+            </li>
+            
+            <li>
+                Haz clic en el botón de descarga correspondiente a tu sistema operativo (Windows, macOS o Linux).
+                El archivo comenzará a descargarse automáticamente.
+                <img src="/img/articulos/conf-intellij/ft2.png" alt="imagen-pagina-descarga-intellij" class="AI-foto">
+
+            </li>
+
+            <li>
+                Una vez descargado el instalador, ábrelo para iniciar el proceso de instalación.
+                En Windows verás un asistente clásico con opciones como la ruta de instalación y accesos directos.
+                <!-- Imagen del instalador -->
+            </li>
+
+            <li>
+                Durante la instalación puedes marcar opciones como:
+                <br>– Crear acceso directo en el escritorio  
+                <br>– Asociar archivos .java con IntelliJ  
+                <br>– Añadir IntelliJ al PATH (opcional)
+                <!-- Imagen de las opciones del instalador -->
+            </li>
+
+            <li>
+                Cuando finalice la instalación, ejecuta IntelliJ IDEA por primera vez.
+                La primera pantalla te pedirá elegir el tema (claro u oscuro) y algunas configuraciones iniciales.
+                <!-- Imagen de la primera ejecución -->
+            </li>
+
+            <li>
+                Tras completar la configuración inicial, IntelliJ se abrirá y podrás crear tu primer proyecto en Java.
+                En la siguiente sección veremos cómo hacerlo paso a paso.
+            </li>
+            </ul>
+        </div>
+    </section>
+
+</BaseLayout>
+
+<style>
+    .enlace-tema a {
+        position: relative;
+        padding-bottom: 20px;
+        margin-bottom: 15px;
+        color: #007bff; text-decoration: none;
+    }
+
+    .enlace-tema a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 60px; /* largo de la línea */
+        height: 3px; /* grosor */
+        background-color: #5678d6; 
+        border-radius: 2px;
+    }
+
+    .ia-intro-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 50px;
+    }
+
+.ia-intro-card {
+    background: #ffffff;
+    padding: 25px 30px;
+    max-width: 900px;
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.ia-intro-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.ia-intro-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 12px;
+}
+.AI-foto {
+    max-width: 900px;   /* Ajusta el tamaño máximo que quieres */
+    width: 100%;        /* Se adapta al contenedor */
+    height: auto;       /* Mantiene proporción */
+    display: block;
+    margin: 20px auto;  /* Centrada */
+    border-radius: 8px; /* Opcional */
+}
+</style>

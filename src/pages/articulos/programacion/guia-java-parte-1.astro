@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Tu primera aplicación en Java | AW Hub">
+
+<h1 style="text-align: center; display: inline-block;
+    background: #f2f2f2; /* gris suave */
+    padding: 8px 18px;
+    border-radius: 6px;">Tu primera aplicación en Java: guía paso a paso para principiantes (Parte 1)</h1>
+    <div class="enlace-tema">
+        <a href="/temas/progr/">Programación</a>
+    </div>
+
+    <section class="ia-intro-section">
+        <div class="ia-intro-card">
+            <h2>Introducción: Java, los primeros pasos de tu proyecto</h2>
+            <p>Aprender a programar en Java es una de las mejores formas de iniciarse en el desarrollo de software, 
+                y en esta primera parte de la guía vamos a dar los pasos esenciales para comenzar con buen pie. 
+                Aquí crearás tu primer proyecto en Java desde cero y te familiarizarás con IntelliJ IDEA, el IDE (Entorno de desarrollo integrado)
+                que utilizaremos durante toda la serie. Verás cómo funciona su entorno, para qué sirve cada sección 
+                y cómo preparar tu espacio de trabajo antes de escribir tu primera línea de código.</p>
+        </div>
+    </section>
+
+</BaseLayout>
+
+<style>
+    .enlace-tema a {
+        position: relative;
+        padding-bottom: 20px;
+        margin-bottom: 15px;
+        color: #007bff; text-decoration: none;
+    }
+
+    .enlace-tema a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 60px; /* largo de la línea */
+        height: 3px; /* grosor */
+        background-color: #5678d6; 
+        border-radius: 2px;
+    }
+
+    .ia-intro-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 50px;
+    }
+
+.ia-intro-card {
+    background: #ffffff;
+    padding: 25px 30px;
+    max-width: 900px;
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.ia-intro-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.ia-intro-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+</style>

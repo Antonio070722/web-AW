@@ -919,6 +919,7 @@ html {
 /*ESTILOS PARA EL BANNER DE COOKIES*/
 /* Centrar el banner como modal */
 /* ESTILOS PARA EL BANNER DE COOKIES (MODAL CENTRADO) */
+/*
 .cc-window.cc-classic.cc-popup {
   position: fixed !important;
   top: 50% !important;
@@ -1001,8 +1002,9 @@ html {
 .cc-link:hover {
   color: #ffffff !important;
 }
-
+*/
 /* Ajustes táctiles para móvil */
+/*
 @media (max-width: 768px) {
   .cc-window.cc-classic.cc-popup {
     width: 85% !important;
@@ -1013,3 +1015,5 @@ html {
     font-size: 1rem !important;
   }
 }
+  */
+
