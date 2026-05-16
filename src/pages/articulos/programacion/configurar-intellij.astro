@@ -72,36 +72,150 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
             </li>
 
             <li>
-                Una vez descargado el instalador, ábrelo para iniciar el proceso de instalación.
-                En Windows verás un asistente clásico con opciones como la ruta de instalación y accesos directos.
-                <!-- Imagen del instalador -->
+                <p>Al abrir el instalador de IntelliJ IDEA, verás esta pantalla de bienvenida.  
+                Aquí el asistente te informa de que te guiará durante todo el proceso de instalación y te recomienda cerrar otras aplicaciones antes de continuar.  
+                Simplemente haz clic en <strong>Next</strong> para avanzar al siguiente paso.</p>
+                
+                <img src="/img/articulos/conf-intellij/ft1-inst.png" alt="instalador-intellij-bienvenida" class="cap-intellij">
             </li>
 
             <li>
-                Durante la instalación puedes marcar opciones como:
-                <br>– Crear acceso directo en el escritorio  
-                <br>– Asociar archivos .java con IntelliJ  
-                <br>– Añadir IntelliJ al PATH (opcional)
-                <!-- Imagen de las opciones del instalador -->
+                <p>En esta pantalla debes elegir la carpeta donde se instalará IntelliJ IDEA.  
+                Lo normal es dejar la ruta predeterminada que propone el instalador, ya que es la ubicación recomendada para evitar problemas de permisos o configuraciones.  
+                Si no necesitas cambiar nada, haz clic en <strong>Next</strong> para continuar.</p>
+                
+                <img src="/img/articulos/conf-intellij/ft2-inst.png" alt="instalador-intellij-ruta" class="cap-intellij">
+            </li>
+
+
+            <li>
+            <p>
+                En este paso puedes activar varias opciones adicionales antes de instalar IntelliJ IDEA.  
+                Las más importantes son:
+                <br><br>
+                – <strong>Create Desktop Shortcut</strong>: crea un acceso directo en el escritorio (recomendado). <br>
+                – <strong>Add 'bin' folder to the PATH</strong>: permite ejecutar IntelliJ desde la terminal (opcional).<br>  
+                – <strong>Add 'Open Folder as Project'</strong>: añade la opción al menú contextual de Windows.  <br>
+                – <strong>File Associations</strong>: asocia archivos .java, .kt, .gradle, etc., con IntelliJ (opcional).<br>
+                <br>
+                Para esta guía basta con dejar activado el acceso directo. Cuando lo tengas listo, pulsa <strong>Next</strong>.
+            </p>
+                <img src="/img/articulos/conf-intellij/ft3-inst.png" alt="instalador-intellij-opciones" class="cap-intellij">
+            </li>
+
+
+            <li>
+                <p>Aquí puedes elegir en qué carpeta del menú de inicio se crearán los accesos directos de IntelliJ IDEA.  
+                Lo habitual es dejar la opción por defecto (<strong>JetBrains</strong>), ya que mantiene todo organizado.  
+                Si no quieres crear accesos en el menú de inicio, puedes marcar la casilla <strong>Do not create shortcuts</strong>.  
+                Cuando estés conforme, haz clic en <strong>Install</strong> para comenzar la instalación.</p>
+                
+                <img src="/img/articulos/conf-intellij/ft4-inst.png" alt="instalador-intellij-menu-inicio" class="cap-intellij">
             </li>
 
             <li>
-                Cuando finalice la instalación, ejecuta IntelliJ IDEA por primera vez.
-                La primera pantalla te pedirá elegir el tema (claro u oscuro) y algunas configuraciones iniciales.
-                <!-- Imagen de la primera ejecución -->
+                <p>El instalador comenzará a copiar los archivos necesarios y configurar IntelliJ IDEA en tu sistema.  
+                Este proceso puede tardar unos minutos dependiendo de la velocidad de tu equipo.  
+                Solo tienes que esperar a que la barra de progreso llegue al final.  
+                Cuando termine, podrás continuar con la configuración inicial del IDE.</p>
+                
+                <img src="/img/articulos/conf-intellij/ft5-inst.png" alt="instalador-intellij-progreso" class="cap-intellij">
             </li>
 
             <li>
-                Tras completar la configuración inicial, IntelliJ se abrirá y podrás crear tu primer proyecto en Java.
-                En la siguiente sección veremos cómo hacerlo paso a paso.
+                <p>Una vez completada la instalación, aparecerá esta pantalla final del asistente.  
+                Aquí se confirma que IntelliJ IDEA se ha instalado correctamente en tu equipo.  
+                Puedes dejar marcada la opción <strong>Run IntelliJ IDEA</strong> si quieres abrir el programa inmediatamente después de cerrar el instalador.  
+                Para finalizar, haz clic en <strong>Finish</strong>.</p>
+                <img src="/img/articulos/conf-intellij/ft6-inst.png" alt="instalador-intellij-finalizado" class="cap-intellij">
             </li>
-            </ul>
+
+            <li>
+                <p>Al abrir IntelliJ IDEA por primera vez, aparecerá la ventana del acuerdo de usuario de JetBrains.  
+                Para continuar, debes aceptar los términos marcando la casilla correspondiente.  
+                Una vez hecho esto, pulsa <strong>Continue</strong> para seguir con la configuración inicial del IDE.</p>
+                <img src="/img/articulos/conf-intellij/ft7-inst.png" alt="acuerdo-usuario-jetbrains" class="cap-intellij">
+            </li>
+
+            <li>
+                <p>
+                    Después del acuerdo de usuario, IntelliJ IDEA mostrará la ventana de “Data Sharing”.  
+                    Aquí puedes decidir si deseas enviar estadísticas de uso anónimas para ayudar a mejorar el IDE.  
+                    Esta elección es opcional y no afecta al funcionamiento del programa.  
+                    Selecciona <strong>Send Anonymous Statistics</strong> o <strong>Don’t Send</strong> según tu preferencia.
+                </p>
+                <img src="/img/articulos/conf-intellij/ft8-inst.png" alt="intellij-data-sharing" class="cap-intellij">
+            </li>
+
+            <li>
+                <p>
+                    Tras completar la configuración inicial, IntelliJ IDEA mostrará su pantalla de bienvenida.  
+                    Desde aquí puedes crear un proyecto nuevo, abrir uno existente o clonar un repositorio.  
+                    También encontrarás accesos a la personalización del IDE, la gestión de plugins y una sección de aprendizaje para familiarizarte con sus herramientas.
+                </p>
+                <img src="/img/articulos/conf-intellij/ft9-inst.png" alt="pantalla-bienvenida-intellij" class="cap-intellij">
+            </li></ul>
+
+            <br><h2>Crear tu primer proyecto</h2>
+            <p>
+                Un proyecto en IntelliJ IDEA es el espacio donde organizas todo tu trabajo: archivos, configuraciones y recursos necesarios para desarrollar tu aplicación.  
+                Aquí es donde crearás tu código, gestionarás tus módulos y controlarás la estructura completa de lo que vayas a construir.
+            </p>
+
+            <p>
+                Para comenzar tu primer proyecto, desde la pantalla de bienvenida selecciona la opción <strong>New Project</strong>.  
+                Esta es la ruta principal para crear un entorno de trabajo nuevo dentro del IDE.
+            </p>
+            <img src="/img/articulos/conf-intellij/ft9-inst.png" alt="crear-nuevo-proyecto-intellij" class="cap-intellij">
+
+            <p>
+                En la ventana de creación de proyectos podrás elegir el nombre, la ubicación y el tipo de proyecto que vas a crear.  
+                Una vez configuradas estas opciones, pulsa <strong>Create</strong> para generar tu nuevo entorno de trabajo en IntelliJ IDEA.
+            </p>
+            <img src="/img/articulos/conf-intellij/ft10-inst.png" alt="configurar-nuevo-proyecto-intellij" class="cap-intellij">
+
+            <p>
+                Una vez creado el proyecto, IntelliJ IDEA mostrará la estructura inicial en el panel lateral y abrirá el archivo <strong>Main.java</strong> con un ejemplo de código.  
+                Desde aquí ya puedes comenzar a escribir, ejecutar y depurar tu aplicación directamente en el editor.
+            </p>
+            <img src="/img/articulos/conf-intellij/ft11-inst.png" alt="proyecto-java-abierto-intellij" class="cap-intellij">
+            
+            <p>
+                A partir de aquí, IntelliJ IDEA será el entorno de desarrollo que utilizaremos en todas las guías de <a href="/temas/progr/">programación</a>.  
+                Gracias a su potencia, facilidad de uso y herramientas integradas, es la opción ideal para aprender y trabajar con Java desde cero.
+            </p>
+
         </div>
     </section>
+
+    <!--Div para las tarjetas laterales-->
+        <div class="articulos-sidebar">
+            <h3>Otros artículos</h3>
+            <!--Tarjeta artículo IA -->
+            <div class="theme-card">
+                <h2>Cómo activar GitHub Copilot y su autocompletado predictivo en IntelliJ IDEA</h2>
+                <p>Aprende a instalar y activar GitHub Copilot en IntelliJ IDEA para obtener autocompletado predictivo en tiempo real.</p>
+                <a href="/articulos/programacion/activar-autocompletado-github-copilot/" style="color: #007bff; text-decoration: none;">Saber más</a>
+            </div>
+            <div class="theme-card">
+                <h2>Tu primera aplicación en Java: guía paso a paso para principiantes (Parte 1)</h2>
+                <p>Aprende a crear tu primer proyecto en Java desde cero y da tus primeros pasos dentro de IntelliJ IDEA. En esta primera parte te familiarizarás con el entorno del IDE, entenderás para qué sirve cada sección y dejarás tu espacio de trabajo listo para empezar a programar con comodidad y sin complicaciones.</p>
+                <a href="/articulos/programacion/guia-java-parte-1/" style="color: #007bff; text-decoration: none;">Saber más</a>
+            </div>
+        
+        </div>
 
 </BaseLayout>
 
 <style>
+    .cap-intellij {
+    max-width: 500px;   /* Ajusta el tamaño máximo que quieres */
+    width: 100%;        /* Se adapta al contenedor */
+    height: auto;       /* Mantiene proporción */
+    display: block;
+    margin: 20px auto;  /* Centrada */
+    border-radius: 8px; /* Opcional */
+}
     .enlace-tema a {
         position: relative;
         padding-bottom: 20px;
@@ -155,4 +269,65 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
     margin: 20px auto;  /* Centrada */
     border-radius: 8px; /* Opcional */
 }
+
+ .articulos-sidebar {
+            position: absolute;
+            top: 193px; /* AJUSTA este valor para alinearlo con tu cuadrante */
+            right: 40px;
+            width: 260px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            z-index: 5;
+        }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1500px) {
+
+    .articulos-sidebar {
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        margin: 40px 0 0 0 !important;
+        padding: 0 20px;
+    }
+
+    /* MUY IMPORTANTE: el contenedor principal debe permitir flujo normal */
+    .contenedor-principal, 
+    main, 
+    .contenido, 
+    .wrapper {
+        position: static !important;
+    }
+}
+
+
+
+.articulos-sidebar .theme-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    font-size: 0.9rem;
+}
+.articulos-sidebar h3 {
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+.articulos-sidebar h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px; /* largo de la línea */
+    height: 3px; /* grosor */
+    background-color: #5678d6; /* rojo como el que dibujaste */
+    border-radius: 2px;
+}
+
 </style>

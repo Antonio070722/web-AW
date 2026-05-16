@@ -7,23 +7,35 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 <h1 style="display: inline-block;
     background: #f2f2f2; /* gris suave */
     padding: 8px 18px;
-    border-radius: 6px;">Tu primera aplicación en Java: guía paso a paso para principiantes (Parte 1)</h1>
+    border-radius: 6px;">Cómo activar GitHub Copilot y su autocompletado predictivo en IntelliJ IDEA</h1>
     <div class="enlace-tema">
         <a href="/temas/progr/">Programación</a>
     </div>
 
     <section class="ia-intro-section">
         <div class="ia-intro-card">
-            <h2>Introducción: Java, los primeros pasos de tu proyecto</h2>
-            <p>Aprender a programar en Java es una de las mejores formas de iniciarse en el desarrollo de software, 
-                y en esta primera parte de la guía vamos a dar los pasos esenciales para comenzar con buen pie. 
-                Aquí crearás tu primer proyecto en Java desde cero y te familiarizarás con IntelliJ IDEA, el IDE (Entorno de desarrollo integrado)
-                que utilizaremos durante toda la serie. Verás cómo funciona su entorno, para qué sirve cada sección 
-                y cómo preparar tu espacio de trabajo antes de escribir tu primera línea de código.</p>
+            <h2>Qué es el autocompletado predictivo de GitHub Copilot en IntelliJ IDEA</h2>
+            <p>El autocompletado predictivo de GitHub Copilot es una función basada en inteligencia artificial que analiza el código que estás escribiendo y genera sugerencias completas en tiempo real. Estas sugerencias aparecen en gris claro dentro del editor y te permiten escribir código más rápido, reducir errores y trabajar con mayor fluidez sin necesidad de memorizar cada detalle de la sintaxis.
+            </p>
+
+            <img src="/img/articulos/github-copilot-intellij/ft1.png" alt="imagen-logo-github-copilot" class="AI-foto">
+
+            <h2 >Instalar el plugin de GitHub Copilot</h2><br>
+
+            <p>
+                Antes de instalar el plugin de GitHub Copilot, asegúrate de tener IntelliJ IDEA correctamente configurado. 
+                Si aún no lo has hecho, puedes seguir nuestra guía de instalación paso a paso disponible en el artículo 
+                <a href="/articulos/programacion/configurar-intellij/">cómo instalar IntelliJ IDEA</a>. 
+                Una vez tengas el IDE listo, podrás seguir con la guía.
+            </p>
+
+            
+
         </div>
     </section>
 
-    <div class="articulos-sidebar">
+    <!--Div para las tarjetas laterales-->
+        <div class="articulos-sidebar">
             <h3>Otros artículos</h3>
             <!--Tarjeta artículo IA -->
             <div class="theme-card">
@@ -31,17 +43,25 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
                 <p>Guía completa de instalación de IntelliJ IDEA explicada paso a paso y acompañada de imágenes de cada fase. Ideal para quienes desean preparar correctamente su entorno antes de comenzar a trabajar con un IDE profesional.</p>
                 <a href="/articulos/programacion/configurar-intellij/" style="color: #007bff; text-decoration: none;">Saber más</a>
             </div>
-
             <div class="theme-card">
-                <h2>Cómo activar GitHub Copilot y su autocompletado predictivo en IntelliJ IDEA</h2>
-                <p>Aprende a instalar y activar GitHub Copilot en IntelliJ IDEA para obtener autocompletado predictivo en tiempo real.</p>
-                <a href="/articulos/programacion/activar-autocompletado-github-copilot/" style="color: #007bff; text-decoration: none;">Saber más</a>
+                <h2>Tu primera aplicación en Java: guía paso a paso para principiantes (Parte 1)</h2>
+                <p>Aprende a crear tu primer proyecto en Java desde cero y da tus primeros pasos dentro de IntelliJ IDEA. En esta primera parte te familiarizarás con el entorno del IDE, entenderás para qué sirve cada sección y dejarás tu espacio de trabajo listo para empezar a programar con comodidad y sin complicaciones.</p>
+                <a href="/articulos/programacion/guia-java-parte-1/" style="color: #007bff; text-decoration: none;">Saber más</a>
             </div>
-    </div>
+        
+        </div>
 
 </BaseLayout>
 
 <style>
+    .cap-intellij {
+    max-width: 500px;   /* Ajusta el tamaño máximo que quieres */
+    width: 100%;        /* Se adapta al contenedor */
+    height: auto;       /* Mantiene proporción */
+    display: block;
+    margin: 20px auto;  /* Centrada */
+    border-radius: 8px; /* Opcional */
+}
     .enlace-tema a {
         position: relative;
         padding-bottom: 20px;
@@ -87,6 +107,15 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
     color: #444;
     margin-bottom: 12px;
 }
+.AI-foto {
+    max-width: 900px;   /* Ajusta el tamaño máximo que quieres */
+    width: 100%;        /* Se adapta al contenedor */
+    height: auto;       /* Mantiene proporción */
+    display: block;
+    margin: 20px auto;  /* Centrada */
+    border-radius: 8px; /* Opcional */
+}
+
  .articulos-sidebar {
             position: absolute;
             top: 193px; /* AJUSTA este valor para alinearlo con tu cuadrante */
@@ -110,7 +139,18 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
         margin: 40px 0 0 0 !important;
         padding: 0 20px;
     }
+
+    /* MUY IMPORTANTE: el contenedor principal debe permitir flujo normal */
+    .contenedor-principal, 
+    main, 
+    .contenido, 
+    .wrapper {
+        position: static !important;
+    }
 }
+
+
+
 .articulos-sidebar .theme-card {
     background: #fff;
     border: 1px solid #e5e5e5;
@@ -135,4 +175,5 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
     background-color: #5678d6; /* rojo como el que dibujaste */
     border-radius: 2px;
 }
+
 </style>

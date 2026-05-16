@@ -1,3 +1,5 @@
+
+
 const pages = {
     1: [
         {
@@ -22,7 +24,28 @@ const pages = {
             desc: "Una visión clara de los tipos de inteligencia artificial.",
             url: "/articulos/inteligencia-artificial/tipos-de-inteligencia-artificial-(ia-ai)/"
         }
+    ],
+
+    3: [
+        {
+            title: "Tu primera aplicación en Java: guía paso a paso para principiantes (Parte 1)",
+            desc: "Inicia tu primer proyecto en Java y comprende los elementos básicos del entorno de desarrollo para comenzar a programar correctamente.",
+            url: "/articulos/programacion/guia-java-parte-1/"
+        },
+        {
+            title: "Instalar y configurar tu primer IDE, IntelliJ IDEA",
+            desc: "Guía de instalación de IntelliJ IDEA explicada paso a paso y acompañada de imágenes claras.",
+            url: "/articulos/programacion/guia-java-parte-1/"
+        }
+    ],
+    4: [
+        {
+            title: "Cómo activar GitHub Copilot y su autocompletado predictivo en IntelliJ IDEA",
+            desc: "Aprende a instalar y activar GitHub Copilot en IntelliJ IDEA para obtener autocompletado predictivo en tiempo real.",
+            url: "/articulos/programacion/activar-autocompletado-github-copilot/"
+        }
     ]
+
 };
 
 function changePage(num) {
@@ -44,4 +67,4 @@ function changePage(num) {
 }
 
 // Cargar página 1 al entrar
-changePage(1);
+changePage(3);

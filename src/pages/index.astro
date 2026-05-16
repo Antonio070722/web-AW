@@ -26,35 +26,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 <div class="hero-latest">
                     <div class="latest-panel">
                         <h2>📌 Últimos artículos</h2>
-                        
-                        <div class="article-card">
-                            <h3>Neuralink: el primer chip cerebral funcional</h3>
-                            <p>Neuralink, la empresa de Elon Musk, ha logrado implantar un chip capaz de interpretar señales del cerebro y convertirlas en acciones reales.</p>
-                            <a href="../articulos/tecnologia/neuralink-implanta-primer-chip-cerebral" class="article-link">Leer más →</a>
-                        </div>
+                                
+                    <div id="latest-articles"></div> <!--PARA MODIFICAR O AÑADIR ARTICULOS EN paginacion-articulos.js -->
 
-                        <div class="article-card">
-                            <h3>Qué es la IA Superinteligente y por qué preocupa</h3>
-                            <p>La IA superinteligente: el nivel de inteligencia artificial que podría superar al ser humano.</p>
-                            <a href="../articulos/inteligencia-artificial/inteligencia-artificial-superInteligente" class="article-link">Leer más →</a>
-                        </div>
-
-                        <div class="article-card">
-                            <h3>Baterías de sodio: la alternativa barata al litio que puede revolucionar la energía</h3>
-                            <p>Una nueva generación de baterías más baratas, seguras y ecológicas que podría transformar el futuro de la energía.</p>
-                            <a href="../articulos/tecnologia/baterias-de-sodio-alternativas-baratas-al-litio" class="article-link">Leer más →</a>
-                        </div>
-
-                        <div class="article-card">
-                            <h3>¿Qué tipos de IA existen?</h3>
-                            <p>Una visión clara de los tipos de inteligencia artificial: desde la IA débil que usamos a diario hasta la 
-                    IA fuerte, capaz de razonar y aprender como un ser humano.</p>
-                            <a href="../articulos/inteligencia-artificial/tipos-de-inteligencia-artificial-(ia-ai)" class="article-link">Leer más →</a>
-                        </div>
-                        
-                        
+                    <div class="pagination">
+                        <button onclick="changePage(1)">1</button>
+                        <button onclick="changePage(2)">2</button>
+                        <button onclick="changePage(3)">3</button> 
+                        <button onclick="changePage(4)">4</button> 
                     </div>
+                                
                 </div>
+            </div>
 
         <!-- Carrusel de temas (Qué puedes encontrar aquí) -->
         <section class="what-you-find">
@@ -111,4 +94,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
     <!--<script is:inline src="/js/carrusel.js"></script> -->
+        <script is:inline src="/js/paginacion-articulos.js"></script>
+
 </BaseLayout>
