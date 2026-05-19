@@ -1,3 +1,0 @@
-# Forzar redirección al formato canónico (con barra al final)
-/   https://awhub.awhubassistance.workers.dev/  302
-/temas/*   /temas/:splat/  302
