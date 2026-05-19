@@ -2,7 +2,7 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Tu primera aplicación en Java | AW Hub">
+<BaseLayout title="Tu primera aplicación en Java (parte 1)">
 
 <h1 style="display: inline-block;
     background: #f2f2f2; /* gris suave */
@@ -41,10 +41,12 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
             <p>Dentro del panel izquierdo, donde se muestra la estructura del proyecto, verás una carpeta llamada src. Despliega su contenido y busca la subcarpeta main/java. Es ahí donde guardaremos todo nuestro código fuente. Haz clic con el botón derecho sobre la carpeta java, selecciona New → Java Class y asígnale el nombre Main. Así se creará un archivo Main.java dentro de src/main/java, con una plantilla básica.</p>
             <img src="/img/articulos/primer-programa-java-pt1/ft2.png" alt="imagen-estructura-programa" class="cap-intellij">
             <p>No te preocupes si no entiendes cada palabra ahora. Por el momento, lo importante es que dentro de las llaves del método main es donde escribiremos las instrucciones que queremos ejecutar. Una vez creada la clase Main, IntelliJ te mostrará un archivo vacío o con una estructura básica. Para que nuestro programa pueda ejecutarse, necesitamos escribir el método main. Este método es el punto de entrada de toda aplicación Java; sin él, el programa no sabrá por dónde empezar. Escribe exactamente el siguiente código dentro de las llaves de la clase Main:</p>
+            
             <div class="code-container">
-                <pre><code id="codigo">static void main(String[] args)&#123;<br><br> &#125;</code></pre>
-                <button class="copy-btn" onclick="copiarCodigo()">Copiar</button>
+                <pre><code id="codigo-main">static void main(String[] args)&#123;<br><br> &#125;</code></pre>
+                <button class="copy-btn">Copiar</button>
             </div>
+
             <p>Se debería ver tal que así:</p>
             <img src="/img/articulos/primer-programa-java-pt1/ft3.png" alt="imagen-estructura-programa" class="cap-intellij">
             <h3>Explicación rápida</h3><br>
@@ -59,8 +61,8 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
             <br><p>Dentro de las llaves del método main que acabamos de crear, vamos a poner la siguiente línea, que será la encargada de mostrar el texto "Hola, mundo!" por pantalla</p>
         
             <div class="code-container">
-                <pre><code id="codigo">System.out.println("Hola, mundo!");</code></pre>
-                <button class="copy-btn" onclick="copiarCodigo()">Copiar</button>
+                <pre><code id="codigo-println">System.out.println("Hola, mundo!");</code></pre>
+                <button class="copy-btn">Copiar</button>
             </div>
 
             <ul class="subpuntos">
@@ -71,13 +73,13 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 
             <p>Ahora, el código debería tener este aspecto: </p>
             <div class="code-container">
-                <pre><code id="codigo">public class main &#123;
+                <pre><code id="codigo-clase">public class main &#123;
     static void main(String[] args) &#123;
         System.out.println("Hola, mundo!");
     &#125;
 &#125;
                 </code></pre>
-                <button class="copy-btn" onclick="copiarCodigo()">Copiar</button>
+                <button class="copy-btn">Copiar</button>
             </div>
 
             <p>Ahora que ya has escrito el código, es momento de ejecutarlo y ver el resultado. Pulsa en el <strong>triángulo verde</strong> que aparece en la barra superior de IntelliJ: </p>
