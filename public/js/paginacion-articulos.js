@@ -10,19 +10,30 @@ const pages = {
         {
             title: "Qué es la IA Superinteligente y por qué preocupa",
             desc: "La IA superinteligente: el nivel de inteligencia artificial que podría superar al ser humano.",
-            url: "/articulos/inteligencia-artificial/inteligencia-artificial-superInteligente/"
-        }
-    ],
-    2: [
+            url: "/articulos/inteligencia-artificial/inteligencia-artificial-superInteligente"
+        },
         {
             title: "Baterías de sodio: la alternativa barata al litio",
             desc: "Una nueva generación de baterías más baratas, seguras y ecológicas.",
             url: "/articulos/tecnologia/baterias-de-sodio-alternativas-baratas-al-litio/"
-        },
+        }
+
+    ],
+    2: [
         {
             title: "¿Qué tipos de IA existen?",
             desc: "Una visión clara de los tipos de inteligencia artificial.",
             url: "/articulos/inteligencia-artificial/tipos-de-inteligencia-artificial-(ia-ai)/"
+        },
+        {
+            title: "Instalar y configurar tu primer IDE, IntelliJ IDEA",
+            desc: "Guía de instalación de IntelliJ IDEA explicada paso a paso y acompañada de imágenes claras.",
+            url: "/articulos/programacion/configurar-intellij/"
+        },
+        {
+            title: "Cómo activar GitHub Copilot y su autocompletado predictivo en IntelliJ IDEA",
+            desc: "Aprende a instalar y activar GitHub Copilot en IntelliJ IDEA para obtener autocompletado predictivo en tiempo real.",
+            url: "/articulos/programacion/activar-autocompletado-github-copilot/"
         }
     ],
 
@@ -33,18 +44,15 @@ const pages = {
             url: "/articulos/programacion/guia-java-parte-1/"
         },
         {
-            title: "Instalar y configurar tu primer IDE, IntelliJ IDEA",
-            desc: "Guía de instalación de IntelliJ IDEA explicada paso a paso y acompañada de imágenes claras.",
-            url: "/articulos/programacion/guia-java-parte-1/"
+            title: "Tu primera aplicación en Java (Parte 2): variables, tipos de datos y entrada del usuario",
+            desc: "Sigue la serie de Java para principiantes. Aprende a guardar datos con variables y a leer lo que escribe el usuario con Scanner. Ejemplos y ejercicios incluidos.",
+            url: "/articulos/programacion/guia-java-parte-2/"
         }
     ],
-    4: [
-        {
-            title: "Cómo activar GitHub Copilot y su autocompletado predictivo en IntelliJ IDEA",
-            desc: "Aprende a instalar y activar GitHub Copilot en IntelliJ IDEA para obtener autocompletado predictivo en tiempo real.",
-            url: "/articulos/programacion/activar-autocompletado-github-copilot/"
-        }
-    ]
+    //4: [
+        
+        
+    //]
 
 };
 
