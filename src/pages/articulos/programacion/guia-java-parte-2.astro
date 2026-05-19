@@ -1,0 +1,328 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Tu primera aplicación en Java | AW Hub">
+
+<h1 style="display: inline-block;
+    background: #f2f2f2; /* gris suave */
+    padding: 8px 18px;
+    border-radius: 6px;">Tu primera aplicación en Java paso a paso (Parte 2): variables, tipos de datos y entrada del usuario</h1>
+    <div class="enlace-tema">
+        <a href="/temas/progr/">Programación</a>
+    </div>
+
+    <section class="ia-intro-section">
+        <div class="ia-intro-card">
+            <h2>1. Variables: guardando información en memoria</h2>
+
+            <p>Un programa no sirve de mucho si solo muestra un mensaje fijo. Para que sea útil, necesita <strong>guardar datos</strong>: el nombre de un usuario, su edad, el resultado de una operación… Para eso existen las <strong>variables</strong>.</p>
+
+            <p>Imagina una variable como una <strong>caja con una etiqueta</strong>. Dentro de la caja guardas un valor (un número, un texto, etc.). La etiqueta es el nombre de la variable, y lo que hay dentro puede cambiar mientras el programa se ejecuta.</p>
+
+            <img src="/img/articulos/primer-programa-java-pt2/ft1.png" alt="Ilustración de variables como cajas etiquetadas en Java" class="cap-intellij">
+
+            <br><h3>Declarar y asignar variables en Java</h3>
+
+            <p>Para crear una variable hay que indicar <strong>qué tipo de dato va a guardar</strong> y <strong>cómo se llama</strong>. Después se le asigna un valor con el símbolo <code>=</code>.</p>
+
+            <div class="code-container">
+                <pre><code id="codigo-variables">
+int edad;
+edad = 25;
+
+String nombre = "Ana";   // También se puede declarar y asignar en una línea</code></pre>
+                <button class="copy-btn" onclick="copiarCodigo('codigo-variables')">Copiar</button>
+            </div>
+
+            <p>En este ejemplo hemos creado dos variables:</p>
+            <ul class="subpuntos">
+                <li><code>edad</code> de tipo <code>int</code> (entero) y le asignamos el valor 25.</li>
+                <li><code>nombre</code> de tipo <code>String</code> (cadena de texto) con el valor "Ana".</li>
+            </ul>
+
+            <h2>2. Tipos de datos básicos que usarás todo el tiempo</h2>
+
+            <p>Java necesita saber de antemano qué tipo de dato va a guardar cada variable. Estos son los más comunes para empezar:</p>
+
+            <ul class="subpuntos">
+                <li><strong>int</strong> → números enteros (ej. <code>int año = 2025;</code>)</li>
+                <li><strong>double</strong> → números decimales (ej. <code>double altura = 1.75;</code>)</li>
+                <li><strong>boolean</strong> → verdadero o falso (ej. <code>boolean esMayor = true;</code>)</li>
+                <li><strong>String</strong> → texto (atención: la <code>S</code> mayúscula, no es un tipo primitivo pero lo usarás constantemente).</li>
+            </ul>
+
+            <img src="/img/articulos/primer-programa-java-pt2/ft2.png" alt="Tabla resumen de tipos de datos int double boolean String en Java" class="AI-foto">
+
+            <p>Aquí tienes un pequeño programa que declara varias variables y las muestra por consola:</p>
+
+            <div class="code-container">
+                <pre><code id="codigo-tipos">public class Main &#123;
+                public static void main(String[] args) &#123;
+                    int edad = 25;
+                    double altura = 1.75;
+                    boolean estudiante = true;
+                    String ciudad = "Madrid";
+
+                    System.out.println("Edad: " + edad);
+                    System.out.println("Altura: " + altura);
+                    System.out.println("¿Es estudiante? " + estudiante);
+                    System.out.println("Ciudad: " + ciudad);
+                &#125;
+            &#125;</code></pre>
+                <button class="copy-btn" onclick="copiarCodigo('codigo-tipos')">Copiar</button>
+            </div>
+
+            <p>La salida por consola se debería ver tal que así:</p>
+            <pre><code>
+            Edad: 25
+            Altura: 1.75
+            ¿Es estudiante? true
+            Ciudad: Madrid</code></pre>
+
+            <h2>3. Entrada del usuario: interactuando con el teclado</h2>
+
+            <p>Hasta ahora siempre mostramos datos fijos. Para que el programa sea interactivo necesitamos <strong>leer lo que escribe el usuario</strong>. En Java se usa la clase <code>Scanner</code>.</p>
+
+            <img src="/img/articulos/primer-programa-java-pt2/scanner-esquema.png" alt="Diagrama de flujo de entrada del usuario con Scanner en Java" class="img-articulo">
+
+            <h3>Usando Scanner paso a paso</h3>
+
+            <ul class="subpuntos">
+                <li><strong>Importar la clase</strong> al principio del archivo: <code>import java.util.Scanner;</code></li>
+                <li><strong>Crear un objeto Scanner</strong> que lea desde el teclado: <code>Scanner scanner = new Scanner(System.in);</code></li>
+                <li><strong>Leer un texto</strong> con <code>scanner.nextLine()</code> (para una palabra o frase completa).</li>
+                <li><strong>Leer un número entero</strong> con <code>scanner.nextInt()</code>.</li>
+                <li>(Opcional) Cerrar el scanner con <code>scanner.close()</code> cuando ya no lo necesites.</li>
+            </ul>
+
+            <p>Aquí tienes un ejemplo completo que pregunta el nombre del usuario y lo saluda:</p>
+
+            <div class="code-container">
+                <pre><code id="codigo-scanner">import java.util.Scanner;
+
+            public class Main &#123;
+                public static void main(String[] args) &#123;
+                    Scanner scanner = new Scanner(System.in);
+                    
+                    System.out.print("¿Cómo te llamas? ");
+                    String nombre = scanner.nextLine();
+                    
+                    System.out.println("¡Hola " + nombre + "! Bienvenido a Java.");
+                    
+                    scanner.close();
+                &#125;
+            &#125;</code></pre>
+                <button class="copy-btn" onclick="copiarCodigo('codigo-scanner')">Copiar</button>
+            </div>
+
+            <p><strong>Posible salida en consola:</strong></p>
+            <pre><code>¿Cómo te llamas? Laura
+            ¡Hola Laura! Bienvenido a Java.</code></pre>
+
+            <h2>4. Ejercicio guiado: Calculadora de edad</h2>
+
+            <p>Vamos a combinar variables, entrada del usuario y operaciones aritméticas. El programa preguntará el año de nacimiento y mostrará la edad aproximada.</p>
+
+            <div class="code-container">
+                <pre><code id="codigo-edad">import java.util.Scanner;
+
+            public class Main &#123;
+                public static void main(String[] args) &#123;
+                    Scanner scanner = new Scanner(System.in);
+                    
+                    System.out.print("¿En qué año naciste? ");
+                    int añoNacimiento = scanner.nextInt();
+                    
+                    int añoActual = 2026;  // Cambia si lo usas en otro año
+                    int edad = añoActual - añoNacimiento;
+                    
+                    System.out.println("Tienes aproximadamente " + edad + " años.");
+                    
+                    scanner.close();
+                &#125;
+            &#125;</code></pre>
+                <button class="copy-btn" onclick="copiarCodigo('codigo-edad')">Copiar</button>
+            </div>
+
+            <p><strong>Ejemplo de ejecución:</strong></p>
+            <pre><code>¿En qué año naciste? 1995
+            Tienes aproximadamente 31 años.</code></pre>
+
+            <img src="/img/articulos/primer-programa-java-pt2/ejecucion-calculadora-edad.png" alt="Captura de consola IntelliJ mostrando cálculo de edad en Java" class="img-articulo">
+
+            <h2>5. Errores comunes al empezar (y cómo solucionarlos)</h2>
+
+            <ul class="subpuntos">
+                <li><strong>Olvidar importar <code>Scanner</code></strong>: aparece un error "cannot find symbol". Añade <code>import java.util.Scanner;</code> al inicio del archivo.</li>
+                <li><strong>No cerrar el string con comillas dobles</strong>: Java no entenderá dónde termina el texto. Revisa que todas las comillas estén emparejadas.</li>
+                <li><strong>Usar <code>nextLine()</code> después de <code>nextInt()</code></strong>: a veces el scanner "se come" un salto de línea. Para evitarlo, añade un <code>scanner.nextLine()</code> extra después de leer el número.</li>
+                <li><strong>Confundir <code>System.out.print</code> con <code>println</code></strong>: el primero no añade salto de línea, el segundo sí. Úsalos según necesites.</li>
+            </ul>
+
+            <img src="/img/articulos/primer-programa-java-pt2/error-nextLine-scanner.png" alt="Error común en Java al mezclar nextInt y nextLine con Scanner" class="img-articulo">
+
+            <h2>6. Reto para practicar (antes de la Parte 3)</h2>
+
+            <p>Intenta escribir un programa que:</p>
+            <ol class="subpuntos">
+                <li>Pida dos números enteros al usuario.</li>
+                <li>Muestre su suma, resta, multiplicación y división (la división puede dar decimales, usa <code>double</code>).</li>
+            </ol>
+
+            <p><strong>Pista:</strong> necesitarás dos variables <code>int</code>, una cuarta variable para el resultado, y usar los operadores <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>.</p>
+
+            <img src="/img/articulos/primer-programa-java-pt2/reto-programacion-java.png" alt="Captura del reto de suma resta multiplicación división en Java" class="img-articulo">
+
+            <p>Si te atascas, no te preocupes: en la Parte 3 veremos condicionales y bucles, y resolveremos este reto en detalle.</p>
+
+            <h2>7. Resumen y adelanto de la Parte 3</h2>
+
+            <ul class="subpuntos">
+                <li>Has aprendido qué son las variables y los tipos de datos básicos (<code>int</code>, <code>double</code>, <code>boolean</code>, <code>String</code>).</li>
+                <li>Has usado <code>Scanner</code> para leer información del usuario por teclado.</li>
+                <li>Has creado un programa que calcula la edad y has practicado con un reto.</li>
+            </ul>
+
+            <p>En la <strong>Parte 3</strong> daremos el salto a la lógica: <strong>condicionales (if-else)</strong> para que los programas tomen decisiones, y <strong>bucles (while, for)</strong> para repetir acciones. ¡No te la pierdas!</p>
+
+            <p>Si tienes dudas, déjalas en los comentarios. Y si no has visto la Parte 1, puedes encontrarla <a href="/ruta/a/parte1">aquí</a>.</p>
+        </div>
+    </section>
+
+    <div class="articulos-sidebar">
+            <h3>Otros artículos</h3>
+            <!--Tarjeta artículo IA -->
+            <div class="theme-card">
+                <h2>Instalar y configurar tu primer IDE, IntelliJ IDEA</h2>
+                <p>Guía completa de instalación de IntelliJ IDEA explicada paso a paso y acompañada de imágenes de cada fase. Ideal para quienes desean preparar correctamente su entorno antes de comenzar a trabajar con un IDE profesional.</p>
+                <a href="/articulos/programacion/configurar-intellij/" style="color: #007bff; text-decoration: none;">Saber más</a>
+            </div>
+
+            <div class="theme-card">
+                <h2>Cómo activar GitHub Copilot y su autocompletado predictivo en IntelliJ IDEA</h2>
+                <p>Aprende a instalar y activar GitHub Copilot en IntelliJ IDEA para obtener autocompletado predictivo en tiempo real.</p>
+                <a href="/articulos/programacion/activar-autocompletado-github-copilot/" style="color: #007bff; text-decoration: none;">Saber más</a>
+            </div>
+    </div>
+
+<script is:inline src="/js/copiarCodigo.js"></script>
+
+</BaseLayout>
+
+<style>
+.subpuntos{
+    margin-left: 30px;
+}
+
+.cap-intellij {
+    max-width: 500px;   /* Ajusta el tamaño máximo que quieres */
+    width: 100%;        /* Se adapta al contenedor */
+    height: auto;       /* Mantiene proporción */
+    display: block;
+    margin: 20px auto;  /* Centrada */
+    border-radius: 8px; /* Opcional */
+}
+.AI-foto {
+    max-width: 900px;   /* Ajusta el tamaño máximo que quieres */
+    width: 100%;        /* Se adapta al contenedor */
+    height: auto;       /* Mantiene proporción */
+    display: block;
+    margin: 20px auto;  /* Centrada */
+    border-radius: 8px; /* Opcional */
+}
+
+    .enlace-tema a {
+        position: relative;
+        padding-bottom: 20px;
+        margin-bottom: 15px;
+        color: #007bff; text-decoration: none;
+    }
+
+    .enlace-tema a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 60px; /* largo de la línea */
+        height: 3px; /* grosor */
+        background-color: #5678d6; 
+        border-radius: 2px;
+    }
+
+    .ia-intro-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 50px;
+    }
+
+.ia-intro-card {
+    background: #ffffff;
+    padding: 25px 30px;
+    max-width: 900px;
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.ia-intro-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.ia-intro-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 12px;
+}
+ .articulos-sidebar {
+            position: absolute;
+            top: 193px; /* AJUSTA este valor para alinearlo con tu cuadrante */
+            right: 40px;
+            width: 260px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            z-index: 5;
+        }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1500px) {
+
+    .articulos-sidebar {
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        margin: 40px 0 0 0 !important;
+        padding: 0 20px;
+    }
+}
+.articulos-sidebar .theme-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    font-size: 0.9rem;
+}
+.articulos-sidebar h3 {
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+.articulos-sidebar h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px; /* largo de la línea */
+    height: 3px; /* grosor */
+    background-color: #5678d6; /* rojo como el que dibujaste */
+    border-radius: 2px;
+}
+</style>
