@@ -919,7 +919,7 @@ html {
 /*ESTILOS PARA EL BANNER DE COOKIES*/
 /* Centrar el banner como modal */
 /* ESTILOS PARA EL BANNER DE COOKIES (MODAL CENTRADO) */
-/*
+
 .cc-window.cc-classic.cc-popup {
   position: fixed !important;
   top: 50% !important;
@@ -1015,7 +1015,7 @@ html {
     font-size: 1rem !important;
   }
 }
-  */
+  
 
 /*Paginacon en la tarjeta Ultimos articulos*/
 .pagination {
@@ -1045,4 +1045,41 @@ html {
     color: #fff;
     font-weight: bold;
     transform: scale(0.92);
+}
+
+/*Caja de copiar codigo*/
+.code-container {
+    position: relative;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 20px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    overflow-x: auto;
+}
+
+.code-container pre {
+    margin: 0;
+    color: #d4d4d4;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #3c3c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.copy-btn:hover {
+    background-color: #555;
 }

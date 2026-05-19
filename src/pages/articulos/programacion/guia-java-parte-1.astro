@@ -35,7 +35,79 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
                 Ahora que ya conoces la base teórica, es momento de pasar a la práctica. Para continuar, asegúrate de haber creado tu primer proyecto en IntelliJ IDEA siguiendo el paso correspondiente de la guía anterior, que puedes verlo <a href="/articulos/programacion/configurar-intellij#creacion-proyecto">aquí</a>. Si ya lo tienes listo, podemos avanzar y comenzar a escribir tu primer programa en Java.
             </p>
 
+            <h2>2. Tu primer programa: "Hola Mundo"</h2>
+            <p>Ahora que ya tienes tu proyecto creado y abierto en IntelliJ IDEA, vamos a escribir nuestro primer programa. Se llamará "Hola Mundo" y su única misión es mostrar ese mensaje en la consola. Puede parecer sencillo, pero es el primer paso para dominar Java.</p>
+            <br>
+            <p>Dentro del panel izquierdo, donde se muestra la estructura del proyecto, verás una carpeta llamada src. Despliega su contenido y busca la subcarpeta main/java. Es ahí donde guardaremos todo nuestro código fuente. Haz clic con el botón derecho sobre la carpeta java, selecciona New → Java Class y asígnale el nombre Main. Así se creará un archivo Main.java dentro de src/main/java, con una plantilla básica.</p>
+            <img src="/img/articulos/primer-programa-java-pt1/ft2.png" alt="imagen-estructura-programa" class="cap-intellij">
+            <p>No te preocupes si no entiendes cada palabra ahora. Por el momento, lo importante es que dentro de las llaves del método main es donde escribiremos las instrucciones que queremos ejecutar. Una vez creada la clase Main, IntelliJ te mostrará un archivo vacío o con una estructura básica. Para que nuestro programa pueda ejecutarse, necesitamos escribir el método main. Este método es el punto de entrada de toda aplicación Java; sin él, el programa no sabrá por dónde empezar. Escribe exactamente el siguiente código dentro de las llaves de la clase Main:</p>
+            <div class="code-container">
+                <pre><code id="codigo">static void main(String[] args)&#123;<br><br> &#125;</code></pre>
+                <button class="copy-btn" onclick="copiarCodigo()">Copiar</button>
+            </div>
+            <p>Se debería ver tal que así:</p>
+            <img src="/img/articulos/primer-programa-java-pt1/ft3.png" alt="imagen-estructura-programa" class="cap-intellij">
+            <h3>Explicación rápida</h3><br>
+            <ul class="subpuntos">
+                <li><i>public</i> ➜ El método es accesible desde cualquier lugar.</li>
+                <li><i>static</i> ➜ Puede ejecutarse sin necesidad de crear un objeto de la clase.</li>
+                <li><i>void</i> ➜ No devuelve ningún valor.</li>
+                <li><i>main</i> ➜ El nombre fijo que Java busca al ejecutar.</li>
+                <li><i>String[] args</i> ➜  Permite recibir argumentos desde la terminal (lo veremos más adelante).</li>
+            </ul>
+            <p>Entre las llaves del método main es donde irán las instrucciones de nuestro programa. Por ahora lo dejaremos vacío, pero en el siguiente paso añadiremos la línea que muestra el mensaje "Hola, mundo".</p>
+            <br><p>Dentro de las llaves del método main que acabamos de crear, vamos a poner la siguiente línea, que será la encargada de mostrar el texto "Hola, mundo!" por pantalla</p>
+        
+            <div class="code-container">
+                <pre><code id="codigo">System.out.println("Hola, mundo!");</code></pre>
+                <button class="copy-btn" onclick="copiarCodigo()">Copiar</button>
+            </div>
 
+            <ul class="subpuntos">
+                <li><i>System.out.println</i> ➜ Es la forma que tiene Java de mostrar texto en la consola</li>
+                <li>Lo que va entre comillas es  el mensaje que aparecerá. Puedes cambiarlo por cualquier otro texto.</li>
+                <li>El punto y coma (;) en java, todas las instrucciones terminan con punto y coma. No te olvides de él.</li>
+            </ul>
+
+            <p>Ahora, el código debería tener este aspecto: </p>
+            <div class="code-container">
+                <pre><code id="codigo">public class main &#123;
+    static void main(String[] args) &#123;
+        System.out.println("Hola, mundo!");
+    &#125;
+&#125;
+                </code></pre>
+                <button class="copy-btn" onclick="copiarCodigo()">Copiar</button>
+            </div>
+
+            <p>Ahora que ya has escrito el código, es momento de ejecutarlo y ver el resultado. Pulsa en el <strong>triángulo verde</strong> que aparece en la barra superior de IntelliJ: </p>
+            <img src="/img/articulos/primer-programa-java-pt1/ft5.png" alt="imagen-estructura-programa" class="cap-intellij">
+            <p>Ahora verás que se abre una ventana en la parte inferior de la ventana de IntelliJ: </p>
+            <img src="/img/articulos/primer-programa-java-pt1/ft6.png" alt="imagen-estructura-programa" class="cap-intellij">
+
+            <p>¡Enhorabuena! Acabas de ejecutar tu primer programa en Java con IntelliJ IDEA.</p>
+
+            <br><h3>¿Qué significa todo este código?</h3>
+            <p>No te preocupes si no entiendes cada palabra. Por ahora, solo recuerda estas dos ideas:</p>
+            <ul>
+                <li>Todo programa en Java debe ir dentro de una <strong>clase</strong> (aquí llamada <code>Main</code>).</li>
+                <li>El método <code>main</code> es el <strong>punto de entrada</strong>; Java empieza a ejecutar desde ahí.</li>
+            </ul>
+            <p>El resto de palabras (<code>public</code>, <code>static</code>, <code>void</code>, <code>String[] args</code>) las iremos viendo más adelante. Por ahora concéntrate en que todo funciona.</p>
+        
+            <br><h2>3. Probando la depuración: ver el código paso a paso</h2>
+            <p>IntelliJ permite ejecutar el programa línea por línea para ver qué hace. Es muy útil para encontrar errores.</p>
+            <ul class="subpuntos">
+                <li>Haz clic en el margen izquierdo del editor, junto al número de línea donde está <code>System.out.println(...)</code>. Aparecerá un punto rojo: es un <strong>breakpoint</strong>.</li>
+                <img src="/img/articulos/primer-programa-java-pt1/ft7.png" alt="imagen-estructura-programa" class="cap-intellij">
+
+                <li>En lugar de ejecutar normalmente, haz clic en el botón de <strong>depurar</strong> (ícono de insecto 🐞) o pulsa <code>Shift + F9</code>.</li>
+                <img src="/img/articulos/primer-programa-java-pt1/ft8.png" alt="imagen-estructura-programa" class="cap-intellij">                
+                <li>El programa se detendrá en esa línea. Verás cómo se resalta y podrás avanzar paso a paso con el botón <strong>Step Over</strong> (F8).</li>
+                <img src="/img/articulos/primer-programa-java-pt1/ft9.png" alt="imagen-estructura-programa" class="cap-intellij">                
+            </ul>
+            <p>Cuando termines, pulsa el botón rojo de detener.</p>
+        
         </div>
     </section>
 
@@ -55,10 +127,16 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
             </div>
     </div>
 
+<script is:inline src="/js/copiarCodigo.js"></script>
+
 </BaseLayout>
 
 <style>
-        .cap-intellij {
+.subpuntos{
+    margin-left: 30px;
+}
+
+.cap-intellij {
     max-width: 500px;   /* Ajusta el tamaño máximo que quieres */
     width: 100%;        /* Se adapta al contenedor */
     height: auto;       /* Mantiene proporción */
