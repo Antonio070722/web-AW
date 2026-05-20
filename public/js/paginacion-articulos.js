@@ -23,17 +23,17 @@ const pages = {
         {
             title: "¿Qué tipos de IA existen?",
             desc: "Una visión clara de los tipos de inteligencia artificial.",
-            url: "/articulos/inteligencia-artificial/tipos-de-inteligencia-artificial-(ia-ai)/"
+            url: "/articulos/inteligencia-artificial/tipos-de-inteligencia-artificial-ia-ai"
         },
         {
             title: "Instalar y configurar tu primer IDE, IntelliJ IDEA",
             desc: "Guía de instalación de IntelliJ IDEA explicada paso a paso y acompañada de imágenes claras.",
-            url: "/articulos/programacion/configurar-intellij/"
+            url: "/articulos/programacion/configurar-intellij"
         },
         {
             title: "Cómo activar GitHub Copilot y su autocompletado predictivo en IntelliJ IDEA",
             desc: "Aprende a instalar y activar GitHub Copilot en IntelliJ IDEA para obtener autocompletado predictivo en tiempo real.",
-            url: "/articulos/programacion/activar-autocompletado-github-copilot/"
+            url: "/articulos/programacion/activar-autocompletado-github-copilot"
         }
     ],
 
@@ -41,12 +41,12 @@ const pages = {
         {
             title: "Tu primera aplicación en Java: guía paso a paso para principiantes (Parte 1)",
             desc: "Inicia tu primer proyecto en Java y comprende los elementos básicos del entorno de desarrollo para comenzar a programar correctamente.",
-            url: "/articulos/programacion/guia-java-parte-1/"
+            url: "/articulos/programacion/guia-java-parte-1"
         },
         {
             title: "Tu primera aplicación en Java (Parte 2): variables, tipos de datos y entrada del usuario",
             desc: "Sigue la serie de Java para principiantes. Aprende a guardar datos con variables y a leer lo que escribe el usuario con Scanner. Ejemplos y ejercicios incluidos.",
-            url: "/articulos/programacion/guia-java-parte-2/"
+            url: "/articulos/programacion/guia-java-parte-2"
         }
     ],
     //4: [
