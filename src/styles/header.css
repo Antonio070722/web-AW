@@ -90,10 +90,11 @@ nav a:hover, nav a.active {
 }
 .submenú {
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 220%;
+    right: 0;
+    left: auto;
     background: var(--primary);
-    min-width: 220px;
+    min-width: 300px;
     border-radius: 12px;
     opacity: 0;
     visibility: hidden;
