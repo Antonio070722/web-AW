@@ -94,7 +94,7 @@ nav a:hover, nav a.active {
     right: 0;
     left: auto;
     background: var(--primary);
-    min-width: 300px;
+    min-width: 180px;
     border-radius: 12px;
     opacity: 0;
     visibility: hidden;
@@ -117,6 +117,7 @@ nav a:hover, nav a.active {
 .submenú a {
     padding: 12px 20px;
     display: block;
+    white-space: nowrap;
 }
 
 /* Hamburguesa */
@@ -174,9 +175,37 @@ nav a:hover, nav a.active {
 
 /* ========== HERO PRINCIPAL (index) ========== */
 .hero {
-    padding: 60px 0 40px;
-    background: linear-gradient(135deg, #f9faff 0%, #ffffff 100%);
+    padding: 72px 0 56px;
+    background: #ffffff;
+    border-bottom: 1px solid #e8ecf0;
+}
 
+.hero-tag {
+    display: inline-block;
+    background: #eff6ff;
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 40px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    color: #0a0a0a;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #475569;
+    margin-bottom: 32px;
+    max-width: 480px;
 }
 
 .hero-grid {
@@ -209,6 +238,78 @@ nav a:hover, nav a.active {
     gap: 16px;
     flex-wrap: wrap;
 }
+
+.hero-visual {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 420px;
+    margin: 0 auto;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+
+.hero-badge {
+    display: inline-block;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 40px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    width: fit-content;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 24px;
+    justify-content: space-around;
+}
+
+.hero-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.stat-num {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0a0a0a;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.hero-code-block {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 20px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.88rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.code-line { color: #e6edf3; line-height: 1.7; }
+.c-blue { color: #79c0ff; }
+.c-green { color: #7ee787; }
+.c-orange { color: #ffb057; }
+
 .btn {
     display: inline-block;
     padding: 12px 28px;
@@ -288,17 +389,17 @@ nav a:hover, nav a.active {
 
 /* ========== CARRUSEL TEMAS (index) ========== */
 .what-you-find {
-    background: var(--gray-light);
-    padding: 60px 0;
-    margin: 0;
-    max-width: 100%;
-    border-radius: 0;
+    background: white;
+    padding: 70px 0;
+    border-top: 1px solid #e8ecf0;
+    border-bottom: 1px solid #e8ecf0;
 }
 .section-title {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
-    margin-bottom: 48px;
+    margin-bottom: 40px;
+    color: #0a0a0a;
 }
 .que-carousel {
     display: flex;
@@ -338,17 +439,19 @@ nav a:hover, nav a.active {
 }
 
 .que-card {
-    flex: 0 0 260px;
-    background: white;
-    border-radius: 24px;
+    flex: 0 0 280px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
     padding: 28px;
     scroll-snap-align: start;
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
     transition: var(--transition);
 }
 .que-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,102,255,0.08);
+    border-color: #bfdbfe;
 }
 .que-card h3 {
     font-size: 1.5rem;
@@ -887,7 +990,7 @@ main {
     .hero-latest {
         position: absolute;
         right: 2%;
-        top: 16%;
+        top: 25%;
         width: 260px; /* Sidebar estrecha */
         z-index: 10;
         
@@ -1083,4 +1186,10 @@ html {
 
 .copy-btn:hover {
     background-color: #555;
+}
+
+.hero-grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 48px;
 }

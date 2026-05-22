@@ -62,7 +62,7 @@ function changePage(num) {
         <div class="article-card">
             <h3>${article.title}</h3>
             <p>${article.desc}</p>
-            <a href="${article.url}" class="article-link">Leer más →</a>
+            <a href="${article.url}" class="article-link">Leer articulo →</a>
         </div>
     `).join("");
     // Quitar la clase activa de todos los botones

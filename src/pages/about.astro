@@ -3,23 +3,160 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Sobre nosotros - AW Hub">    
-    <div class="texto">    
-    <h1>Sobre Nosotros</h1>
-        <p>AW – HUB es una plataforma digital independiente dedicada a explorar y divulgar temas de tecnología, inteligencia artificial, finanzas y programación. Su objetivo es ofrecer un espacio actualizado y confiable donde cualquier persona pueda acercarse al mundo digital con claridad y sin complicaciones.</p>
-        <p>AW – HUB apuesta por una comunicación directa y accesible, explicando conceptos complejos de forma práctica y comprensible. Su misión es democratizar el conocimiento digital, alejándose de tecnicismos innecesarios y priorizando explicaciones claras, útiles y humanas.</p>
-        <p>La web surgió de la necesidad de compartir información valiosa sobre temas como la <strong>tecnología</strong>, la <strong>inteligencia artificial</strong> y las <strong>finanzas</strong>, que a menudo se presentan de manera intimidante. AW cree que el <strong>aprendizaje</strong> debe ser inclusivo, por lo que se esfuerza por ofrecer contenido claro, directo y relatable, inspirado en experiencias reales y ejemplos cotidianos.</p>
-        <p>Lo que aporta al lector es una perspectiva fresca y sin complicaciones: guías que no asumen conocimientos previos, consejos aplicables y una voz que invita a la reflexión sin abrumar. Su visión es construir una <strong>comunidad</strong> de aprendices curiosos, donde el crecimiento personal y profesional se logre a través de la <strong>educación accesible</strong>.</p>
-        <p>En cuanto a su estilo, AW combina profesionalismo con un tono cercano y humano, como si estuviera conversando con un amigo. Evita tecnicismos excesivos y prioriza la utilidad, asegurándose de que cada artículo o explicación responda a preguntas reales y ayude a tomar decisiones informadas.</p>
-    </div> 
+    <div class="about-wrapper">
+
+        <div class="about-header">
+            <span class="about-tag">El autor</span>
+            <h1>Quién está detrás de AW-HUB</h1>
+        </div>
+
+        <div class="about-body">
+            <div class="about-avatar">A</div>
+            <div class="about-text">
+                <p>Hola, soy Antonio, un apasionado de la tecnología de Córdoba, España.</p>
+                <p>Un día me cansé de buscar explicaciones claras sobre inteligencia artificial, programación y tecnología moderna — y no encontrarlas. Los recursos que existían eran o demasiado técnicos para el común de la gente, o demasiado superficiales para quien quiere entender de verdad. No había término medio.</p>
+                <p>Por eso creé AW-HUB: para ser ese término medio.</p>
+                <p>Aquí encontrarás guías paso a paso sobre Java, explicaciones sobre IA desde cero, análisis de tecnologías que están cambiando el mundo — todo escrito sin jerga innecesaria, con ejemplos reales y sin relleno. Cada artículo está pensado para que salgas sabiendo más de lo que entraste, independientemente de tu nivel.</p>
+                <p>No somos una empresa ni un equipo de redactores. Soy una persona que aprende, investiga y escribe sobre lo que le apasiona — y que cree firmemente que el conocimiento tecnológico debería estar al alcance de cualquiera, no solo de los que ya saben.</p>
+                <p>Si tienes dudas, sugerencias, o simplemente quieres decir hola, puedes escribirme desde la <a href="/sugerencias">página de contacto</a>. Estaré encantado de leerte.</p>
+            </div>
+        </div>
+
+        <div class="about-values">
+            <div class="value-card">
+                <span class="value-icon">💡</span>
+                <h3>Claridad</h3>
+                <p>Conceptos complejos explicados de forma simple, sin sacrificar profundidad.</p>
+            </div>
+            <div class="value-card">
+                <span class="value-icon">🎯</span>
+                <h3>Utilidad</h3>
+                <p>Cada artículo tiene un propósito: que aprendas algo aplicable de verdad.</p>
+            </div>
+            <div class="value-card">
+                <span class="value-icon">🔓</span>
+                <h3>Accesibilidad</h3>
+                <p>Conocimiento tecnológico para todos, sin barreras ni tecnicismos innecesarios.</p>
+            </div>
+        </div>
+
+    </div>
     <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
 </BaseLayout>
+
 <style>
-  .texto {
-    padding: 20px;
-    font-family: 'Poppins', sans-serif;
-    background-color: #fff;
-    color: #000;
-    max-width: 800px;
+.about-wrapper {
+    max-width: 860px;
     margin: 0 auto;
-  }
+    padding: 60px 24px;
+}
+
+.about-header {
+    margin-bottom: 48px;
+}
+
+.about-tag {
+    display: inline-block;
+    background: #eff6ff;
+    color: #0066ff;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 40px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.about-header h1 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 700;
+    color: #0a0a0a;
+    line-height: 1.2;
+}
+
+.about-body {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    margin-bottom: 56px;
+}
+
+.about-avatar {
+    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+    background: #0066ff;
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-text p {
+    font-size: 1.05rem;
+    color: #334155;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-text a {
+    color: #0066ff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.about-text a:hover {
+    text-decoration: underline;
+}
+
+.about-values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 48px;
+}
+
+.value-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.25s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,102,255,0.08);
+    border-color: #bfdbfe;
+}
+
+.value-icon {
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.value-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0a0a0a;
+    margin-bottom: 8px;
+}
+
+.value-card p {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+    .about-body {
+        flex-direction: column;
+    }
+}
 </style>
