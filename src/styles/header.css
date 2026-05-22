@@ -20,7 +20,7 @@
     --shadow-md: 0 12px 24px rgba(0,0,0,0.08);
     --shadow-lg: 0 20px 35px rgba(0,0,0,0.12);
     --radius-md: 16px;
-    --radius-lg: 24px;
+    --radius-lg: 14px;
     --transition: all 0.25s ease;
 }
 
@@ -244,11 +244,11 @@ nav a:hover, nav a.active {
 
 
 .hero-latest .latest-panel {
-    background: var(--primary);
+    background: #f8f8f8;
     border-radius: var(--radius-lg);
     padding: 24px;
-    color: white;
-    box-shadow: var(--shadow-lg);
+    color: black;
+    box-shadow: none;
 }
 .latest-panel h2 {
     font-size: 1.5rem;
@@ -273,7 +273,7 @@ nav a:hover, nav a.active {
 }
 .article-card p {
     font-size: 0.9rem;
-    color: #cbd5e1;
+    color: #4f5256;
     margin-bottom: 12px;
 }
 .article-link {

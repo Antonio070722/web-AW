@@ -8,8 +8,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <div class="hero-grid">
                 <div class="hero-text">
                     <h1>AW-HUB | IA, tecnología moderna y programación</h1>
-                    <p>AW‑HUB es un espacio para entender la IA, la tecnología moderna y la programación de forma clara y práctica, con ejemplos reales y explicaciones profundas pensadas para curiosos y autodidactas que quieren aprender de verdad.</p>
-                    <div class="hero-buttons">
+                        <p><strong>Aprende IA</strong>, <strong>programación</strong> y <strong>tecnología moderna</strong> de forma clara y práctica. Explicaciones profundas, ejemplos reales y cero tecnicismos. Pensado para curiosos y autodidactas que quieren <strong>entender de verdad cómo funciona el mundo digital</strong>.</p>                    <div class="hero-buttons">
                         <a href="temas/todosTemas.html" class="btn btn-primary">Explorar temas →</a>
                         <a href="about.html" class="btn btn-secondary">Conoce más</a>
                     </div>
@@ -48,17 +47,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                     <div class="que-track" id="queTrack">
                         <div class="que-card">
                             <h3>💻 Tecnología</h3>
-                            <p>Innovaciones, gadgets y tendencias digitales que transforman el mundo.</p>
+                            <p>Las innovaciones <strong>tecnológicas</strong> que están cambiando el mundo, explicadas sin sensacionalismos y con ejemplos cotidianos.</p>
                             <a href="temas/tecnologia" class="card-link">Descubrir →</a>
                         </div>
                         <div class="que-card">
                             <h3>🧠 Inteligencia Artificial</h3>
-                            <p>Desde redes neuronales hasta ética, aprende IA de forma amigable.</p>
+                            <p>Descubre qué es la IA, tipos de Inteligencia Artificial, cómo funciona y hacia dónde se dirige. <strong>Explicaciones claras</strong> sin tecnicismos innecesarios.</p>
                             <a href="temas/inteligencia-artificial-ia" class="card-link">Descubrir →</a>
                         </div>
                         <div class="que-card">
                             <h3>🐍 Programación</h3>
-                            <p>Fundamentos de código, herramientas prácticas y proyectos reales.</p>
+                            <p>Aprende a programar <strong>en Java</strong> desde cero con <strong>guías prácticas</strong>, ejemplos reales y trucos que te ahorrarán horas de frustración.</p>
                             <a href="temas/progr.html" class="card-link">Descubrir →</a>
                         </div>
                         <div class="que-card">
@@ -78,16 +77,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 <div class="mission-quote">
                     <span class="quote-icon">“</span>
                     <p>Democratizar el conocimiento, sin jergas técnicas ni barreras. Que cualquier persona pueda
-                        entender cómo funciona el mundo digital y financiero.</p>
-                    <footer>— AW, creador de AW HUB</footer>
+                        entender cómo funciona el mundo digital.</p>
+                    <a href="/about" class="btn-outline-creator">Conoce al creador</a>
                 </div>
+                
+
                 <div class="mission-text">
-                    <h2>¿Por qué nació este proyecto?</h2>
-                    <p>Porque aprender sobre tecnología, IA y finanzas no debería ser aburrido ni intimidante. Aquí
-                        encontrarás explicaciones claras, ejemplos cotidianos y una comunidad de curiosos que creen en
-                        el poder de la educación accesible. Cada artículo está pensado para que <strong>tú tomes
-                            acción</strong>.</p>
-                    <a href="about.html" class="btn-outline">Conoce más sobre mí →</a>
+                    <h2>Educación tecnológica clara, práctica y para todos</h2>
+                    <p>... Por eso aquí <strong>hablamos claro, con ejemplos reales y cero rollo</strong>. 
+Encontrarás <strong>guías de Java paso a paso</strong>, explicaciones sobre <strong>inteligencia artificial desde cero</strong>, 
+y análisis de tecnologías como Neuralink o las baterías de sodio. 
+Cada artículo está pensado para que entiendas conceptos complejos y <strong>los apliques</strong>.</p>
+                    <a href="/temas/todosTemas" class="btn-outline">Comienza aquí →</a>
                 </div>
             </div>
         </section>
@@ -97,3 +98,21 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <script is:inline src="/js/paginacion-articulos.js"></script>
 
 </BaseLayout>
+<style>
+    .btn-outline-creator {
+    display: inline-block;
+    border: 1px solid var(--accent);
+    padding: 10px 24px;
+    border-radius: 40px;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    background: var(--accent);
+    color: white;
+
+}
+.btn-outline-creator:hover {
+    color: var(--accent);
+    background-color: white;
+}
+</style>
