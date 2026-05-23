@@ -49,10 +49,14 @@ const pages = {
             url: "/articulos/programacion/guia-java-parte-2"
         }
     ],
-    //4: [
+    4: [
+        {
+            title: "Tu primera aplicación en Java (Parte 3): condicionales y bucles",
+            desc: "Aprende a usar condicionales y bucles en Java para que tus programas tomen decisiones y repitan acciones. Resolveremos el reto anterior y crearás tu primer juego interactivo.",
+            url: "/articulos/programacion/guia-java-parte-3"
+        }
         
-        
-    //]
+    ]
 
 };
 
