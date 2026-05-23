@@ -2,15 +2,15 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Politica de cookies | AW Hub">
+<BaseLayout title="Politica de cookies">
 
-<h1 style="text-align: center; display: inline-block;
-    background: #f2f2f2; /* gris suave */
-    padding: 8px 18px;
-    border-radius: 6px;">Politica de cookies</h1>
+<div class="legal-header">
+    <span class="legal-tag">Legal</span>
+    <h1>Politica de cookies</h1>
     <div class="enlace-tema">
-        <a href="/temas/inteligencia-artificial(ia)">Inicio</a>
+        <a href="/">Inicio</a>
     </div>
+</div>
 
     <section class="ia-intro-section">
         <div class="ia-intro-card">
@@ -115,6 +115,33 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 </BaseLayout>
 
 <style>
+.legal-header {
+    margin-bottom: 40px;
+    padding: 60px 24px 0;
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.legal-tag {
+    display: inline-block;
+    background: #eff6ff;
+    color: #0066ff;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 40px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.legal-header h1 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 700;
+    color: #0a0a0a;
+}
+
     .enlace-tema a {
     position: relative;
     padding-bottom: 20px;
