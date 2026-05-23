@@ -1,0 +1,323 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Tu primera aplicación en Java (Parte 3)" description="Aprende a usar variables, tipos de datos y Scanner en Java con ejemplos prácticos paso a paso. Guía para principiantes con ejercicios incluidos.">
+
+    <a href="/temas/progr" class="legal-tag">Programación</a>
+    <h1>Tu primera aplicación en Java paso a paso (Parte 3): condicionales, bucles y resolución del reto</h1>
+
+    <section class="ia-intro-section">
+        <div class="ia-intro-card">
+
+            <h2>0. Solución al reto de la Parte 2</h2>
+
+            <p>En la Parte 2 te dejamos un reto: crear un programa que pidiera <strong>dos números enteros</strong> y mostrara su suma, resta, multiplicación y división. Aquí tienes la solución:</p>
+
+            <div class="code-container">
+                <pre><code id="codigo-reto">import java.util.Scanner;
+
+public class Main &#123;
+    public static void main(String[] args) &#123;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Introduce el primer número: ");
+        int a = scanner.nextInt();
+
+        System.out.print("Introduce el segundo número: ");
+        int b = scanner.nextInt();
+
+        System.out.println("Suma: " + (a + b));
+        System.out.println("Resta: " + (a - b));
+        System.out.println("Multiplicación: " + (a * b));
+        System.out.println("División: " + (double) a / b);
+
+        scanner.close();
+    &#125;
+&#125;</code></pre>
+                <button class="copy-btn" onclick="copiarCodigo('codigo-reto')">Copiar</button>
+            </div>
+
+            <p>Fíjate en el cast <code>(double) a / b</code> — si dividieras dos <code>int</code> directamente, Java descartaría los decimales. Al convertir <code>a</code> a <code>double</code> antes de dividir, <strong>conservas la parte decimal del resultado</strong>.</p>
+
+            <img src="/img/articulos/primer-programa-java-pt3/ftX.webp" alt="Resultado reto parte 2" class="AI-foto">
+            
+            <h2>1. Condicionales: que el programa tome decisiones</h2>
+
+            <p>Hasta ahora nuestros programas ejecutaban todas las líneas de arriba a abajo sin excepción. Con los <strong>condicionales</strong> podemos hacer que el programa <strong>tome caminos distintos</strong> según una condición.</p>
+
+            <p>La estructura básica es <code>if</code> (si) y <code>else</code> (si no). Si la condición es verdadera, se ejecuta el bloque del <code>if</code>; si no, el del <code>else</code>.</p>
+
+            <div class="code-container">
+                <pre><code id="codigo-if">import java.util.Scanner;
+
+public class Main &#123;
+    public static void main(String[] args) &#123;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("¿Cuántos años tienes? ");
+        int edad = scanner.nextInt();
+
+        if (edad >= 18) &#123;
+            System.out.println("Eres mayor de edad.");
+        &#125; else &#123;
+            System.out.println("Eres menor de edad.");
+        &#125;
+
+        scanner.close();
+    &#125;
+&#125;</code></pre>
+                <button class="copy-btn" onclick="copiarCodigo('codigo-if')">Copiar</button>
+            </div>
+
+            <p><strong>Ejemplo de ejecución:</strong></p>
+            <pre><code>¿Cuántos años tienes? 16
+Eres menor de edad.</code></pre>
+
+            <p>También puedes encadenar condiciones con <strong>else if</strong> para cubrir más casos:</p>
+
+            <div class="code-container">
+                <pre><code id="codigo-elseif">if (edad >= 65) &#123;
+    System.out.println("Tercera edad.");
+&#125; else if (edad >= 18) &#123;
+    System.out.println("Adulto.");
+&#125; else &#123;
+    System.out.println("Menor de edad.");
+&#125;</code></pre>
+                <button class="copy-btn" onclick="copiarCodigo('codigo-elseif')">Copiar</button>
+            </div>
+
+            <h2>2. Operadores de comparación</h2>
+
+            <p>Dentro de los <code>if</code> usarás constantemente estos operadores para comparar valores:</p>
+
+            <ul class="subpuntos">
+                <li><code>==</code> → igual a</li>
+                <li><code>!=</code> → distinto de</li>
+                <li><code>&gt;</code> → mayor que</li>
+                <li><code>&lt;</code> → menor que</li>
+                <li><code>&gt;=</code> → mayor o igual que</li>
+                <li><code>&lt;=</code> → menor o igual que</li>
+            </ul>
+
+            <p><strong>Atención:</strong> para comparar números usa <code>==</code>, pero para comparar <code>String</code> usa siempre <code>.equals()</code>. Ejemplo: <code>nombre.equals("Ana")</code>. Si usas <code>==</code> con textos, Java compara referencias de memoria, no el contenido, y el resultado puede ser incorrecto.</p>
+
+            <h2>3. Bucles: repetir acciones</h2>
+
+            <p>Los <strong>bucles</strong> permiten ejecutar un bloque de código varias veces sin tener que repetirlo manualmente. En Java los más usados son <code>while</code> y <code>for</code>.</p>
+
+            <h3>El bucle while</h3><br>
+
+            <p>Se ejecuta <strong>mientras una condición sea verdadera</strong>. Es útil cuando no sabes de antemano cuántas veces se va a repetir.</p>
+
+            <div class="code-container">
+                <pre><code id="codigo-while">int contador = 1;
+
+while (contador &lt;= 5) &#123;
+    System.out.println("Vuelta número " + contador);
+    contador++;
+&#125;</code></pre>
+                <button class="copy-btn" onclick="copiarCodigo('codigo-while')">Copiar</button>
+            </div>
+
+            <p><strong>Salida:</strong></p>
+            <pre><code>Vuelta número 1
+Vuelta número 2
+Vuelta número 3
+Vuelta número 4
+Vuelta número 5</code></pre>
+
+            <br><h3>El bucle for</h3><br>
+
+            <p>Es más compacto y se usa cuando <strong>sabes exactamente cuántas veces</strong> quieres repetir algo. Incluye la inicialización, la condición y el incremento en una sola línea.</p>
+
+            <div class="code-container">
+                <pre><code id="codigo-for">for (int i = 1; i &lt;= 5; i++) &#123;
+    System.out.println("Vuelta número " + i);
+&#125;</code></pre>
+                <button class="copy-btn" onclick="copiarCodigo('codigo-for')">Copiar</button>
+            </div>
+
+            <p>Este <code>for</code> hace exactamente lo mismo que el <code>while</code> anterior pero de forma más concisa. <strong>Usa <code>for</code> cuando sepas el número de repeticiones y <code>while</code> cuando dependa de una condición variable.</strong></p>
+
+            <h2>4. Ejercicio guiado: adivina el número</h2>
+
+            <p>Vamos a combinar todo lo aprendido — variables, Scanner, condicionales y bucles — en un programa completo. El programa elige un número secreto y el usuario tiene que adivinarlo.</p>
+
+            <div class="code-container">
+                <pre><code id="codigo-adivina">import java.util.Scanner;
+
+public class Main &#123;
+    public static void main(String[] args) &#123;
+
+        int secreto = 42;
+        int intento = 0;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Adivina el número entre 1 y 100:");
+
+        while (intento != secreto) &#123;
+            System.out.print("Tu intento: ");
+            intento = scanner.nextInt();
+
+            if (intento &lt; secreto) &#123;
+                System.out.println("Demasiado bajo, prueba más alto.");
+            &#125; else if (intento &gt; secreto) &#123;
+                System.out.println("Demasiado alto, prueba más bajo.");
+            &#125;
+        &#125;
+
+        System.out.println("¡Correcto! El número era " + secreto + ".");
+        scanner.close();
+    &#125;
+&#125;</code></pre>
+                <button class="copy-btn" onclick="copiarCodigo('codigo-adivina')">Copiar</button>
+            </div>
+
+            <h2>5. Errores comunes con condicionales y bucles</h2>
+
+            <ul class="subpuntos">
+                <li><strong>Bucle infinito</strong>: si la condición del <code>while</code> nunca se vuelve falsa, el programa se queda bloqueado. Asegúrate de que el contador cambia dentro del bucle.</li>
+                <li><strong>Usar <code>=</code> en vez de <code>==</code></strong>: <code>=</code> asigna un valor, <code>==</code> compara. Confundirlos es un error muy frecuente.</li>
+                <li><strong>Olvidar las llaves <code>&#123; &#125;</code></strong>: si el <code>if</code> o el bucle solo tienen una línea puedes omitirlas, pero es mejor incluirlas siempre para evitar confusiones.</li>
+            </ul>
+
+            <h2>6. Reto para practicar (antes de la Parte 4)</h2>
+
+            <p>Intenta escribir un programa que:</p>
+            <ol class="subpuntos">
+                <li>Pida al usuario que introduzca 5 números enteros uno a uno.</li>
+                <li>Calcule y muestre la <strong>suma total</strong> y el <strong>promedio</strong> de los 5 números.</li>
+            </ol>
+
+            <p><strong>Pista:</strong> necesitarás un bucle <code>for</code> que se repita 5 veces, una variable acumuladora para la suma y dividir entre 5 al final usando <code>double</code> para conservar decimales.</p>
+
+            <p>Si te atascas, no te preocupes: en la Parte 4 veremos <strong>arrays y métodos</strong>, y resolveremos este reto en detalle.</p>
+
+            <h2>7. Resumen y adelanto de la Parte 4</h2>
+
+            <ul class="subpuntos">
+                <li>Has aprendido a usar <strong>condicionales</strong> (<code>if</code>, <code>else if</code>, <code>else</code>) para que el programa tome decisiones.</li>
+                <li>Has dominado los <strong>bucles</strong> <code>while</code> y <code>for</code> para repetir acciones.</li>
+                <li>Has creado un juego completo combinando todo lo aprendido hasta ahora.</li>
+            </ul>
+
+            <p>En la <strong>Parte 4</strong> daremos el salto a los <strong>arrays</strong> para guardar colecciones de datos, y a los <strong>métodos</strong> para organizar el código en bloques reutilizables. ¡No te la pierdas!</p>
+
+            <p>Si tienes dudas, puedes escribirlas en la <a href="/sugerencias">sección de contacto</a>. Y si no has visto las partes anteriores, aquí tienes la <a href="/articulos/programacion/guia-java-parte-1/">Parte 1</a> y la <a href="/articulos/programacion/guia-java-parte-2/">Parte 2</a>.</p>
+
+        </div>
+    </section>
+
+    <div class="articulos-sidebar">
+        <h3>Otros artículos</h3>
+        <div class="theme-card">
+            <h2>Instalar y configurar tu primer IDE, IntelliJ IDEA</h2>
+            <p>Guía completa de instalación de IntelliJ IDEA explicada paso a paso y acompañada de imágenes de cada fase.</p>
+            <a href="/articulos/programacion/configurar-intellij/" style="color: #007bff; text-decoration: none;">Saber más</a>
+        </div>
+        <div class="theme-card">
+            <h2>Cómo activar GitHub Copilot y su autocompletado predictivo en IntelliJ IDEA</h2>
+            <p>Aprende a instalar y activar GitHub Copilot en IntelliJ IDEA para obtener autocompletado predictivo en tiempo real.</p>
+            <a href="/articulos/programacion/activar-autocompletado-github-copilot/" style="color: #007bff; text-decoration: none;">Saber más</a>
+        </div>
+        <div class="theme-card">
+            <h2>Tu primera aplicación en Java: guía paso a paso para principiantes (Parte 1)</h2>
+            <p>Crea tu primer proyecto en Java desde cero y familiarízate con IntelliJ IDEA.</p>
+            <a href="/articulos/programacion/guia-java-parte-1/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+        <div class="theme-card">
+            <h2>Tu primera aplicación en Java: variables, tipos de datos y entrada del usuario (Parte 2)</h2>
+            <p>Aprende a usar variables, los tipos de datos básicos de Java y a leer la entrada del usuario con Scanner.</p>
+            <a href="/articulos/programacion/guia-java-parte-2/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+    </div>
+
+<script is:inline src="/js/copiarCodigo.js"></script>
+<button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+
+</BaseLayout>
+
+<style>
+.subpuntos {
+    margin-left: 30px;
+}
+.AI-foto {
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+.ia-intro-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 50px;
+}
+.ia-intro-card {
+    background: #ffffff;
+    padding: 25px 30px;
+    max-width: 900px;
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+.ia-intro-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #111;
+}
+.ia-intro-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 12px;
+}
+.articulos-sidebar {
+    position: absolute;
+    top: 193px;
+    right: 40px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 5;
+}
+@media (max-width: 1500px) {
+    .articulos-sidebar {
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        margin: 40px 0 0 0 !important;
+        padding: 0 20px;
+    }
+}
+.articulos-sidebar .theme-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    font-size: 0.9rem;
+}
+.articulos-sidebar h3 {
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+.articulos-sidebar h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #5678d6;
+    border-radius: 2px;
+}
+</style>
