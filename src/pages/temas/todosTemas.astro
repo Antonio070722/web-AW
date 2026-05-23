@@ -22,7 +22,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                 <a href="/temas/inteligencia-artificial-ia" class="tcard-link">Ver artículos →</a>
             </div>
 
-            <div class="tcard" style="margin-bottom: 320px;">
+            <div class="tcard tcard-last">
                 <span class="tcard-icon">🐍</span>
                 <h2>Programación</h2>
                 <p>Aprende a programar desde cero con guías prácticas de Java, ejemplos reales y trucos para avanzar rápido.</p>
@@ -51,6 +51,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     <script is:inline src="/js/paginacion-articulos.js"></script>
 </BaseLayout>
 <style>
+@media (min-width: 1481px) {
+    .tcard-last {
+        margin-bottom: 320px;
+    }
+}
 
     .contenido {
         padding: 20px; 
