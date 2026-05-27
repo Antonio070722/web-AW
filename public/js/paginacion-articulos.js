@@ -8,7 +8,7 @@ const pages = {
             url: "/articulos/tecnologia/neuralink-implanta-primer-chip-cerebral/"
         },
         {
-            title: "Qué es la IA Superinteligente y por qué preocupa",
+            title: "Inteligencia Artificial Superinteligente: qué es y por qué preocupa",
             desc: "La IA superinteligente: el nivel de inteligencia artificial que podría superar al ser humano.",
             url: "/articulos/inteligencia-artificial/inteligencia-artificial-superInteligente"
         },
@@ -21,7 +21,7 @@ const pages = {
     ],
     2: [
         {
-            title: "¿Qué tipos de IA existen?",
+            title: "IA débil vs IA fuerte: diferencias y ejemplos",
             desc: "Una visión clara de los tipos de inteligencia artificial.",
             url: "/articulos/inteligencia-artificial/tipos-de-inteligencia-artificial-ia-ai"
         },
@@ -54,6 +54,11 @@ const pages = {
             title: "Tu primera aplicación en Java (Parte 3): condicionales y bucles",
             desc: "Aprende a usar condicionales y bucles en Java para que tus programas tomen decisiones y repitan acciones. Resolveremos el reto anterior y crearás tu primer juego interactivo.",
             url: "/articulos/programacion/guia-java-parte-3"
+        }, 
+        {
+            title: "Deep Learning vs Machine Learning: diferencias y ejemplos",
+            desc: "Aprende qué es el Deep Learning, cómo funcionan las redes neuronales profundas y por qué es la base de la IA moderna. Sin tecnicismos.",
+            url: "/articulos/inteligencia-artificial/deep-learning"
         }
         
     ]

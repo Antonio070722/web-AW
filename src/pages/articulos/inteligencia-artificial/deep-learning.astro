@@ -1,0 +1,248 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout 
+    title="Qué es el Deep Learning y en qué se diferencia del Machine Learning"
+    description="Aprende qué es el Deep Learning, cómo funcionan las redes neuronales profundas y por qué es la base de la IA moderna. Sin tecnicismos."
+>
+    <a href="/temas/inteligencia-artificial-ia" class="legal-tag">Inteligencia Artificial</a>
+    <h1>Qué es el Deep Learning y en qué se diferencia del Machine Learning</h1>
+
+    <section class="ia-intro-section">
+        <div class="ia-intro-card">
+
+            <p>El término <strong>Deep Learning</strong> aparece constantemente cuando se habla de inteligencia artificial, pero pocas veces se explica con claridad qué significa y por qué es tan importante. En este artículo verás qué es el Deep Learning, cómo funciona por dentro y en qué se diferencia del Machine Learning tradicional.</p>
+
+            <img src="/img/articulos/deep-learning/ft1.png" alt="Ilustración de red neuronal profunda con capas" class="AI-foto">
+
+            <h2>¿Qué es el Deep Learning?</h2>
+
+            <p>El Deep Learning (aprendizaje profundo) es una rama del Machine Learning que utiliza <strong>redes neuronales con muchas capas</strong> para aprender patrones complejos a partir de grandes cantidades de datos. La palabra "deep" (profundo) hace referencia precisamente a esa profundidad: cuantas más capas tiene una red, más complejas son las relaciones que puede aprender.</p>
+
+            <p>Es la tecnología detrás de los avances más espectaculares de la IA en los últimos años: reconocimiento de voz, traducción automática, generación de imágenes, coches autónomos y modelos de lenguaje como ChatGPT.</p>
+
+            <h2>¿Cómo funciona una red neuronal profunda?</h2>
+
+            <p>Imagina una cadena de filtros. Cada capa de la red toma la información de la capa anterior, la transforma y la pasa a la siguiente. Así, la red va construyendo una comprensión cada vez más abstracta de los datos.</p>
+
+            <ul class="subpuntos">
+                <li><strong>Capa de entrada:</strong> recibe los datos en bruto (píxeles de una imagen, palabras de un texto, etc.).</li>
+                <li><strong>Capas ocultas:</strong> procesan y transforman la información. Cuantas más capas, más profunda es la red.</li>
+                <li><strong>Capa de salida:</strong> produce el resultado final (una clasificación, una predicción, un texto generado).</li>
+            </ul>
+
+            <p>Durante el entrenamiento, la red ajusta miles o millones de parámetros internos para reducir el error en sus predicciones. Este proceso se repite millones de veces hasta que la red aprende a generalizar correctamente.</p>
+
+            <img src="/img/articulos/deep-learning/ft2.png" alt="Diagrama de capas de entrada, ocultas y salida en una red neuronal" class="AI-foto">
+
+            <h2>¿En qué se diferencia del Machine Learning tradicional?</h2>
+
+            <p>Esta es la pregunta clave. Ambos son formas de que las máquinas aprendan de datos, pero tienen diferencias importantes:</p>
+
+            <h3 style="margin-left: 20px;">Machine Learning tradicional</h3><br>
+            <ul class="subpuntos">
+                <li>Requiere que un humano <strong>seleccione las características</strong> relevantes de los datos (feature engineering).</li>
+                <li>Funciona bien con <strong>cantidades moderadas de datos</strong>.</li>
+                <li>Sus modelos son más <strong>interpretables y explicables</strong>.</li>
+                <li>Ejemplos: árboles de decisión, regresión logística, SVM.</li>
+            </ul>
+
+            <h3 style="margin-left: 20px;">Deep Learning</h3><br>
+            <ul class="subpuntos">
+                <li><strong>Aprende las características solo</strong>, sin intervención humana.</li>
+                <li>Necesita <strong>grandes volúmenes de datos</strong> y potencia de cómputo (GPUs).</li>
+                <li>Sus modelos son más difíciles de interpretar (caja negra).</li>
+                <li>Supera al ML tradicional en tareas complejas como visión o lenguaje.</li>
+            </ul>
+
+            <img src="/img/articulos/deep-learning/ft3.png" alt="Comparativa entre Machine Learning y Deep Learning" class="AI-foto">
+
+            <h2>¿Por qué el Deep Learning ha revolucionado la IA?</h2>
+
+            <p>Hasta hace unos años, los sistemas de IA tenían un techo claro: más datos no significaba necesariamente mejores resultados. El Deep Learning rompió ese techo. Cuantos más datos y más potencia de cómputo, mejor funciona.</p>
+
+            <p>Tres factores hicieron posible su explosión:</p>
+
+            <ul class="subpuntos">
+                <li><strong>Grandes volúmenes de datos:</strong> internet generó cantidades masivas de datos etiquetados.</li>
+                <li><strong>GPUs:</strong> las tarjetas gráficas permitieron entrenar redes enormes en tiempo razonable.</li>
+                <li><strong>Nuevas arquitecturas:</strong> como las redes convolucionales (CNN) para imágenes o los transformers para lenguaje.</li>
+            </ul>
+
+            <h2>Tipos de redes neuronales en Deep Learning</h2>
+
+            <p>No todas las redes neuronales profundas son iguales. Según la tarea, se usan arquitecturas distintas:</p>
+
+            <h3 style="margin-left: 20px;">Redes Convolucionales (CNN)</h3><br>
+            <p style="margin-left: 20px;">Especializadas en procesar imágenes. Detectan bordes, formas y patrones visuales de forma jerárquica. Se usan en reconocimiento facial, diagnóstico médico por imagen y coches autónomos.</p>
+
+            <h3 style="margin-left: 20px;">Redes Recurrentes (RNN)</h3><br>
+            <p style="margin-left: 20px;">Diseñadas para datos secuenciales como texto o audio. Tienen memoria de lo que han procesado antes. Hoy en día han sido superadas en gran medida por los transformers.</p>
+
+            <h3 style="margin-left: 20px;">Transformers</h3><br>
+            <p style="margin-left: 20px;">La arquitectura dominante en procesamiento de lenguaje natural. Es la base de modelos como GPT, BERT o LLaMA. Su mecanismo de atención les permite entender el contexto de una palabra en relación a todas las demás.</p>
+
+            <h3 style="margin-left: 20px;">GANs (Redes Generativas Antagónicas)</h3><br>
+            <p style="margin-left: 20px;">Dos redes que compiten entre sí: una genera contenido falso y la otra intenta detectarlo. El resultado es contenido sintético de alta calidad: imágenes, vídeos, voces generadas por IA.</p>
+
+            <img src="/img/articulos/deep-learning/ft4.png" alt="Tipos de redes neuronales: CNN, RNN, Transformers y GANs" class="AI-foto">
+
+            <h2>Ejemplos reales de Deep Learning en tu día a día</h2>
+
+            <ul class="subpuntos">
+                <li><strong>Google Translate:</strong> usa transformers para traducir entre más de 100 idiomas.</li>
+                <li><strong>Face ID del iPhone:</strong> red neuronal que reconoce tu cara en milisegundos.</li>
+                <li><strong>Spotify y Netflix:</strong> sistemas de recomendación basados en redes profundas.</li>
+                <li><strong>ChatGPT:</strong> modelo de lenguaje basado en transformers entrenado con miles de millones de textos.</li>
+                <li><strong>Tesla Autopilot:</strong> redes convolucionales que procesan la imagen de las cámaras en tiempo real.</li>
+            </ul>
+
+            <h2>Limitaciones del Deep Learning</h2>
+
+            <p>No todo son ventajas. El Deep Learning tiene limitaciones importantes que conviene conocer:</p>
+
+            <ul class="subpuntos">
+                <li><strong>Necesita muchos datos:</strong> sin datos suficientes, el modelo no aprende bien.</li>
+                <li><strong>Caja negra:</strong> es difícil explicar por qué el modelo toma una decisión concreta.</li>
+                <li><strong>Coste computacional:</strong> entrenar modelos grandes requiere hardware especializado y mucha energía.</li>
+                <li><strong>Sensible a datos sesgados:</strong> si los datos de entrenamiento tienen sesgos, el modelo los hereda.</li>
+            </ul>
+
+            <img src="/img/articulos/deep-learning/ft5.png" alt="Limitaciones del Deep Learning ilustradas" class="AI-foto">
+
+            <h2>Resumen</h2>
+
+            <ul class="subpuntos">
+                <li>El Deep Learning es una rama del Machine Learning que usa redes neuronales con muchas capas.</li>
+                <li>Aprende características de los datos solo, sin intervención humana.</li>
+                <li>Ha revolucionado la IA gracias a los grandes volúmenes de datos, las GPUs y nuevas arquitecturas.</li>
+                <li>Sus aplicaciones van desde el reconocimiento de imágenes hasta los modelos de lenguaje.</li>
+                <li>Tiene limitaciones: necesita muchos datos, es una caja negra y tiene alto coste computacional.</li>
+            </ul>
+
+            <p>Si quieres seguir aprendiendo sobre inteligencia artificial, puedes explorar más artículos en la <a href="/temas/inteligencia-artificial-ia">sección de IA</a> o escribirnos desde la <a href="/sugerencias">página de contacto</a>.</p>
+
+        </div>
+    </section>
+
+    <div class="articulos-sidebar">
+        <h3>Otros artículos</h3>
+
+        <div class="theme-card">
+            <h2>IA débil vs IA fuerte: diferencias y ejemplos</h2>
+            <p>Descubre las diferencias entre los tipos de inteligencia artificial con ejemplos reales y sin tecnicismos.</p>
+            <a href="/articulos/inteligencia-artificial/tipos-de-inteligencia-artificial-ia-ai/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+
+        <div class="theme-card">
+            <h2>IA Superinteligente: qué es, características y riesgos</h2>
+            <p>Qué es la IA superinteligente, por qué es aún hipotética y qué riesgos plantea para la humanidad.</p>
+            <a href="/articulos/inteligencia-artificial/inteligencia-artificial-superInteligente/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+
+        <div class="theme-card">
+            <h2>Neuralink: el primer chip cerebral funcional implantado</h2>
+            <p>Descubre qué es Neuralink, cómo funciona el chip cerebral y qué logró el primer paciente.</p>
+            <a href="/articulos/tecnologia/neuralink-implanta-primer-chip-cerebral/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+
+        <div class="theme-card">
+            <h2>Baterías de sodio: la alternativa barata al litio</h2>
+            <p>Descubre qué son las baterías de sodio, sus ventajas frente al litio y por qué pueden revolucionar el almacenamiento energético.</p>
+            <a href="/articulos/tecnologia/baterias-de-sodio-alternativas-baratas-al-litio/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+
+        <div class="theme-card">
+            <h2>Tu primera aplicación en Java (Parte 1)</h2>
+            <p>Crea tu primer proyecto en Java desde cero y familiarízate con IntelliJ IDEA.</p>
+            <a href="/articulos/programacion/guia-java-parte-1/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+
+    </div>
+
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+
+</BaseLayout>
+
+<style>
+.subpuntos {
+    margin-left: 30px;
+}
+.ia-intro-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 50px;
+}
+.ia-intro-card {
+    background: #ffffff;
+    padding: 25px 30px;
+    max-width: 900px;
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+.ia-intro-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #111;
+}
+.ia-intro-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 12px;
+}
+.AI-foto {
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+.articulos-sidebar {
+    position: absolute;
+    top: 193px;
+    right: 40px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 5;
+}
+@media (max-width: 1500px) {
+    .articulos-sidebar {
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        margin: 40px 0 0 0 !important;
+        padding: 0 20px;
+    }
+}
+.articulos-sidebar .theme-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    font-size: 0.9rem;
+}
+.articulos-sidebar h3 {
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+.articulos-sidebar h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #5678d6;
+    border-radius: 2px;
+}
+</style>

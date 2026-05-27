@@ -2,7 +2,7 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Condicionales y bucles en Java con ejemplos: if, else, while y for" description="Aprende a usar variables, tipos de datos y Scanner en Java con ejemplos prácticos paso a paso. Guía para principiantes con ejercicios incluidos.">
+<BaseLayout title="Condicionales y bucles en Java con ejemplos: if, else, while y for" description="Aprende a usar bucles while y for en Java con ejemplos claros. También verás cómo funcionan los condicionales if y else. Guía práctica para principiantes.">
 
     <a href="/temas/progr" class="legal-tag">Programación</a>
     <h1>Tu primera aplicación en Java paso a paso (Parte 3): condicionales, bucles y resolución del reto</h1>
@@ -10,38 +10,9 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
     <section class="ia-intro-section">
         <div class="ia-intro-card">
 
-            <h2>0. Solución al reto de la Parte 2</h2>
-
-            <p>En la Parte 2 te dejamos un reto: crear un programa que pidiera <strong>dos números enteros</strong> y mostrara su suma, resta, multiplicación y división. Aquí tienes la solución:</p>
-
-            <div class="code-container">
-                <pre><code id="codigo-reto">import java.util.Scanner;
-
-public class Main &#123;
-    public static void main(String[] args) &#123;
-
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Introduce el primer número: ");
-        int a = scanner.nextInt();
-
-        System.out.print("Introduce el segundo número: ");
-        int b = scanner.nextInt();
-
-        System.out.println("Suma: " + (a + b));
-        System.out.println("Resta: " + (a - b));
-        System.out.println("Multiplicación: " + (a * b));
-        System.out.println("División: " + (double) a / b);
-
-        scanner.close();
-    &#125;
-&#125;</code></pre>
-                <button class="copy-btn" onclick="copiarCodigo('codigo-reto')">Copiar</button>
-            </div>
-
-            <p>Fíjate en el cast <code>(double) a / b</code> — si dividieras dos <code>int</code> directamente, Java descartaría los decimales. Al convertir <code>a</code> a <code>double</code> antes de dividir, <strong>conservas la parte decimal del resultado</strong>.</p>
-
-            <img src="/img/articulos/primer-programa-java-pt3/ft1.webp" alt="Resultado reto parte 2" class="AI-foto" style="max-width: 500px;">
+            <p>Antes de empezar, si vienes de la <a href="/articulos/programacion/guia-java-parte-2/">Parte 2</a> 
+            y quieres ver la solución al reto de la calculadora, la encontrarás al final de este artículo.</p>
+            
             
             <h2>1. Condicionales: que el programa tome decisiones</h2>
 
@@ -188,7 +159,40 @@ public class Main &#123;
                 <li><strong>Olvidar las llaves <code>&#123; &#125;</code></strong>: si el <code>if</code> o el bucle solo tienen una línea puedes omitirlas, pero es mejor incluirlas siempre para evitar confusiones.</li>
             </ul>
 
-            <h2>6. Reto para practicar (antes de la Parte 4)</h2>
+            <h2>6. Solución al reto de la Parte 2</h2>
+
+                        <p>En la Parte 2 te dejamos un reto: crear un programa que pidiera <strong>dos números enteros</strong> y mostrara su suma, resta, multiplicación y división. Aquí tienes la solución:</p>
+
+                        <div class="code-container">
+                            <pre><code id="codigo-reto">import java.util.Scanner;
+
+            public class Main &#123;
+                public static void main(String[] args) &#123;
+
+                    Scanner scanner = new Scanner(System.in);
+
+                    System.out.print("Introduce el primer número: ");
+                    int a = scanner.nextInt();
+
+                    System.out.print("Introduce el segundo número: ");
+                    int b = scanner.nextInt();
+
+                    System.out.println("Suma: " + (a + b));
+                    System.out.println("Resta: " + (a - b));
+                    System.out.println("Multiplicación: " + (a * b));
+                    System.out.println("División: " + (double) a / b);
+
+                    scanner.close();
+                &#125;
+            &#125;</code></pre>
+                            <button class="copy-btn" onclick="copiarCodigo('codigo-reto')">Copiar</button>
+                        </div>
+
+            <p>Fíjate en el cast <code>(double) a / b</code> — si dividieras dos <code>int</code> directamente, Java descartaría los decimales. Al convertir <code>a</code> a <code>double</code> antes de dividir, <strong>conservas la parte decimal del resultado</strong>.</p>
+
+            <img src="/img/articulos/primer-programa-java-pt3/ft1.webp" alt="Resultado reto parte 2" class="AI-foto" style="max-width: 500px;">
+                        
+            <h2>7. Reto para practicar (antes de la Parte 4)</h2>
 
             <p>Intenta escribir un programa que:</p>
             <ol class="subpuntos">
@@ -200,7 +204,7 @@ public class Main &#123;
 
             <p>Si te atascas, no te preocupes: en la Parte 4 veremos <strong>arrays y métodos</strong>, y resolveremos este reto en detalle.</p>
 
-            <h2>7. Resumen y adelanto de la Parte 4</h2>
+            <h2>8. Resumen y adelanto de la Parte 4</h2>
 
             <ul class="subpuntos">
                 <li>Has aprendido a usar <strong>condicionales</strong> (<code>if</code>, <code>else if</code>, <code>else</code>) para que el programa tome decisiones.</li>
