@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Inicio" page="home">
-        <!-- Hero principal - Nuevo diseño Grid -->
+    <!-- Hero principal - Nuevo diseño Grid -->
         <section class="hero">
             <div class="hero-grid">
                 <div class="hero-text">
@@ -33,21 +33,20 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             </div>
         </section>
         
-                <div class="hero-latest">
-                    <div class="latest-panel">
-                        <h2>📌 Últimos artículos</h2>
+        <div class="hero-latest">
+            <div class="latest-panel">
+                <h2>📌 Últimos artículos</h2>
                                 
-                    <div id="latest-articles"></div> <!--PARA MODIFICAR O AÑADIR ARTICULOS EN paginacion-articulos.js -->
+                <div id="latest-articles"></div> <!--PARA MODIFICAR O AÑADIR ARTICULOS EN paginacion-articulos.js -->
 
-                    <div class="pagination">
-                        <button onclick="changePage(1)">1</button>
-                        <button onclick="changePage(2)">2</button>
-                        <button onclick="changePage(3)">3</button> 
-                        <button onclick="changePage(4)">4</button>
-                    </div>
-                                
+                <div class="pagination">
+                    <button onclick="changePage(1)">1</button>
+                    <button onclick="changePage(2)">2</button>
+                    <button onclick="changePage(3)">3</button> 
+                <button onclick="changePage(4)">4</button>
                 </div>
             </div>
+        </div>
 
         <!-- Carrusel de temas (Qué puedes encontrar aquí) -->
         <section class="what-you-find">
@@ -106,6 +105,6 @@ Cada artículo está pensado para que entiendas conceptos complejos y <strong>lo
 
     <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
     <!--<script is:inline src="/js/carrusel.js"></script> -->
-        <script is:inline src="/js/paginacion-articulos.js"></script>
+        <script is:inline src="/js/paginacion-articulos.js"></script>    
 
 </BaseLayout>
