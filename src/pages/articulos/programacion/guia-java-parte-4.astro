@@ -1,0 +1,392 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout 
+    title="Arrays en Java: métodos, ejemplos y explicación fácil (Parte 4)"
+    description="Aprende a usar arrays para guardar colecciones de datos y métodos para organizar tu código en Java. Guía práctica con ejemplos y ejercicios para principiantes."
+>
+
+    <a href="/temas/progr" class="legal-tag">Programación</a>
+    <h1>Tu primera aplicación en Java paso a paso (Parte 4): arrays y métodos</h1>
+
+    <section class="ia-intro-section">
+        <div class="ia-intro-card">
+
+            <p>Antes de empezar, si vienes de la <a href="/articulos/programacion/guia-java-parte-3/"><strong>Parte 3</strong></a> y quieres ver la solución al reto de la suma y el promedio, la encontrarás al final de este artículo.</p>
+
+            <h2>1. Arrays: guardar colecciones de datos</h2>
+
+            <p>Hasta ahora cada variable guardaba un único valor. Pero ¿qué pasa si necesitas guardar las notas de 30 alumnos, o los precios de 100 productos? Crear 100 variables separadas es inviable. Para eso existen los <strong>arrays</strong>.</p>
+
+            <p>Un array es una <strong>estructura que almacena varios valores del mismo tipo</strong> bajo un único nombre. Puedes imaginarlo como una fila de cajas numeradas, donde cada caja guarda un valor y tiene un número de posición llamado <strong>índice</strong>.</p>
+
+            <img src="/img/articulos/primer-programa-java-pt4/ft1.webp" alt="Ilustración de un array como fila de cajas numeradas en Java" class="AI-foto" style="max-width: 600px;">
+
+            <h3>Cómo declarar y usar un array</h3><br>
+
+            <p>Para crear un array en Java necesitas indicar el tipo de datos y el tamaño:</p>
+
+            <div class="code-container">
+                <pre><code id="codigo-array-basico">// Declarar un array de 5 enteros
+int[] numeros = new int[5];
+
+// Asignar valores
+numeros[0] = 10;
+numeros[1] = 20;
+numeros[2] = 30;
+numeros[3] = 40;
+numeros[4] = 50;
+
+// Acceder a un valor
+System.out.println(numeros[2]); // Imprime 30</code></pre>
+                <button class="copy-btn" onclick="copiarCodigo('codigo-array-basico')">Copiar</button>
+            </div>
+
+            <p>Fíjate que los índices empiezan en <strong>0</strong>, no en 1. Un array de 5 elementos tiene índices del 0 al 4. Este es uno de los errores más frecuentes al empezar.</p>
+
+            <p>También puedes declarar e inicializar el array en una sola línea:</p>
+
+            <div class="code-container">
+                <pre><code id="codigo-array-directo">int[] numeros = &#123;10, 20, 30, 40, 50&#125;;</code></pre>
+                <button class="copy-btn" onclick="copiarCodigo('codigo-array-directo')">Copiar</button>
+            </div>
+
+            <h3>Recorrer un array con un bucle for</h3><br>
+
+            <p>Los arrays y los bucles van de la mano. La forma más habitual de recorrer todos los elementos es con un <code>for</code>:</p>
+
+            <div class="code-container">
+                <pre><code id="codigo-array-for">int[] numeros = &#123;10, 20, 30, 40, 50&#125;;
+
+for (int i = 0; i < numeros.length; i++) &#123;
+    System.out.println("Posición " + i + ": " + numeros[i]);
+&#125;</code></pre>
+                <button class="copy-btn" onclick="copiarCodigo('codigo-array-for')">Copiar</button>
+            </div>
+
+            <p><strong>Salida:</strong></p>
+            <pre><code>Posición 0: 10
+Posición 1: 20
+Posición 2: 30
+Posición 3: 40
+Posición 4: 50</code></pre>
+
+            <p><code>numeros.length</code> devuelve el tamaño del array automáticamente, así no tienes que escribirlo a mano.</p>
+
+            <p>También existe el <strong>for-each</strong>, más sencillo cuando solo necesitas leer los valores sin usar el índice:</p>
+
+            <div class="code-container">
+                <pre><code id="codigo-foreach">for (int n : numeros) &#123;
+    System.out.println(n);
+&#125;</code></pre>
+                <button class="copy-btn" onclick="copiarCodigo('codigo-foreach')">Copiar</button>
+            </div>
+
+            <img src="/img/articulos/primer-programa-java-pt4/ft2.webp" alt="Resultado de recorrer un array con bucle for en Java" class="AI-foto" style="max-width: 500px;">
+
+            <h2>2. Métodos: organizar el código en bloques reutilizables</h2>
+
+            <p>A medida que los programas crecen, el código dentro del <code>main</code> se vuelve largo y difícil de leer. Los <strong>métodos</strong> permiten dividir el código en bloques con nombre, cada uno con una responsabilidad clara.</p>
+
+            <p>Un método es un bloque de código que puedes <strong>definir una vez y llamar cuantas veces quieras</strong>. Es como una función en otros lenguajes.</p>
+
+            <h3>Estructura de un método</h3><br>
+
+            <div class="code-container">
+                <pre><code id="codigo-metodo-basico">static void saludar() &#123;
+    System.out.println("¡Hola! Bienvenido a Java.");
+&#125;
+
+public static void main(String[] args) &#123;
+    saludar(); // Llamamos al método
+    saludar(); // Podemos llamarlo tantas veces como queramos
+&#125;</code></pre>
+                <button class="copy-btn" onclick="copiarCodigo('codigo-metodo-basico')">Copiar</button>
+            </div>
+
+            <p><strong>Salida:</strong></p>
+            <pre><code>¡Hola! Bienvenido a Java.
+¡Hola! Bienvenido a Java.</code></pre>
+
+            <h3>Métodos con parámetros</h3><br>
+
+            <p>Los métodos pueden recibir valores para trabajar con ellos. Estos valores se llaman <strong>parámetros</strong>:</p>
+
+            <div class="code-container">
+                <pre><code id="codigo-metodo-params">static void saludar(String nombre) &#123;
+    System.out.println("¡Hola, " + nombre + "!");
+&#125;
+
+public static void main(String[] args) &#123;
+    saludar("Ana");
+    saludar("Carlos");
+&#125;</code></pre>
+                <button class="copy-btn" onclick="copiarCodigo('codigo-metodo-params')">Copiar</button>
+            </div>
+
+            <p><strong>Salida:</strong></p>
+            <pre><code>¡Hola, Ana!
+¡Hola, Carlos!</code></pre>
+
+            <h3>Métodos que devuelven un valor</h3><br>
+
+            <p>Un método también puede <strong>calcular algo y devolver el resultado</strong>. En ese caso, en lugar de <code>void</code> indicamos el tipo de dato que devuelve, y usamos <code>return</code>:</p>
+
+            <div class="code-container">
+                <pre><code id="codigo-metodo-return">static int sumar(int a, int b) &#123;
+    return a + b;
+&#125;
+
+public static void main(String[] args) &#123;
+    int resultado = sumar(5, 3);
+    System.out.println("La suma es: " + resultado); // La suma es: 8
+&#125;</code></pre>
+                <button class="copy-btn" onclick="copiarCodigo('codigo-metodo-return')">Copiar</button>
+            </div>
+
+            <img src="/img/articulos/primer-programa-java-pt4/ft3.webp" alt="Ejemplo de método con parámetros y return en Java" class="AI-foto" style="max-width: 500px;">
+
+            <h2>3. Ejercicio guiado: calculadora con métodos y arrays</h2>
+
+            <p>Vamos a combinar todo — arrays, bucles y métodos — en un programa que calcula la media de un conjunto de notas.</p>
+
+            <div class="code-container">
+                <pre><code id="codigo-ejercicio">public class Main &#123;
+
+    // Método que calcula la media de un array
+    static double calcularMedia(int[] notas) &#123;
+        int suma = 0;
+        for (int nota : notas) &#123;
+            suma += nota;
+        &#125;
+        return (double) suma / notas.length;
+    &#125;
+
+    // Método que muestra todas las notas
+    static void mostrarNotas(int[] notas) &#123;
+        System.out.println("Notas introducidas:");
+        for (int i = 0; i < notas.length; i++) &#123;
+            System.out.println("  Nota " + (i + 1) + ": " + notas[i]);
+        &#125;
+    &#125;
+
+    public static void main(String[] args) &#123;
+        int[] notas = &#123;8, 6, 9, 7, 10&#125;;
+
+        mostrarNotas(notas);
+
+        double media = calcularMedia(notas);
+        System.out.println("Media: " + media);
+    &#125;
+&#125;</code></pre>
+                <button class="copy-btn" onclick="copiarCodigo('codigo-ejercicio')">Copiar</button>
+            </div>
+
+            <p><strong>Salida:</strong></p>
+            <pre><code>Notas introducidas:
+  Nota 1: 8
+  Nota 2: 6
+  Nota 3: 9
+  Nota 4: 7
+  Nota 5: 10
+Media: 8.0</code></pre>
+
+            <img src="/img/articulos/primer-programa-java-pt4/ft4.webp" alt="Resultado del ejercicio de arrays y métodos en Java" class="AI-foto" style="max-width: 500px;">
+
+            <h2>4. Errores comunes con arrays y métodos</h2>
+
+            <ul class="subpuntos">
+                <li><strong>ArrayIndexOutOfBoundsException:</strong> intentas acceder a un índice que no existe. Recuerda que un array de 5 elementos tiene índices del 0 al 4, nunca al 5.</li>
+                <li><strong>Olvidar el return:</strong> si un método declara que devuelve un valor (por ejemplo <code>int</code>), debe tener un <code>return</code> en todos los caminos posibles.</li>
+                <li><strong>Confundir void con return:</strong> los métodos <code>void</code> no devuelven nada. Si intentas usar su resultado, el compilador dará error.</li>
+                <li><strong>Modificar el array original sin querer:</strong> cuando pasas un array a un método, el método recibe una referencia al mismo array. Los cambios dentro del método afectan al original.</li>
+            </ul>
+
+            <h2>5. Solución al reto de la Parte 3</h2>
+
+            <p>En la Parte 3 te dejamos un reto: pedir 5 números al usuario y calcular su suma y promedio. Aquí tienes la solución usando todo lo aprendido en esta entrega:</p>
+
+            <div class="code-container">
+                <pre><code id="codigo-reto">import java.util.Scanner;
+
+public class Main &#123;
+
+    static double calcularPromedio(int[] numeros) &#123;
+        int suma = 0;
+        for (int n : numeros) &#123;
+            suma += n;
+        &#125;
+        return (double) suma / numeros.length;
+    &#125;
+
+    public static void main(String[] args) &#123;
+        Scanner scanner = new Scanner(System.in);
+        int[] numeros = new int[5];
+
+        for (int i = 0; i < numeros.length; i++) &#123;
+            System.out.print("Introduce el número " + (i + 1) + ": ");
+            numeros[i] = scanner.nextInt();
+        &#125;
+
+        int suma = 0;
+        for (int n : numeros) &#123;
+            suma += n;
+        &#125;
+
+        double promedio = calcularPromedio(numeros);
+
+        System.out.println("Suma total: " + suma);
+        System.out.println("Promedio: " + promedio);
+
+        scanner.close();
+    &#125;
+&#125;</code></pre>
+                <button class="copy-btn" onclick="copiarCodigo('codigo-reto')">Copiar</button>
+            </div>
+
+            <h2>6. Reto para practicar (antes de la Parte 5)</h2>
+
+            <p>Intenta escribir un programa que:</p>
+            <ol class="subpuntos">
+                <li>Pida al usuario 5 números enteros y los guarde en un array.</li>
+                <li>Cree un método <code>encontrarMaximo</code> que reciba el array y devuelva el número más alto.</li>
+                <li>Cree un método <code>encontrarMinimo</code> que devuelva el número más bajo.</li>
+                <li>Muestre el máximo y el mínimo por pantalla.</li>
+            </ol>
+
+            <p><strong>Pista:</strong> inicializa el máximo con el primer elemento del array y recórrelo comparando con cada elemento siguiente. Si encuentras uno mayor, actualiza el máximo.</p>
+
+            <p>Si te atascas, no te preocupes: en la Parte 5 veremos <strong>Strings y la clase Math</strong>, y resolveremos este reto en detalle.</p>
+
+            <h2>7. Resumen y adelanto de la Parte 5</h2>
+
+            <ul class="subpuntos">
+                <li>Has aprendido qué son los <strong>arrays</strong> y cómo guardar colecciones de datos.</li>
+                <li>Has recorrido arrays con bucles <code>for</code> y <code>for-each</code>.</li>
+                <li>Has creado <strong>métodos</strong> con y sin parámetros, y con y sin valor de retorno.</li>
+                <li>Has combinado todo en un ejercicio real de cálculo de media.</li>
+            </ul>
+
+            <p>En la <strong>Parte 5</strong> aprenderemos a trabajar con <strong>Strings en profundidad</strong> — longitud, subcadenas, búsqueda — y con la <strong>clase Math</strong> para operaciones matemáticas avanzadas. ¡No te la pierdas!</p>
+
+            <p>Si tienes dudas, puedes escribirlas en la <a href="/sugerencias">sección de contacto</a>. Y si no has visto las partes anteriores, aquí tienes la <a href="/articulos/programacion/guia-java-parte-1/">Parte 1</a>, la <a href="/articulos/programacion/guia-java-parte-2/">Parte 2</a> y la <a href="/articulos/programacion/guia-java-parte-3/">Parte 3</a>.</p>
+
+        </div>
+    </section>
+
+    <div class="articulos-sidebar">
+        <h3>Otros artículos</h3>
+        <div class="theme-card">
+            <h2>Instalar y configurar tu primer IDE, IntelliJ IDEA</h2>
+            <p>Guía completa de instalación de IntelliJ IDEA explicada paso a paso y acompañada de imágenes de cada fase.</p>
+            <a href="/articulos/programacion/configurar-intellij/" style="color: #007bff; text-decoration: none;">Saber más</a>
+        </div>
+        <div class="theme-card">
+            <h2>Cómo activar GitHub Copilot y su autocompletado predictivo en IntelliJ IDEA</h2>
+            <p>Aprende a instalar y activar GitHub Copilot en IntelliJ IDEA para obtener autocompletado predictivo en tiempo real.</p>
+            <a href="/articulos/programacion/activar-autocompletado-github-copilot/" style="color: #007bff; text-decoration: none;">Saber más</a>
+        </div>
+        <div class="theme-card">
+            <h2>Tu primera aplicación en Java: guía paso a paso para principiantes (Parte 1)</h2>
+            <p>Crea tu primer proyecto en Java desde cero y familiarízate con IntelliJ IDEA.</p>
+            <a href="/articulos/programacion/guia-java-parte-1/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+        <div class="theme-card">
+            <h2>Tu primera aplicación en Java: variables, tipos de datos y entrada del usuario (Parte 2)</h2>
+            <p>Aprende a usar variables, tipos de datos básicos y Scanner en Java con ejemplos prácticos.</p>
+            <a href="/articulos/programacion/guia-java-parte-2/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+        <div class="theme-card">
+            <h2>Tu primera aplicación en Java: condicionales y bucles (Parte 3)</h2>
+            <p>Aprende a usar if-else y bucles while y for para que tus programas tomen decisiones y repitan acciones.</p>
+            <a href="/articulos/programacion/guia-java-parte-3/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+    </div>
+
+<script is:inline src="/js/copiarCodigo.js"></script>
+<button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+
+</BaseLayout>
+
+<style>
+.subpuntos {
+    margin-left: 30px;
+}
+.AI-foto {
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+.ia-intro-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 50px;
+}
+.ia-intro-card {
+    background: #ffffff;
+    padding: 25px 30px;
+    max-width: 900px;
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+.ia-intro-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #111;
+}
+.ia-intro-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 12px;
+}
+.articulos-sidebar {
+    position: absolute;
+    top: 193px;
+    right: 40px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 5;
+}
+@media (max-width: 1500px) {
+    .articulos-sidebar {
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        margin: 40px 0 0 0 !important;
+        padding: 0 20px;
+    }
+}
+.articulos-sidebar .theme-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    font-size: 0.9rem;
+}
+.articulos-sidebar h3 {
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+.articulos-sidebar h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #5678d6;
+    border-radius: 2px;
+}
+</style>
