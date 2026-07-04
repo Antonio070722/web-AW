@@ -1245,3 +1245,39 @@ html {
         padding: 0 20px !important;
     }
 }
+
+.footer-links {
+    display: flex;
+    gap: 15px; /* Espacio entre enlaces */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #666;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.footer-links a:hover {
+    color: #0066ff;
+}
+
+.footer-x-link {
+    display: inline-flex;
+    align-items: center;
+    color: #999;
+    transition: color 0.3s ease;
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+.footer-x-link:hover {
+    color: #0066ff;
+}
+
+.footer-x-link svg {
+    width: 18px;
+    height: 18px;
+}
