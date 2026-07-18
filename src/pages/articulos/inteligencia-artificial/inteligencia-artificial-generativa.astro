@@ -1,0 +1,261 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout 
+    title="IA Generativa: qué es, cómo funciona y qué puede crear (texto, imágenes y vídeo)"
+    description="Qué es la IA generativa, cómo funcionan los modelos que crean texto, imágenes y vídeo, qué herramientas existen hoy y qué riesgos plantea. Explicado de forma clara y sin tecnicismos."
+>
+
+    <a href="/temas/inteligencia-artificial-ia" class="legal-tag">Inteligencia Artificial</a>
+    <h1>IA Generativa: qué es y cómo está cambiando la creación de contenido</h1>
+    
+    <section class="ia-intro-section">
+        <div class="ia-intro-card">
+
+    <p>
+        La <strong>IA generativa</strong> es, probablemente, la rama de la inteligencia artificial con más impacto directo en la 
+        vida cotidiana de millones de personas ahora mismo. A diferencia de otros tipos de IA que se limitan a clasificar, 
+        predecir o analizar datos, la IA generativa <strong>crea contenido nuevo</strong>: textos, imágenes, vídeos, música o código, 
+        a partir de una simple descripción escrita en lenguaje natural.
+    </p>
+
+    <img src="/img/articulos/ia-generativa/ft1.webp" alt="Ilustración de inteligencia artificial generativa creando contenido" class="AI-foto">
+
+    <h2>¿Qué es exactamente la IA generativa?</h2>
+    <p>
+        La IA generativa es un tipo de inteligencia artificial entrenada con enormes cantidades de datos (texto, imágenes o vídeo) 
+        para aprender los patrones, estilos y estructuras de ese contenido, y después <strong>generar contenido nuevo y original</strong> 
+        que sigue esos mismos patrones, en lugar de limitarse a copiar o buscar algo ya existente.
+    </p>
+    <p>
+        Cuando le pides a una herramienta como ChatGPT que redacte un correo, o a Midjourney que dibuje un paisaje, el sistema 
+        no está buscando en una base de datos algo parecido: está construyendo esa respuesta palabra a palabra, o píxel a píxel, 
+        basándose en lo que aprendió durante su entrenamiento.
+    </p>
+
+    <h3 style="margin-left: 20px;">Tipos principales de IA generativa</h3><br>
+    <ul class="subpuntos">
+        <li><strong>Generación de texto:</strong> modelos de lenguaje (LLMs) como ChatGPT, Gemini o Claude, que redactan, resumen, traducen o programan.</li>
+        <li><strong>Generación de imágenes:</strong> herramientas como Midjourney, DALL·E o Stable Diffusion, que crean imágenes a partir de una descripción.</li>
+        <li><strong>Generación de vídeo:</strong> modelos como Sora o Veo, capaces de crear clips completos a partir de un simple párrafo de texto.</li>
+        <li><strong>Generación de audio y voz:</strong> sistemas que crean música, efectos de sonido o voces sintéticas realistas.</li>
+    </ul>
+
+    <h2>¿Cómo funciona por dentro?</h2>
+    <p>
+        Aunque cada tipo de contenido usa una arquitectura distinta, la mayoría de los modelos actuales se basan en dos grandes 
+        familias de tecnología: los <strong>transformers</strong> (la base de los modelos de texto) y los <strong>modelos de difusión</strong> 
+        (la base de la mayoría de generadores de imagen y vídeo).
+    </p>
+    <p>
+        Un modelo de difusión, en esencia, aprende a hacer el proceso inverso: parte de una imagen compuesta enteramente por 
+        ruido aleatorio y, paso a paso, la va "limpiando" hasta convertirla en una imagen coherente que encaja con la descripción 
+        de texto que le has dado. Un modelo de lenguaje, en cambio, funciona prediciendo qué palabra es más probable que venga 
+        a continuación, una y otra vez, hasta formar frases completas con sentido.
+    </p>
+
+    <h3 style="margin-left: 20px;">Proceso simplificado (imagen o vídeo)</h3><br>
+    <ul class="subpuntos">
+        <li><strong>1. Interpretación del prompt:</strong> el modelo analiza la descripción de texto que le has dado.</li>
+        <li><strong>2. Generación desde ruido:</strong> parte de una base aleatoria y la va ajustando por etapas.</li>
+        <li><strong>3. Refinado progresivo:</strong> añade detalle, coherencia visual y consistencia hasta el resultado final.</li>
+    </ul>
+
+    <h2>Un poco de historia: de dónde viene todo esto</h2>
+    <p>
+        La IA generativa no apareció de la nada. Las primeras redes capaces de generar imágenes de forma convincente 
+        (las llamadas GAN, o "redes generativas antagónicas") se propusieron en 2014, pero fue a partir de 2021-2022, con la 
+        llegada de herramientas como DALL·E, Stable Diffusion y Midjourney, cuando el gran público empezó a tener acceso 
+        directo a esta tecnología. El lanzamiento de ChatGPT a finales de 2022 hizo lo mismo con la generación de texto, 
+        y en los últimos años los modelos de vídeo como Sora o Veo han seguido ese mismo camino de popularización.
+    </p>
+
+    <h2>Aplicaciones reales de la IA generativa</h2>
+    <p>
+        Lejos de ser solo una curiosidad, la IA generativa ya se usa de forma habitual en múltiples sectores.
+    </p>
+
+    <h3 style="margin-left: 20px;">Usos más extendidos</h3><br>
+    <ul class="subpuntos">
+        <li><strong>Marketing y publicidad:</strong> creación rápida de anuncios, copys y piezas visuales personalizadas.</li>
+        <li><strong>Diseño y arte conceptual:</strong> bocetos, ilustraciones y mockups de producto en minutos.</li>
+        <li><strong>Producción audiovisual:</strong> vídeos y animaciones sin necesidad de cámaras ni equipo de rodaje.</li>
+        <li><strong>Educación:</strong> materiales de estudio, resúmenes y explicaciones personalizadas.</li>
+        <li><strong>Desarrollo de software:</strong> generación y revisión de código a partir de descripciones en lenguaje natural.</li>
+        <li><strong>Atención al cliente:</strong> asistentes conversacionales que responden dudas de forma automática.</li>
+    </ul>
+
+    <h2>¿Es gratis usar IA generativa?</h2>
+    <p>
+        Depende de la herramienta. La mayoría sigue un modelo freemium: ofrecen un número limitado de generaciones gratuitas 
+        al día o al mes, y cobran una suscripción para uso intensivo, mayor resolución o eliminación de marcas de agua. 
+        También existen alternativas de código abierto, como algunos modelos de la familia Stable Diffusion, que se pueden 
+        ejecutar de forma gratuita si dispones del hardware necesario, aunque requieren más conocimientos técnicos.
+    </p>
+
+    <h2>¿Quién es el dueño del contenido generado por IA?</h2>
+    <p>
+        Es una de las preguntas más habituales y, a día de hoy, no tiene una respuesta universal: depende del país y de los 
+        términos de uso de cada herramienta. En general, la mayoría de plataformas comerciales conceden al usuario derechos 
+        de uso comercial sobre lo que genera, pero la protección legal por derechos de autor de ese contenido (si puede 
+        registrarse como obra propia) sigue siendo un terreno legal en desarrollo en muchos países, precisamente porque 
+        la autoría "humana" de una obra generada por IA está en discusión.
+    </p>
+
+    <h2>Riesgos y críticas</h2>
+    <p>
+        El auge de la IA generativa también ha traído consigo preocupaciones reales que conviene conocer.
+    </p>
+
+    <h3 style="margin-left: 20px;">Principales riesgos</h3><br>
+    <ul class="subpuntos">
+        <li><strong>Deepfakes y desinformación:</strong> vídeos o audios falsos hiperrealistas que pueden usarse para engañar o manipular.</li>
+        <li><strong>Derechos de autor:</strong> muchos modelos se entrenaron con obras protegidas sin autorización explícita de sus autores, lo que ha derivado en demandas activas en varios países.</li>
+        <li><strong>Sesgos heredados:</strong> si los datos de entrenamiento contienen sesgos, el contenido generado puede reproducirlos.</li>
+        <li><strong>Impacto en profesiones creativas:</strong> preocupación legítima de ilustradores, redactores y músicos sobre su futuro laboral.</li>
+        <li><strong>Alucinaciones:</strong> los modelos de texto pueden generar información falsa con total seguridad aparente.</li>
+    </ul>
+
+    <h2>¿Reemplazará la IA generativa a los profesionales creativos?</h2>
+    <p>
+        La mayoría de los expertos coincide en que, de momento, la IA generativa funciona mejor como <strong>herramienta de apoyo</strong> 
+        que como sustituto completo: acelera tareas repetitivas o de primer boceto, pero sigue requiriendo criterio humano para 
+        dar coherencia, calidad final y sentido a lo que produce. El debate real no es tanto "IA contra humanos", sino cómo se 
+        reparte el trabajo entre ambos, y qué perfiles profesionales necesitarán adaptarse a esta nueva forma de trabajar.
+    </p>
+
+    <p>Si quieres seguir aprendiendo sobre inteligencia artificial, puedes explorar más artículos en la <a href="/temas/inteligencia-artificial-ia">sección de IA</a> o escribirnos desde la <a href="/sugerencias">página de contacto</a>.</p>
+
+        <p class="ia-contacto">
+            ¿Tienes alguna duda o sugerencia sobre este artículo?
+            <a href="/sugerencias">Escríbenos aquí</a>.
+        </p>
+
+        </div>
+    </section>
+
+    <div class="articulos-sidebar">
+        <h3>Otros artículos</h3>
+
+        <div class="theme-card">
+            <h2>IA Superinteligente: qué es y por qué preocupa</h2>
+            <p>Qué es la IA superinteligente, sus características y los riesgos que plantea para la humanidad.</p>
+            <a href="/articulos/inteligencia-artificial/ia-superinteligente/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+
+        <div class="theme-card">
+            <h2>IA débil vs IA fuerte: diferencias y ejemplos</h2>
+            <p>Una visión clara de los tipos de inteligencia artificial: desde la IA débil que usamos a diario hasta la IA fuerte.</p>
+            <a href="/articulos/inteligencia-artificial/tipos-de-inteligencia-artificial-ia-ai/" style="color: #007bff; text-decoration: none;">Saber más</a>
+        </div>
+
+        <div class="theme-card">
+            <h2>Deep Learning vs Machine Learning: diferencias y ejemplos</h2>
+            <p>Aprende qué es el Deep Learning, cómo funcionan las redes neuronales profundas y por qué es la base de la IA moderna.</p>
+            <a href="/articulos/inteligencia-artificial/deep-learning/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+
+        <div class="theme-card">
+            <h2>Neuralink: el primer chip cerebral funcional implantado</h2>
+            <p>Descubre qué es Neuralink, cómo funciona el chip cerebral y qué logró el primer paciente.</p>
+            <a href="/articulos/tecnologia/neuralink-implanta-primer-chip-cerebral/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+
+        <div class="theme-card">
+            <h2>Baterías de sodio: la alternativa barata al litio</h2>
+            <p>Descubre qué son las baterías de sodio, sus ventajas frente al litio y por qué pueden revolucionar el almacenamiento energético.</p>
+            <a href="/articulos/tecnologia/baterias-de-sodio-alternativas-baratas-al-litio/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+
+        <div class="theme-card">
+            <h2>5G: qué es, cómo funciona y por qué cambiará internet</h2>
+            <p>Descubre qué es el 5G, cómo funciona, en qué se diferencia del 4G y cuáles son sus aplicaciones reales.</p>
+            <a href="/articulos/tecnologia/5g-revolucion-conectividad/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+    </div>
+
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+</BaseLayout>
+
+<style>
+.subpuntos {
+    margin-left: 30px;
+}
+.ia-intro-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 50px;
+}
+.ia-intro-card {
+    background: #ffffff;
+    padding: 25px 30px;
+    max-width: 900px;
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+.ia-intro-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #111;
+}
+.ia-intro-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 12px;
+}
+.AI-foto {
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+.articulos-sidebar {
+    position: absolute;
+    top: 193px;
+    right: 40px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 5;
+}
+@media (max-width: 1500px) {
+    .articulos-sidebar {
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        margin: 40px 0 0 0 !important;
+        padding: 0 20px;
+    }
+}
+.articulos-sidebar .theme-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    font-size: 0.9rem;
+}
+.articulos-sidebar h3 {
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+.articulos-sidebar h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #5678d6;
+    border-radius: 2px;
+}
+</style>
