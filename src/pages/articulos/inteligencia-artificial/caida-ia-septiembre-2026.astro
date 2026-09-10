@@ -20,7 +20,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
         misma pregunta en redes sociales: si toda la IA se cae a la vez, ¿de qué dependemos realmente?
     </p>
 
-    <img src="/img/articulos/caida-ia-septiembre-2026/ft1.webp" alt="Interfaz de chat de IA mostrando error de conexión" class="AI-foto">
+    <img src="/img/articulos/caida-ia/ft1.webp" alt="Interfaz de chat de IA mostrando error de conexión" class="AI-foto">
 
     <h2>¿Qué pasó exactamente?</h2>
     <p>
@@ -147,3 +147,85 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 
     <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
 </BaseLayout>
+
+<style>
+.subpuntos {
+    margin-left: 30px;
+}
+.ia-intro-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 50px;
+}
+.ia-intro-card {
+    background: #ffffff;
+    padding: 25px 30px;
+    max-width: 900px;
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+.ia-intro-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #111;
+}
+.ia-intro-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 12px;
+}
+.AI-foto {
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+.articulos-sidebar {
+    position: absolute;
+    top: 193px;
+    right: 40px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 5;
+}
+@media (max-width: 1500px) {
+    .articulos-sidebar {
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        margin: 40px 0 0 0 !important;
+        padding: 0 20px;
+    }
+}
+.articulos-sidebar .theme-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    font-size: 0.9rem;
+}
+.articulos-sidebar h3 {
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+.articulos-sidebar h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #5678d6;
+    border-radius: 2px;
+}
+</style>
