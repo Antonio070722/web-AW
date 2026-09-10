@@ -61,6 +61,24 @@ const pages = {
             url: "/articulos/inteligencia-artificial/deep-learning"
         }
         
+    ],
+    5: [
+        {
+            title: "IA Generativa: qué es y cómo está cambiando la creación de contenido",
+            desc: "Descubre qué es la IA generativa, cómo funcionan los modelos que crean texto, imágenes y vídeo, y qué riesgos plantea.",
+            url: "/articulos/inteligencia-artificial/inteligencia-artificial-generativa"
+        },
+        {
+            title: "La caída simultánea de ChatGPT, Claude, Gemini y Grok: qué pasó de verdad",
+            desc: "Qué se sabe realmente de la caída global de IA de septiembre de 2026 y por qué depender de un solo proveedor es un riesgo real.",
+            url: "/articulos/inteligencia-artificial/caida-ia-septiembre-2026"
+        },
+        {
+            title: "5G: qué es, cómo funciona y por qué cambiará internet",
+            desc: "Descubre qué es el 5G, cómo funciona, en qué se diferencia del 4G y cuáles son sus aplicaciones reales.",
+            url: "/articulos/tecnologia/5g-revolucion-conectividad"
+        }
+        
     ]
 
 };
@@ -84,4 +102,4 @@ function changePage(num) {
 }
 
 // Cargar página 1 al entrar
-changePage(3);
+changePage(5);
