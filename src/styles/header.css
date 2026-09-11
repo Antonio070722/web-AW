@@ -173,6 +173,17 @@ nav a:hover, nav a.active {
     color: var(--accent);
 }
 
+.mobile-menu button {
+    display: block;
+    padding: 14px 24px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #2a2a2a;
+}
+.mobile-menu button:hover {
+    color: var(--accent);
+}
+
 /* ========== HERO PRINCIPAL (index) ========== */
 .hero {
     padding: 72px 0 56px;

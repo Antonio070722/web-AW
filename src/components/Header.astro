@@ -19,14 +19,31 @@
 
             <li><a href="/about">Sobre mí</a></li>
             <li><a href="/sugerencias">Contacto</a></li>
+            <li>
+                <button id="searchTrigger" class="search-icon-btn" aria-label="Buscar">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </li>
         </ul>
     </nav>
 
-    <button id="hamburger" class="hamburger" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú de navegación">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+    <div class="mobile-actions">
+        <button id="searchTriggerMobile" class="search-icon-btn-mobile" aria-label="Buscar">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </button>
+
+        <button id="hamburger" class="hamburger" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú de navegación">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
 
     <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
         <ul>
@@ -36,5 +53,279 @@
             <li><a href="/sugerencias">Contacto</a></li>
         </ul>
     </div>
+
+    <!-- Modal de búsqueda -->
+    <div id="searchModal" class="search-modal" hidden>
+        <div class="search-modal-backdrop"></div>
+        <div class="search-modal-content">
+            <div class="search-input-wrapper">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off">
+                <button id="searchClose" aria-label="Cerrar">✕</button>
+            </div>
+            <div id="searchResults" class="search-results"></div>
+        </div>
+    </div>
 </header>
+
+<style>
+.search-icon-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s;
+}
+.search-icon-btn:hover {
+    opacity: 0.6;
+}
+
+/* Contenedor del icono de búsqueda + hamburguesa en móvil */
+.mobile-actions {
+    display: none;
+    align-items: center;
+    gap: 12px;
+}
+.search-icon-btn-mobile {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+}
+
+/* MODAL: Oculto por defecto usando opacity y pointer-events */
+.search-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 10vh;
+    opacity: 0;
+    pointer-events: none; /* Permite hacer clic detrás cuando está cerrado */
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Estado Activo para mostrarlo */
+.search-modal.is-open {
+    opacity: 1;
+    pointer-events: auto; /* Activa la interacción */
+}
+
+.search-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(2px);
+}
+
+.search-modal-content {
+    position: relative;
+    background: #fff;
+    color: black;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh; /* Permite crecer verticalmente */
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    z-index: 100000;
+}
+
+.search-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e6e6e6;
+    color: #666;
+}
+
+.search-input-wrapper input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1.05rem;
+    color: #111;
+    background: transparent;
+}
+
+.search-input-wrapper button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #999;
+    font-size: 1.2rem;
+    padding: 4px 8px;
+}
+
+.search-results {
+    overflow-y: auto;
+    padding: 12px;
+    max-height: 50vh; /* Altura suficiente para ver la lista de resultados */
+    min-height: 50px; /* Evita que colapse a 0px de alto */
+    display: block;
+}
+
+.search-result-item {
+    display: block;
+    padding: 12px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 6px;
+    border: 1px solid transparent;
+}
+
+.search-result-item:hover {
+    background: #f7f9fc;
+    border-color: #e5e5e5;
+}
+
+.search-result-item h4 {
+    margin: 0 0 4px;
+    font-size: 1rem;
+    color: #007bff;
+}
+
+.search-result-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+.search-empty {
+    padding: 30px 20px;
+    text-align: center;
+    color: #888;
+    font-size: 0.95rem;
+}
+
+/* AJUSTA este breakpoint al que ya uses en tu media query real de nav/hamburger */
+@media (max-width: 768px) {
+    .mobile-actions {
+        display: flex;
+    }
+}
+</style>
+
+<script>
+    // @ts-nocheck
+    const modal = document.getElementById('searchModal');
+    const backdrop = modal?.querySelector('.search-modal-backdrop');
+    const closeBtn = document.getElementById('searchClose');
+    const input = document.getElementById('searchInput');
+    const resultsBox = document.getElementById('searchResults');
+    const triggerDesktop = document.getElementById('searchTrigger');
+    const triggerMobile = document.getElementById('searchTriggerMobile');
+
+    let pagefind = null;
+
+    async function loadPagefind() {
+        if (pagefind) return pagefind;
+        try {
+            const pagefindPath = `${window.location.origin}/pagefind/pagefind.js`;
+            pagefind = await import(/* @vite-ignore */ pagefindPath);
+            await pagefind.init();
+            return pagefind;
+        } catch (e) {
+            console.warn("Pagefind aún no se ha generado en modo dev.");
+            return null;
+        }
+    }
+
+    function openModal() {
+        if (!modal) return;
+        modal.classList.add('is-open');
+        input.value = '';
+        resultsBox.innerHTML = '';
+        setTimeout(() => input.focus(), 50);
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+        document.body.style.overflow = '';
+    }
+
+    async function handleTriggerClick(e) {
+        if (e) e.preventDefault();
+        openModal();
+        await loadPagefind();
+    }
+
+    triggerDesktop?.addEventListener('click', handleTriggerClick);
+    triggerMobile?.addEventListener('click', handleTriggerClick);
+
+    // Acción para limpiar texto o cerrar modal con la 'X'
+    closeBtn?.addEventListener('click', () => {
+        if (input.value.length > 0) {
+            input.value = '';
+            resultsBox.innerHTML = '';
+            input.focus();
+        } else {
+            closeModal();
+        }
+    });
+
+    backdrop?.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal?.classList.contains('is-open')) closeModal();
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            openModal();
+            loadPagefind();
+        }
+    });
+
+    let debounceTimer;
+    input?.addEventListener('input', () => {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(async () => {
+            const query = input.value.trim();
+            if (!query) {
+                resultsBox.innerHTML = '';
+                return;
+            }
+
+            const pf = await loadPagefind();
+            if (!pf) {
+                resultsBox.innerHTML = '<div class="search-empty">El buscador estará activo al compilar la web (npm run build)</div>';
+                return;
+            }
+
+            const search = await pf.search(query);
+            if (search.results.length === 0) {
+                resultsBox.innerHTML = '<div class="search-empty">No se encontraron resultados</div>';
+                return;
+            }
+
+            const items = await Promise.all(
+                search.results.slice(0, 8).map((r) => r.data())
+            );
+
+            resultsBox.innerHTML = items.map((item) => `
+                <a href="${item.url}" class="search-result-item">
+                    <h4>${item.meta.title || 'Artículo'}</h4>
+                    <p>${item.excerpt}</p>
+                </a>
+            `).join('');
+        }, 200);
+    });
+</script>
 <!--<script src="/js/menu.js" defer></script> -->
