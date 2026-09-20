@@ -3,20 +3,22 @@
 const pages = {
     1: [
         {
+            title: "Amodei, Altman y Musk piden frenar la IA: qué está pasando de verdad",
+            desc: "Los CEOs de Anthropic, OpenAI y xAI piden frenar el desarrollo de la IA. Qué dice la carta de Amodei y por qué la Casa Blanca se opone.",
+            url: "/articulos/inteligencia-artificial/amodei-altman-musk-frenar-ia"
+        },
+        {
+            title: "La caída simultánea de ChatGPT, Claude, Gemini y Grok: qué pasó de verdad",
+            desc: "Qué se sabe realmente de la caída global de IA de septiembre de 2026 y por qué depender de un solo proveedor es un riesgo real.",
+            url: "/articulos/inteligencia-artificial/caida-ia-septiembre-2026"
+        },
+        {
             title: "Neuralink: el primer chip cerebral funcional",
             desc: "Neuralink, la empresa de Elon Musk, ha logrado implantar un chip capaz de interpretar señales del cerebro.",
             url: "/articulos/tecnologia/neuralink-implanta-primer-chip-cerebral/"
-        },
-        {
-            title: "Inteligencia Artificial Superinteligente: qué es y por qué preocupa",
-            desc: "La IA superinteligente: el nivel de inteligencia artificial que podría superar al ser humano.",
-            url: "/articulos/inteligencia-artificial/inteligencia-artificial-superInteligente"
-        },
-        {
-            title: "Baterías de sodio: la alternativa barata al litio",
-            desc: "Una nueva generación de baterías más baratas, seguras y ecológicas.",
-            url: "/articulos/tecnologia/baterias-de-sodio-alternativas-baratas-al-litio/"
         }
+        
+        
 
     ],
     2: [
@@ -69,9 +71,9 @@ const pages = {
             url: "/articulos/inteligencia-artificial/inteligencia-artificial-generativa"
         },
         {
-            title: "La caída simultánea de ChatGPT, Claude, Gemini y Grok: qué pasó de verdad",
-            desc: "Qué se sabe realmente de la caída global de IA de septiembre de 2026 y por qué depender de un solo proveedor es un riesgo real.",
-            url: "/articulos/inteligencia-artificial/caida-ia-septiembre-2026"
+            title: "Inteligencia Artificial Superinteligente: qué es y por qué preocupa",
+            desc: "La IA superinteligente: el nivel de inteligencia artificial que podría superar al ser humano.",
+            url: "/articulos/inteligencia-artificial/inteligencia-artificial-superInteligente"
         },
         {
             title: "5G: qué es, cómo funciona y por qué cambiará internet",
@@ -101,5 +103,5 @@ function changePage(num) {
     document.querySelectorAll('.pagination button')[num - 1].classList.add('active-page');
 }
 
-// Cargar página 1 al entrar
-changePage(5);
+// Cargar página en el parentesis al entrar
+changePage(1);
