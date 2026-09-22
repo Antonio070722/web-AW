@@ -3,14 +3,14 @@
 const pages = {
     1: [
         {
+            title: "Amazon bloquea a Muse, la IA de Meta: qué pasó y qué significa para ti",
+            desc: "Amazon bloquea a Muse, el agente de IA de Meta que compra por ti, tras acusarlo de capturar credenciales sin identificarse.",
+            url: "/articulos/inteligencia-artificial/amazon-bloquea-muse-meta"
+        },
+        {
             title: "Amodei, Altman y Musk piden frenar la IA: qué está pasando de verdad",
             desc: "Los CEOs de Anthropic, OpenAI y xAI piden frenar el desarrollo de la IA. Qué dice la carta de Amodei y por qué la Casa Blanca se opone.",
             url: "/articulos/inteligencia-artificial/amodei-altman-musk-frenar-ia"
-        },
-        {
-            title: "La caída simultánea de ChatGPT, Claude, Gemini y Grok: qué pasó de verdad",
-            desc: "Qué se sabe realmente de la caída global de IA de septiembre de 2026 y por qué depender de un solo proveedor es un riesgo real.",
-            url: "/articulos/inteligencia-artificial/caida-ia-septiembre-2026"
         },
         {
             title: "Neuralink: el primer chip cerebral funcional",
@@ -19,13 +19,15 @@ const pages = {
         }
         
         
+        
+        
 
     ],
     2: [
         {
-            title: "IA débil vs IA fuerte: diferencias y ejemplos",
-            desc: "Una visión clara de los tipos de inteligencia artificial.",
-            url: "/articulos/inteligencia-artificial/tipos-de-inteligencia-artificial-ia-ai"
+            title: "La caída simultánea de ChatGPT, Claude, Gemini y Grok: qué pasó de verdad",
+            desc: "Qué se sabe realmente de la caída global de IA de septiembre de 2026 y por qué depender de un solo proveedor es un riesgo real.",
+            url: "/articulos/inteligencia-artificial/caida-ia-septiembre-2026"
         },
         {
             title: "Instalar y configurar tu primer IDE, IntelliJ IDEA",

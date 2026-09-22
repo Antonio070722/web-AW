@@ -1,0 +1,214 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout 
+    title="Amazon bloquea a Muse, la IA de Meta: qué pasó y qué significa para ti"
+    description="Amazon ha bloqueado a Muse, el agente de IA de Meta que compra por ti, tras acusarlo de capturar credenciales sin identificarse. Qué es Muse, por qué lo bloquearon y qué riesgos reales tiene delegar tus compras en una IA."
+>
+    <a href="/temas/inteligencia-artificial-ia" class="legal-tag">Inteligencia Artificial</a>
+    <h1>Amazon bloquea a Muse, la IA de Meta: qué pasó y qué significa para ti</h1>
+
+    <section class="ia-intro-section">
+        <div class="ia-intro-card">
+
+            <p>Desde la noche del <strong>domingo 20 de septiembre de 2026</strong>, cualquiera que intentara comprar en Amazon usando Muse, el nuevo agente de inteligencia artificial de Meta, empezó a encontrarse con un aviso de bloqueo, <a href="https://www.geekwire.com/2026/amazon-blocks-metas-muse-ai-assistant-in-new-standoff-over-agentic-shopping/" target="_blank" rel="noopener noreferrer">según informó primero GeekWire</a>.. Amazon había decidido cortarle el acceso por completo. Detrás de esa decisión hay una acusación seria: según Amazon, Muse <strong>capturaba y almacenaba las credenciales de los usuarios</strong> sin identificarse como una IA al navegar. En este artículo verás qué es exactamente Muse, qué ha pasado entre las dos compañías, y qué deberías tener en cuenta si usas o piensas usar un asistente de IA para comprar online.</p>
+
+            <img src="/img/articulos/amazon-bloquea-muse-meta/ft1.webp" alt="Aplicación de compra online con un agente de inteligencia artificial" class="AI-foto">
+
+            <h2>¿Qué es Muse, exactamente?</h2>
+
+            <p>Meta presentó Muse el <strong>8 de septiembre de 2026</strong> como su primer "agente personal de IA" <a href="https://geeksroom.com/2026/09/meta-presenta-muse-agente-personal-ia/159302/" target="_blank" rel="noopener noreferrer">(comunicado oficial de lanzamiento)</a>: una herramienta que va más allá de responder preguntas y puede <strong>ejecutar tareas completas por ti</strong>, como enviar correos, reservar viajes, rellenar formularios o completar compras online, incluso después de que cierres la aplicación.</p>
+
+            <p>Muse funciona dentro de una máquina virtual dedicada en la nube llamada <strong>Muse Secure VM</strong>, e incorpora un segundo sistema de supervisión llamado <strong>Sentinel</strong>, que revisa qué acciones puede realizar el agente en internet y pide tu aprobación antes de completar tareas sensibles, como una compra. Para los pagos, usa la plataforma Link de Stripe, que genera un número de tarjeta de un solo uso, de forma que ni la web donde compras ni el propio agente ven tus datos de pago reales.</p>
+
+            <h3 style="margin-left: 20px;">Lo que Muse puede hacer, según Meta</h3><br>
+            <ul class="subpuntos">
+                <li><strong>Comprar online</strong> en tiendas de terceros, comparando opciones y pidiendo tu confirmación antes de pagar.</li>
+                <li><strong>Enviar y responder correos</strong> electrónicos en tu nombre.</li>
+                <li><strong>Reservar viajes</strong> y completar formularios de varios pasos.</li>
+                <li><strong>Seguir trabajando en segundo plano</strong>, incluso con la aplicación cerrada.</li>
+            </ul>
+
+            <p>Por ahora, Muse solo está disponible en Estados Unidos, para mayores de 18 años, a través de su propia aplicación, la web y WhatsApp, con planes que van desde un nivel gratuito hasta suscripciones de 20 y 100 dólares al mes. Meta no ha confirmado todavía su llegada a España ni al resto de Europa.</p>
+
+            <h2>¿Por qué lo ha bloqueado Amazon?</h2>
+
+            <p>Según Amazon, el problema no es que una IA compre en su nombre —la propia Amazon tiene sus propias herramientas de compra asistida, como Alexa for Shopping—, sino <strong>cómo lo hace Muse</strong>. La compañía asegura que Meta nunca le notificó que su agente accedería a la tienda, que Muse <strong>no se identifica como una IA</strong> mientras navega, y que <strong>captura y almacena las credenciales de acceso</strong> de los usuarios, lo que consideran un riesgo real de seguridad y privacidad.</p>
+
+            <p>Antes de bloquearlo, Amazon pidió a Meta que retirase voluntariamente su plataforma del alcance de Muse. Meta se negó, y Amazon terminó cortando el acceso por su cuenta, <a href="https://www.bloomberglinea.com/negocios/amazon-bloquea-a-muse-el-agente-de-ia-de-meta-tras-una-disputa-por-compras-automatizadas/" target="_blank" rel="noopener noreferrer">según recoge Bloomberg Línea</a>. Desde entonces, cualquiera que use Muse para intentar comprar en Amazon ve un mensaje señalando que el acceso de un "agente de IA no autorizado" viola las condiciones de uso de la plataforma.</p>
+
+            <h3 style="margin-left: 20px;">Los puntos en conflicto</h3><br>
+            <ul class="subpuntos">
+                <li><strong>Identificación:</strong> Amazon dice que Muse no se presenta como IA al navegar por su web.</li>
+                <li><strong>Credenciales:</strong> Amazon asegura que el agente capturaba y guardaba contraseñas de acceso.</li>
+                <li><strong>Autorización:</strong> según Amazon, Meta nunca pidió permiso para que Muse operase en su plataforma.</li>
+                <li><strong>La respuesta de Meta:</strong> la compañía niega que Muse tenga visibilidad sobre contraseñas o métodos de pago reales de los usuarios.</li>
+            </ul>
+
+            <img src="/img/articulos/amazon-bloquea-muse-meta/ft2.webp" alt="Pantalla de aviso de bloqueo o acceso denegado en una compra online" class="AI-foto">
+
+            <h2>¿No se supone que Muse tenía protecciones de seguridad?</h2>
+
+            <p>Sí, y aquí está uno de los matices más interesantes del caso. Meta diseñó a Muse con una arquitectura pensada específicamente para evitar este tipo de problemas: el agente en teoría solo maneja <strong>tokens temporales</strong> en lugar de contraseñas reales, y es Sentinel quien aprueba cada acción sensible antes de que se ejecute, sin que el propio modelo llegue a ver las claves reales de acceso.</p>
+
+            <p>El problema, según recogen varios medios especializados, es que esa arquitectura sigue siendo <strong>experimental y, según reconoce el propio equipo de seguridad de Meta, falible</strong>. La disputa con Amazon demuestra que, en la práctica, un agente de IA que navega como si fuera una persona puede comportarse de forma que las plataformas externas no esperan ni autorizan, más allá de las intenciones de diseño original.</p>
+
+            <h2>¿Es la primera vez que Amazon bloquea un agente de IA?</h2>
+
+            <p>No. Amazon lleva varios meses cerrando el paso a agentes externos de otras compañías <a href="https://www.engadget.com/2263659/amazon-bars-metas-muse-ai-from-shopping-on-its-site/" target="_blank" rel="noopener noreferrer">(Engadget)</a>, incluidos algunos de Google y OpenAI, y mantiene un proceso judicial abierto contra Perplexity por su navegador Comet. Amazon también ha ampliado la lista de bots de IA bloqueados en su archivo robots.txt y ha empezado a recortar información de sus correos de confirmación de compra, precisamente para dificultar que agentes externos puedan leer el historial de pedidos de un usuario.</p>
+
+            <p>Esto apunta a algo más amplio que un simple conflicto puntual entre dos empresas: es parte de una <strong>pelea de fondo por quién controla la experiencia de compra online</strong> cuando cada vez más gente delega esa tarea en asistentes de IA en lugar de comprar directamente ellos mismos.</p>
+
+            <h2>¿Debería preocuparme si uso IA para comprar online?</h2>
+
+            <p>No hace falta entrar en pánico, pero sí conviene ser consciente de en qué consiste realmente delegar una compra en un agente de IA. Cuando le das a una herramienta así acceso a tu correo, tu calendario o tu método de pago, le estás confiando información sensible a un sistema que actúa de forma semiautónoma, con menos supervisión directa que si compraras tú mismo paso a paso.</p>
+
+            <h3 style="margin-left: 20px;">Antes de usar un agente de IA para comprar</h3><br>
+            <ul class="subpuntos">
+                <li><strong>Revisa qué permisos le das:</strong> a qué cuentas, correos o métodos de pago tiene acceso, y desconecta lo que no necesite.</li>
+                <li><strong>Comprueba si pide confirmación</strong> antes de completar compras, en vez de hacerlo todo sin supervisión.</li>
+                <li><strong>Desconfía de que "guarde tus contraseñas"</strong> en vez de usar sistemas de token de un solo uso o gestores de contraseñas reconocidos.</li>
+                <li><strong>Ten en cuenta que la tecnología es muy reciente:</strong> este tipo de agentes llevan solo semanas en el mercado, y como demuestra este caso, todavía se están definiendo sus límites reales de seguridad.</li>
+            </ul>
+
+            <h2>Resumen</h2>
+
+            <ul class="subpuntos">
+                <li>Meta lanzó Muse, su agente personal de IA, el 8 de septiembre de 2026, capaz de comprar, reservar y gestionar correo por el usuario.</li>
+                <li>Amazon bloqueó su acceso desde el 20 de septiembre, acusándolo de no identificarse como IA y de capturar credenciales de usuarios.</li>
+                <li>Meta niega que Muse tenga visibilidad sobre contraseñas o datos de pago reales.</li>
+                <li>No es el primer agente de IA que Amazon bloquea: también ha restringido a agentes de Google, OpenAI y Perplexity.</li>
+                <li>Si usas IA para comprar online, revisa qué permisos y datos le das antes de delegarle tareas sensibles.</li>
+            </ul>
+
+            <p>Si quieres seguir aprendiendo sobre inteligencia artificial, puedes explorar más artículos en la <a href="/temas/inteligencia-artificial-ia">sección de IA</a> o escribirnos desde la <a href="/sugerencias">página de contacto</a>.</p>
+
+            <p class="ia-contacto">
+            ¿Tienes alguna duda o sugerencia sobre este artículo?
+            <a href="/sugerencias">Escríbenos aquí</a>.
+        </p>
+
+        </div>
+    </section>
+
+    <div class="articulos-sidebar">
+        <h3>Otros artículos</h3>
+
+        <div class="theme-card">
+            <h2>Amodei, Altman y Musk piden frenar la IA: qué está pasando de verdad</h2>
+            <p>Los CEOs de Anthropic, OpenAI y xAI piden frenar el desarrollo de la IA. Qué dice la carta de Amodei y por qué la Casa Blanca se opone.</p>
+            <a href="/articulos/inteligencia-artificial/amodei-altman-musk-frenar-ia/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+
+        <div class="theme-card">
+            <h2>Neuralink implanta el primer chip cerebral funcional</h2>
+            <p>Descubre qué es Neuralink, cómo funciona el chip cerebral y qué logró el primer paciente.</p>
+            <a href="/articulos/tecnologia/neuralink-implanta-primer-chip-cerebral/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+
+        <div class="theme-card">
+            <h2>La caída simultánea de ChatGPT, Claude, Gemini y Grok: qué pasó de verdad</h2>
+            <p>Qué se sabe realmente de la caída global de IA de septiembre de 2026 y por qué depender de un solo proveedor es un riesgo real.</p>
+            <a href="/articulos/inteligencia-artificial/caida-ia-septiembre-2026/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+
+        <div class="theme-card">
+            <h2>IA Generativa: qué es y cómo está cambiando la creación de contenido</h2>
+            <p>Descubre qué es la IA generativa, cómo funcionan los modelos que crean texto, imágenes y vídeo, y qué riesgos plantea.</p>
+            <a href="/articulos/inteligencia-artificial/inteligencia-artificial-generativa/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+
+        <div class="theme-card">
+            <h2>IA Superinteligente: qué es, características y riesgos</h2>
+            <p>Qué es la IA superinteligente, por qué es aún hipotética y qué riesgos plantea para la humanidad.</p>
+            <a href="/articulos/inteligencia-artificial/inteligencia-artificial-superInteligente/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+
+    </div>
+
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+
+</BaseLayout>
+
+<style>
+.subpuntos {
+    margin-left: 30px;
+}
+.ia-intro-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 50px;
+}
+.ia-intro-card {
+    background: #ffffff;
+    padding: 25px 30px;
+    max-width: 900px;
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+.ia-intro-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #111;
+}
+.ia-intro-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 12px;
+}
+.AI-foto {
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+.articulos-sidebar {
+    position: absolute;
+    top: 193px;
+    right: 40px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 5;
+}
+@media (max-width: 1500px) {
+    .articulos-sidebar {
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        margin: 40px 0 0 0 !important;
+        padding: 0 20px;
+    }
+}
+.articulos-sidebar .theme-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    font-size: 0.9rem;
+}
+.articulos-sidebar h3 {
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+.articulos-sidebar h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #5678d6;
+    border-radius: 2px;
+}
+</style>
