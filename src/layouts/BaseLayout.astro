@@ -17,7 +17,7 @@ const { title, description } = Astro.props;
     <meta name="keywords" content="tecnología, inteligencia artificial, programación, educación digital">
     <meta name="author" content="AW HUB">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://tudominio.com/index.html">
+    <link rel="canonical" href="https://awhub.es/index.html">
 
     <link rel="icon" type="image/png" href="/img/logo-icon.png">
 
@@ -26,6 +26,18 @@ const { title, description } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    </script>
+
     <!--Google adsense-->
     <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9791597928441140"
      crossorigin="anonymous"></script>
@@ -33,25 +45,9 @@ const { title, description } = Astro.props;
     <!-- Google Analytics + Consent Mode v2 (carga síncrona) -->
     <script src="https://www.googletagmanager.com/gtag/js?id=G-DCEVDE89VJ"></script>
     <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){ dataLayer.push(arguments); }
-        gtag('js', new Date());
-
+      gtag('js', new Date());
       gtag('config', 'G-DCEVDE89VJ');
     </script>
-      <!--// Configuración inicial: todo denegado
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'analytics_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied'
-      });
-      
-      gtag('js', new Date());
-      gtag('config', 'G-DCEVDE89VJ', {
-        'send_page_view': true
-      });
-    </script>-->
 
     <!-- CookieConsent CSS (se carga sin defer para evitar bloqueos) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
