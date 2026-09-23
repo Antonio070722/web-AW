@@ -3,6 +3,11 @@
 const pages = {
     1: [
         {
+            title: "El CEO de Nvidia responde a Altman, Amodei y Musk: 'la IA no va a acabar con el mundo'",
+            desc: "Jensen Huang (Nvidia) rechaza las peticiones de frenar la IA y acusa a otros líderes del sector de buscar exenciones normativas.",
+            url: "/articulos/inteligencia-artificial/nvidia-huang-responde-ia"
+        },
+        {
             title: "Amazon bloquea a Muse, la IA de Meta: qué pasó y qué significa para ti",
             desc: "Amazon bloquea a Muse, el agente de IA de Meta que compra por ti, tras acusarlo de capturar credenciales sin identificarse.",
             url: "/articulos/inteligencia-artificial/amazon-bloquea-muse-meta"
@@ -11,19 +16,14 @@ const pages = {
             title: "Amodei, Altman y Musk piden frenar la IA: qué está pasando de verdad",
             desc: "Los CEOs de Anthropic, OpenAI y xAI piden frenar el desarrollo de la IA. Qué dice la carta de Amodei y por qué la Casa Blanca se opone.",
             url: "/articulos/inteligencia-artificial/amodei-altman-musk-frenar-ia"
-        },
+        }
+    ],
+    2: [
         {
             title: "Neuralink: el primer chip cerebral funcional",
             desc: "Neuralink, la empresa de Elon Musk, ha logrado implantar un chip capaz de interpretar señales del cerebro.",
             url: "/articulos/tecnologia/neuralink-implanta-primer-chip-cerebral/"
-        }
-        
-        
-        
-        
-
-    ],
-    2: [
+        },
         {
             title: "La caída simultánea de ChatGPT, Claude, Gemini y Grok: qué pasó de verdad",
             desc: "Qué se sabe realmente de la caída global de IA de septiembre de 2026 y por qué depender de un solo proveedor es un riesgo real.",
@@ -33,12 +33,8 @@ const pages = {
             title: "Instalar y configurar tu primer IDE, IntelliJ IDEA",
             desc: "Guía de instalación de IntelliJ IDEA explicada paso a paso y acompañada de imágenes claras.",
             url: "/articulos/programacion/configurar-intellij"
-        },
-        {
-            title: "Cómo activar GitHub Copilot y su autocompletado predictivo en IntelliJ IDEA",
-            desc: "Aprende a instalar y activar GitHub Copilot en IntelliJ IDEA para obtener autocompletado predictivo en tiempo real.",
-            url: "/articulos/programacion/activar-autocompletado-github-copilot"
         }
+        
     ],
 
     3: [
