@@ -3,9 +3,9 @@
 const pages = {
     1: [
         {
-            title: "El CEO de Nvidia responde a Altman, Amodei y Musk: 'la IA no va a acabar con el mundo'",
-            desc: "Jensen Huang (Nvidia) rechaza las peticiones de frenar la IA y acusa a otros líderes del sector de buscar exenciones normativas.",
-            url: "/articulos/inteligencia-artificial/nvidia-huang-responde-ia"
+            title: "Alibaba presenta el chip que planta cara a Nvidia en China",
+            desc: "Alibaba presenta el Zhenwu V900, un chip de IA que triplica el rendimiento de su predecesor, como respuesta a los controles de exportación de EEUU.",
+            url: "/articulos/tecnologia/alibaba-zhenwu-v900"
         },
         {
             title: "Amazon bloquea a Muse, la IA de Meta: qué pasó y qué significa para ti",
@@ -20,6 +20,11 @@ const pages = {
     ],
     2: [
         {
+            title: "El CEO de Nvidia responde a Altman, Amodei y Musk: 'la IA no va a acabar con el mundo'",
+            desc: "Jensen Huang (Nvidia) rechaza las peticiones de frenar la IA y acusa a otros líderes del sector de buscar exenciones normativas.",
+            url: "/articulos/inteligencia-artificial/nvidia-huang-responde-ia"
+        },
+        {
             title: "Neuralink: el primer chip cerebral funcional",
             desc: "Neuralink, la empresa de Elon Musk, ha logrado implantar un chip capaz de interpretar señales del cerebro.",
             url: "/articulos/tecnologia/neuralink-implanta-primer-chip-cerebral/"
@@ -29,15 +34,17 @@ const pages = {
             desc: "Qué se sabe realmente de la caída global de IA de septiembre de 2026 y por qué depender de un solo proveedor es un riesgo real.",
             url: "/articulos/inteligencia-artificial/caida-ia-septiembre-2026"
         },
-        {
-            title: "Instalar y configurar tu primer IDE, IntelliJ IDEA",
-            desc: "Guía de instalación de IntelliJ IDEA explicada paso a paso y acompañada de imágenes claras.",
-            url: "/articulos/programacion/configurar-intellij"
-        }
+        
+        
         
     ],
 
     3: [
+        {
+            title: "Instalar y configurar tu primer IDE, IntelliJ IDEA",
+            desc: "Guía de instalación de IntelliJ IDEA explicada paso a paso y acompañada de imágenes claras.",
+            url: "/articulos/programacion/configurar-intellij"
+        },
         {
             title: "Tu primera aplicación en Java: guía paso a paso para principiantes (Parte 1)",
             desc: "Inicia tu primer proyecto en Java y comprende los elementos básicos del entorno de desarrollo para comenzar a programar correctamente.",

@@ -723,6 +723,7 @@ main:not(.theme-page) li {
     color: #0a0a0a;
 }
 /* ========== FOOTER ========== */
+
 footer {
     background: #0a0a0a;
     color: #94a3b8;
@@ -773,10 +774,14 @@ footer {
     align-items: center;
     gap: 12px;
 }
+
+/*
 .footer-links {
     display: flex;
-    gap: 28px;
+    gap: 18px;
+    align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .footer-links a {
     color: #cbd5e1;
@@ -786,6 +791,7 @@ footer {
 .footer-links a:hover {
     color: white;
 }
+*/
 
 /* ========== BOTÓN VOLVER ARRIBA ========== */
 .back-to-top {
@@ -1257,11 +1263,19 @@ html {
     }
 }
 
+/*footer-socials es el div en el que he metido los iconos de las redes sociales para que no muevan todo el footer*/
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
 .footer-links {
     display: flex;
-    gap: 15px; /* Espacio entre enlaces */
+    gap: 9px; /* Espacio entre enlaces */
     align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .footer-links a {

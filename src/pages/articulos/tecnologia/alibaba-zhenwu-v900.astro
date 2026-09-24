@@ -1,0 +1,206 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout 
+    title="Alibaba presenta el chip que planta cara a Nvidia en China"
+    description="Alibaba presenta el Zhenwu V900, un chip de IA que triplica el rendimiento de su predecesor, como respuesta directa a los controles de exportación de EEUU. Qué es, qué lo hace posible y qué significa para Nvidia."
+>
+    <a href="/temas/tecnologia" class="legal-tag">Tecnología</a>
+    <h1>Alibaba presenta el chip que planta cara a Nvidia en China</h1>
+
+    <section class="ia-intro-section">
+        <div class="ia-intro-card">
+
+            <p>El <strong>22 de septiembre de 2026</strong>, en la conferencia Apsara de Hangzhou, Alibaba presentó el <strong>Zhenwu V900</strong>, un chip de inteligencia artificial que su CEO, <strong>Eddie Wu</strong>, describió como <strong>"el chip de IA más potente de China hoy"</strong>. No es un anuncio aislado: llega en un momento en el que Nvidia reconoce estar prácticamente <strong>fuera del mercado chino</strong> de centros de datos por los controles de exportación estadounidenses. En este artículo verás qué es exactamente el V900, por qué existe, y qué significa realmente para la posición de Nvidia en el mercado más grande de Asia.</p>
+
+            <img src="/img/articulos/alibaba-zhenwu-v900/ft1.webp" alt="Placa de circuitos y chip de procesamiento para inteligencia artificial" class="AI-foto">
+
+            <h2>¿Qué es exactamente el Zhenwu V900?</h2>
+
+            <p>El V900 es un chip diseñado por <strong>T-Head</strong>, la división de semiconductores de Alibaba, pensado tanto para <strong>entrenar</strong> modelos de IA como para <strong>ejecutarlos</strong> de cara a los usuarios (lo que se conoce como inferencia). Según los datos publicados por la propia compañía, triplica el rendimiento de su predecesor, el M890, presentado en mayo de 2026.</p>
+
+            <h3 style="margin-left: 20px;">Especificaciones principales (según Alibaba)</h3><br>
+            <ul class="subpuntos">
+                <li><strong>3 veces más rendimiento</strong> que el M890, su chip anterior.</li>
+                <li><strong>216 GB de memoria HBM</strong> (memoria de alto ancho de banda).</li>
+                <li><strong>1,2 TB/s de ancho de banda</strong> de interconexión entre chips.</li>
+                <li>Soporte para precisión <strong>FP8 y FP4</strong>, formatos habituales en el entrenamiento de IA moderna.</li>
+                <li>Capacidad para conectar hasta <strong>500.000 chips en un mismo clúster</strong> para entrenar modelos de gran escala.</li>
+            </ul>
+
+            <p>Un matiz importante: estas cifras son <strong>datos reportados por el propio fabricante</strong>, no verificados por análisis independientes todavía, y la fabricación en masa no arrancará hasta el <strong>primer trimestre de 2027</strong>. Es decir, hoy por hoy es una hoja de especificaciones prometedora, no un producto ya desplegado a gran escala.</p>
+
+            <h2>¿Por qué Alibaba necesita fabricar sus propios chips?</h2>
+
+            <p>La respuesta corta es: porque no le queda otra. Los aceleradores más avanzados de Nvidia —las series H100, A100 y Blackwell— están sujetos a una <strong>presunción de denegación</strong> para el mercado chino, y en enero de 2026 China bloqueó por completo la importación de chips H200. El propio Nvidia reconoció en su informe financiero del trimestre cerrado el 26 de julio de 2026 que los controles de exportación, tanto de EEUU como las restricciones chinas, le han impedido efectivamente competir en el mercado de cómputo de centros de datos en China, hasta el punto de que los pocos H200 enviados bajo licencia representaron menos del 1% de sus ingresos trimestrales de esa división.</p>
+
+            <p>Ese vacío es exactamente lo que Alibaba, y otras tecnológicas chinas, están intentando llenar. El chip se fabrica de forma <strong>completamente doméstica a través de SMIC</strong>, la mayor fundidora de semiconductores de China, precisamente para no depender de fábricas extranjeras a las que las empresas chinas tienen cada vez más restringido el acceso.</p>
+
+            <img src="/img/articulos/alibaba-zhenwu-v900/ft2.webp" alt="Centro de datos con servidores para inteligencia artificial" class="AI-foto">
+
+            <h2>¿Cómo está reaccionando el mercado de chips en China?</h2>
+
+            <p>El V900 no aparece en un mercado vacío. Los fabricantes chinos de GPU y aceleradores de IA capturaron el <strong>41% del mercado local de servidores de aceleración de IA en 2025</strong>, frente a una cuota prácticamente nula en 2022. Dentro de ese reparto, <strong>Huawei domina con cerca del 62%</strong> de cuota, mientras que Alibaba se sitúa en torno al <strong>5%</strong>. Esto es importante para entender el V900 correctamente: no está pensado tanto para desbancar a Huawei dentro de China, sino para ocupar el hueco de rendimiento que Nvidia ha dejado libre.</p>
+
+            <p>El predecesor del V900, el M890, ya lleva enviadas más de <strong>560.000 unidades a más de 400 clientes externos</strong> en 20 sectores distintos desde su lanzamiento en mayo, lo que confirma que Alibaba no está anunciando una simple ambición futura, sino la siguiente generación de una línea de producto que ya está en despliegue comercial real.</p>
+
+            <h3 style="margin-left: 20px;">El reparto del mercado chino de aceleradores IA (2025)</h3><br>
+            <ul class="subpuntos">
+                <li><strong>Huawei:</strong> aproximadamente 62% de cuota.</li>
+                <li><strong>Alibaba:</strong> aproximadamente 5% de cuota.</li>
+                <li><strong>Conjunto de fabricantes chinos:</strong> 41% del mercado local, frente a casi 0% en 2022.</li>
+            </ul>
+
+            <h2>¿Es una amenaza real para Nvidia?</h2>
+
+            <p>Aquí conviene distinguir entre dos planos distintos. <strong>Dentro de China</strong>, sí: el V900 es una amenaza estratégica creíble, porque compite precisamente por el hueco que Nvidia ya no puede cubrir por las restricciones legales, no por falta de demanda. <strong>Fuera de China</strong>, el impacto es mucho más limitado por ahora: Nvidia no depende de sus ventas en territorio chino para sostener su negocio global (sus propias previsiones ya asumen cero ingresos de cómputo de centros de datos provenientes de China para el próximo trimestre), así que el V900 no representa, de momento, una amenaza comparable a su posición dominante en el resto del mundo.</p>
+
+            <p>La reacción del mercado bursátil refleja bien este matiz: las acciones de Alibaba subieron un <strong>4%</strong> tras el anuncio, mientras que su competidor local Baidu apenas se movió (0,3%), lo que sugiere que los inversores lo interpretan como una victoria puntual de Alibaba, no como un cambio de fondo en todo el sector chino de IA.</p>
+
+            <h2>El contexto político no es casualidad</h2>
+
+            <p>El anuncio del V900 coincidió con la visita de <strong>Xi Jinping a Washington</strong>, en pleno debate internacional sobre el control de la tecnología de IA más avanzada. Además, Alibaba aprovechó el mismo evento para anunciar sus planes de modelos de hasta <strong>10 billones de parámetros</strong> (las futuras versiones Qwen 4.5 y Qwen 5) y un objetivo de alcanzar <strong>20 gigavatios de capacidad global de centros de datos para 2032</strong> a través de Alibaba Cloud.</p>
+
+            <p>El mensaje de fondo, según varios analistas del sector, es que los controles de exportación estadounidenses no han impedido que China desarrolle capacidad de IA de vanguardia: la han <strong>redirigido</strong> hacia el desarrollo de alternativas propias, cuya madurez es precisamente lo que estos anuncios buscan demostrar.</p>
+
+            <h2>Resumen</h2>
+
+            <ul class="subpuntos">
+                <li>Alibaba presentó el Zhenwu V900 el 22 de septiembre de 2026, un chip que según la compañía triplica el rendimiento de su predecesor.</li>
+                <li>Es una respuesta directa a los controles de exportación de EEUU, que dejan a Nvidia prácticamente fuera del mercado chino de centros de datos.</li>
+                <li>Se fabrica de forma doméstica a través de SMIC, y su producción en masa comenzará en el primer trimestre de 2027.</li>
+                <li>Dentro de China es una amenaza competitiva real; fuera de China, el impacto en Nvidia es, por ahora, limitado.</li>
+                <li>El anuncio coincidió con la visita de Xi Jinping a Washington, en pleno debate global sobre el control de la tecnología de IA.</li>
+            </ul>
+
+            <p>Si quieres seguir aprendiendo sobre tecnología, puedes explorar más artículos en la <a href="/temas/tecnologia">sección de Tecnología</a> o escribirnos desde la <a href="/sugerencias">página de contacto</a>.</p>
+
+            <p class="ia-contacto">
+            ¿Tienes alguna duda o sugerencia sobre este artículo?
+            <a href="/sugerencias">Escríbenos aquí</a>.
+        </p>
+
+        </div>
+    </section>
+
+    <div class="articulos-sidebar">
+        <h3>Otros artículos</h3>
+
+        <div class="theme-card">
+            <h2>El CEO de Nvidia responde a Altman, Amodei y Musk: "la IA no va a acabar con el mundo"</h2>
+            <p>Jensen Huang (Nvidia) rechaza las peticiones de frenar la IA y acusa a otros líderes del sector de buscar exenciones normativas.</p>
+            <a href="/articulos/inteligencia-artificial/nvidia-huang-responde-ia/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+
+        <div class="theme-card">
+            <h2>Amodei, Altman y Musk piden frenar la IA: qué está pasando de verdad</h2>
+            <p>Los CEOs de Anthropic, OpenAI y xAI piden frenar el desarrollo de la IA. Qué dice la carta de Amodei y por qué la Casa Blanca se opone.</p>
+            <a href="/articulos/inteligencia-artificial/amodei-altman-musk-frenar-ia/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+
+        <div class="theme-card">
+            <h2>Amazon bloquea a Muse, la IA de Meta: qué pasó y qué significa para ti</h2>
+            <p>Amazon bloquea a Muse, el agente de IA de Meta que compra por ti, tras acusarlo de capturar credenciales sin identificarse.</p>
+            <a href="/articulos/inteligencia-artificial/amazon-bloquea-muse-meta/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+
+        <div class="theme-card">
+            <h2>La caída simultánea de ChatGPT, Claude, Gemini y Grok: qué pasó de verdad</h2>
+            <p>Qué se sabe realmente de la caída global de IA de septiembre de 2026 y por qué depender de un solo proveedor es un riesgo real.</p>
+            <a href="/articulos/inteligencia-artificial/caida-ia-septiembre-2026/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+
+        <div class="theme-card">
+            <h2>Neuralink implanta el primer chip cerebral funcional</h2>
+            <p>Descubre qué es Neuralink, cómo funciona el chip cerebral y qué logró el primer paciente.</p>
+            <a href="/articulos/tecnologia/neuralink-implanta-primer-chip-cerebral/" style="color: #007bff; text-decoration: none;">Ver artículo</a>
+        </div>
+
+    </div>
+
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+
+</BaseLayout>
+
+<style>
+.subpuntos {
+    margin-left: 30px;
+}
+.ia-intro-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 50px;
+}
+.ia-intro-card {
+    background: #ffffff;
+    padding: 25px 30px;
+    max-width: 900px;
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+.ia-intro-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #111;
+}
+.ia-intro-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 12px;
+}
+.AI-foto {
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+.articulos-sidebar {
+    position: absolute;
+    top: 193px;
+    right: 40px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 5;
+}
+@media (max-width: 1500px) {
+    .articulos-sidebar {
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        margin: 40px 0 0 0 !important;
+        padding: 0 20px;
+    }
+}
+.articulos-sidebar .theme-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    font-size: 0.9rem;
+}
+.articulos-sidebar h3 {
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+.articulos-sidebar h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #5678d6;
+    border-radius: 2px;
+}
+</style>
