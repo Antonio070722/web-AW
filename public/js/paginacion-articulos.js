@@ -3,9 +3,9 @@
 const pages = {
     1: [
         {
-            title: "Alibaba presenta el chip que planta cara a Nvidia en China",
-            desc: "Alibaba presenta el Zhenwu V900, un chip de IA que triplica el rendimiento de su predecesor, como respuesta a los controles de exportación de EEUU.",
-            url: "/articulos/tecnologia/alibaba-zhenwu-v900"
+            title: "Meta, TikTok, Snapchat y YouTube pagan 27 millones por daños a la salud mental de estudiantes",
+            desc: "Meta, TikTok, Snapchat y YouTube pagan 27 millones de dólares para evitar un juicio histórico por dañar la salud mental de estudiantes en EEUU.",
+            url: "/articulos/tecnologia/meta-tiktok-youtube-salud-mental"
         },
         {
             title: "Amazon bloquea a Muse, la IA de Meta: qué pasó y qué significa para ti",
@@ -41,6 +41,11 @@ const pages = {
 
     3: [
         {
+            title: "Alibaba presenta el chip que planta cara a Nvidia en China",
+            desc: "Alibaba presenta el Zhenwu V900, un chip de IA que triplica el rendimiento de su predecesor, como respuesta a los controles de exportación de EEUU.",
+            url: "/articulos/tecnologia/alibaba-zhenwu-v900"
+        },
+        {
             title: "Instalar y configurar tu primer IDE, IntelliJ IDEA",
             desc: "Guía de instalación de IntelliJ IDEA explicada paso a paso y acompañada de imágenes claras.",
             url: "/articulos/programacion/configurar-intellij"
@@ -49,14 +54,15 @@ const pages = {
             title: "Tu primera aplicación en Java: guía paso a paso para principiantes (Parte 1)",
             desc: "Inicia tu primer proyecto en Java y comprende los elementos básicos del entorno de desarrollo para comenzar a programar correctamente.",
             url: "/articulos/programacion/guia-java-parte-1"
-        },
+        }
+        
+    ],
+    4: [
         {
             title: "Tu primera aplicación en Java (Parte 2): variables, tipos de datos y entrada del usuario",
             desc: "Sigue la serie de Java para principiantes. Aprende a guardar datos con variables y a leer lo que escribe el usuario con Scanner. Ejemplos y ejercicios incluidos.",
             url: "/articulos/programacion/guia-java-parte-2"
-        }
-    ],
-    4: [
+        },
         {
             title: "Tu primera aplicación en Java (Parte 3): condicionales y bucles",
             desc: "Aprende a usar condicionales y bucles en Java para que tus programas tomen decisiones y repitan acciones. Resolveremos el reto anterior y crearás tu primer juego interactivo.",
